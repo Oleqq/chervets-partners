@@ -1,95 +1,84 @@
 @font-face {
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald-Regular.eot');
-    src: local('Oswald Regular'), local('Oswald-Regular'),
-        url('../fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Oswald-Regular.woff2') format('woff2'),
-        url('../fonts/Oswald-Regular.woff') format('woff'),
-        url('../fonts/Oswald-Regular.ttf') format('truetype');
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans10pt-Regular.eot');
+    src: local('Nunito Sans Regular'), local('NunitoSans10pt-Regular'),
+        url('../fonts/NunitoSans10pt-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NunitoSans10pt-Regular.woff2') format('woff2'),
+        url('../fonts/NunitoSans10pt-Regular.woff') format('woff'),
+        url('../fonts/NunitoSans10pt-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald-Medium.eot');
-    src: local('Oswald Medium'), local('Oswald-Medium'),
-        url('../fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Oswald-Medium.woff2') format('woff2'),
-        url('../fonts/Oswald-Medium.woff') format('woff'),
-        url('../fonts/Oswald-Medium.ttf') format('truetype');
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans10pt-Medium.eot');
+    src: local('Nunito Sans Medium'), local('NunitoSans10pt-Medium'),
+        url('../fonts/NunitoSans10pt-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NunitoSans10pt-Medium.woff2') format('woff2'),
+        url('../fonts/NunitoSans10pt-Medium.woff') format('woff'),
+        url('../fonts/NunitoSans10pt-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald-SemiBold.eot');
-    src: local('Oswald SemiBold'), local('Oswald-SemiBold'),
-        url('../fonts/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Oswald-SemiBold.woff2') format('woff2'),
-        url('../fonts/Oswald-SemiBold.woff') format('woff'),
-        url('../fonts/Oswald-SemiBold.ttf') format('truetype');
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans10pt-SemiBold.eot');
+    src: local('Nunito Sans SemiBold'), local('NunitoSans10pt-SemiBold'),
+        url('../fonts/NunitoSans10pt-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NunitoSans10pt-SemiBold.woff2') format('woff2'),
+        url('../fonts/NunitoSans10pt-SemiBold.woff') format('woff'),
+        url('../fonts/NunitoSans10pt-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald-Bold.eot');
-    src: local('Oswald Bold'), local('Oswald-Bold'),
-        url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Oswald-Bold.woff2') format('woff2'),
-        url('../fonts/Oswald-Bold.woff') format('woff'),
-        url('../fonts/Oswald-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans10pt-Bold.eot');
+    src: local('Nunito Sans Bold'), local('NunitoSans10pt-Bold'),
+        url('../fonts/NunitoSans10pt-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NunitoSans10pt-Bold.woff2') format('woff2'),
+        url('../fonts/NunitoSans10pt-Bold.woff') format('woff'),
+        url('../fonts/NunitoSans10pt-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Encode Sans';
-    src: url('../fonts/EncodeSans-Regular.eot');
-    src: local('Encode Sans Regular'), local('EncodeSans-Regular'),
-        url('../fonts/EncodeSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/EncodeSans-Regular.woff2') format('woff2'),
-        url('../fonts/EncodeSans-Regular.woff') format('woff'),
-        url('../fonts/EncodeSans-Regular.ttf') format('truetype');
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans10pt-ExtraBold.eot');
+    src: local('Nunito Sans ExtraBold'), local('NunitoSans10pt-ExtraBold'),
+        url('../fonts/NunitoSans10pt-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NunitoSans10pt-ExtraBold.woff2') format('woff2'),
+        url('../fonts/NunitoSans10pt-ExtraBold.woff') format('woff'),
+        url('../fonts/NunitoSans10pt-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans10pt-Black.eot');
+    src: local('Nunito Sans Black'), local('NunitoSans10pt-Black'),
+        url('../fonts/NunitoSans10pt-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NunitoSans10pt-Black.woff2') format('woff2'),
+        url('../fonts/NunitoSans10pt-Black.woff') format('woff'),
+        url('../fonts/NunitoSans10pt-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Light.eot');
+    src: local('Nunito Sans Regular'), local('NunitoSans10pt-Regular'),
+        url('../fonts/RobotoSlab-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Light.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Light.woff') format('woff'),
+        url('../fonts/RobotoSlab-Light.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Encode Sans';
-    src: url('../fonts/EncodeSans-Medium.eot');
-    src: local('Encode Sans Medium'), local('EncodeSans-Medium'),
-        url('../fonts/EncodeSans-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/EncodeSans-Medium.woff2') format('woff2'),
-        url('../fonts/EncodeSans-Medium.woff') format('woff'),
-        url('../fonts/EncodeSans-Medium.ttf') format('truetype');
-    font-weight: 500;
-
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Encode Sans';
-    src: url('../fonts/EncodeSans-SemiBold.eot');
-    src: local('Encode Sans SemiBold'), local('EncodeSans-SemiBold'),
-        url('../fonts/EncodeSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/EncodeSans-SemiBold.woff2') format('woff2'),
-        url('../fonts/EncodeSans-SemiBold.woff') format('woff'),
-        url('../fonts/EncodeSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Encode Sans';
-    src: url('../fonts/EncodeSans-Bold.eot');
-    src: local('Encode Sans Bold'), local('EncodeSans-Bold'),
-        url('../fonts/EncodeSans-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/EncodeSans-Bold.woff2') format('woff2'),
-        url('../fonts/EncodeSans-Bold.woff') format('woff'),
-        url('../fonts/EncodeSans-Bold.ttf') format('truetype');
-    font-weight: bold;
     font-style: normal;
 }

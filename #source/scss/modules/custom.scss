@@ -28,8 +28,8 @@ body {
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.2;
-    font-family: 'Encode Sans', sans-serif;
-    background-color: $black;
+    font-family: var(--font-family);
+    background-color: #737373;
     cursor: url(../img/cursor_white.png) 4 1, default;
     .footer-wrapper {
         margin-top: auto;
@@ -76,11 +76,19 @@ body {
 }
 
 .container {
+    margin: 0 auto;
+
     @media (min-width: 1200px) and (max-width: 1920px) {
         max-width: 80%;
     }
     @media (min-width: 1921px) {
         max-width: 1860px;
+    }
+    @media (max-width:1660px) {
+        max-width: 90%;
+    }
+    @media (max-width:567px) {
+        max-width: 95%;
     }
 }
 

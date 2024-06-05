@@ -1,0 +1,464 @@
+.team-index {
+
+    background-color: #FD5E0F;
+    padding: 200px 0 52px;
+
+    &__wrapper {
+        overflow: hidden;
+
+        @media (max-width:676px) {
+            overflow: hidden;
+        }
+    }
+
+    
+
+    &__card {
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+
+        background-color: #fff;
+
+        padding: 12px;
+        
+        &--top {
+            display: flex;
+            justify-content: flex-end;
+
+            position: relative;
+        }
+
+        &--bottom {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            P {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 108%;
+                color: #000;
+
+                opacity: 0.6;
+
+                margin: 0 0 18px;
+
+                @media (max-width:1920px) {
+                    font-size: 14px;
+                }
+                @media (max-width:1380px) {
+                    font-size: 12px;
+                }
+            }
+        }
+        &--link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 24px;
+
+            width: fit-content;
+
+
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            color: #000;
+            
+            text-transform: uppercase;
+
+            transition: .2s ease;
+
+            @media (max-width:1920px) {
+                font-size: 16px;
+                gap: 16px;
+            }
+            
+            svg {
+                path {
+                    transition: .2s ease;
+                }
+            }
+
+            &:hover {
+                transition: .2s ease;
+
+                gap: 12px;
+
+                color: #FD5E0F;
+
+                @media (max-width:1920px) {
+                    gap: 10px;
+                }
+
+                svg {
+                    path {
+                        fill:  #FD5E0F;
+                    }
+                }
+            }
+        }
+
+        &--name {
+            position: relative;
+
+            display: flex;
+            
+            p {
+                display: flex;
+                flex-direction: column;
+
+                writing-mode: tb-rl;
+
+                transform: scaleX(-100%) scaleY(-100%);
+
+                font-family: var(--font-family);
+                font-weight: 800;
+                font-size: 32px;
+                letter-spacing: -0.05em;
+                color: #000;
+
+                margin: 0 0 6px 0;
+
+                span {
+                    color: #fd5e0f;;
+                }
+
+                @media (max-width:1920px) {
+                    font-size: 24px;
+                }
+                @media (max-width:1380px) {
+                   font-size: 20px ;
+                }
+                @media (max-width:991px) {
+                    font-size: 28px;
+                }
+                @media (max-width:767px) {
+                    font-size: 22px;
+                }
+                @media (max-width:676px) {
+                    font-size: 28px;
+                }
+                @media (max-width:567px) {
+                    // font-size: 24px;
+                }
+                @media (max-width:467px) {
+                    font-size: 24px;
+                }
+            }
+
+            &-badge {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 125%;
+                color: #000;
+                opacity: .6;
+
+                @media (max-width:1920px) {
+                    font-size: 14px;
+                }
+                @media (max-width:1380px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &--photo {
+        
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+
+                max-width: 300px;
+                max-height: 300px;
+
+                @media (max-width:1920px) {
+                    max-width: 200px;
+                   
+                }
+                @media (max-width:1380px) {
+                    max-width: 170px;
+                }                
+                @media (max-width:991px) {
+                    max-width: 225px;
+                }
+                @media (max-width:767px) {
+                    max-width: 190px;
+                }
+                @media (max-width:676px) {
+                    max-width: 250px;
+                }
+                @media (max-width:467px) {
+                    max-width: 200px;
+                }
+
+            }
+        }
+    }
+
+    &__slider {
+        
+      
+
+        .swiper-wrapper {
+            margin-bottom: 42px;
+        }
+
+        &-button {
+
+            &-prev {
+                position: absolute;
+                left: 0;
+
+                padding-left: 24px;
+                margin-left: 24px;
+
+                transition: .2s ease;
+
+                cursor: pointer;
+
+                @media (max-width:567px) {
+                    padding-left: 10px;
+                    margin-left: 0;
+                }
+
+                svg {
+                    @media (max-width:991px) {
+                        
+                        clip-path: inset(0 50% 0 0);
+                    }
+
+                    @media (max-width:567px) {
+                        clip-path: inset(0 75% 0 0);
+                    }
+                }
+
+                &:hover {
+                    transition: .2s ease;
+
+                    transform: translateX(-10px);
+                }
+            }
+            &-next {
+                position: absolute;
+                right: 0;
+
+                padding-right: 24px;
+                margin-right: 24px;
+
+                cursor: pointer;
+
+                @media (max-width:567px) {
+                    padding-right: 14px;
+                    margin-right: 0;
+                }
+
+                svg {
+                    @media (max-width:991px) {
+                        clip-path: inset(0 0 0 50%);
+                    }
+                    @media (max-width:567px) {
+                        clip-path: inset(0 0 0 75%);
+                    }
+                }
+
+                &:hover {
+                    transition: .2s ease;
+
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+
+    
+    
+
+}
+
+.team-index__title {
+
+    background-color: #FD5E0F;
+    border-top: 1px solid #fff;
+
+    padding: 52px 0;
+
+    @media (max-width:991px) {
+        padding: 24px 0;
+    }
+
+    &--top {
+
+        display: flex;
+        align-items: center;
+        gap: 5vw;
+
+        @media (max-width:1439px) {
+            gap: 3vw;
+        }
+        
+    
+
+        h2 {
+            font-family: var(--second-family);
+            font-weight: 300;
+            font-size: 130px;
+            line-height: 100%;
+            letter-spacing: -0.04em;
+            color: #fff;
+
+            margin: 0;
+
+            @media (max-width:1439px) {
+                font-size: 108px;
+            }
+            @media (max-width:1199px) {
+                font-size: 82px;
+            }
+            @media (max-width:991px) {
+                font-size: 74px;
+            }
+            @media (max-width:767px) {
+                font-size: 64px;
+            }
+            @media (max-width:676px) {
+                margin-bottom: 12px;
+            }
+            @media (max-width:567px) {
+                font-size: 56px;
+            }
+            @media (max-width:467px) {
+                font-size: 52px;
+            }
+            @media (max-width:390px) {
+                font-size: 46px;
+            }
+            @media (max-width:350px) {
+                font-size: 38px;
+            }
+            @media (max-width:320px) {
+                font-size: 34px;
+            }
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 100%;
+            text-transform: uppercase;
+            text-align: justify;
+            color: #000;
+
+            @media (max-width:1199px) {
+                font-size: 22px;
+                margin: 12px 0;
+            }
+            @media (max-width:991px) {
+                font-size: 18px;
+                text-align: unset;
+                
+            }
+            @media (max-width:867px) {
+                font-size: 16px;
+            }
+            @media (max-width:676px) {
+                display: none;
+            }
+        }
+
+    }
+    &--bottom {
+        display: flex;
+        align-items: center;
+        gap: 5vw;
+
+        @media (max-width:1439px) {
+            gap: 3vw;
+        }
+        @media (max-width:676px) {
+            flex-direction: column-reverse;
+            gap: 0;
+        }
+
+        h2 {
+            font-family: var(--second-family);
+            font-weight: 300;
+            font-size: 130px;
+            line-height: 100%;
+            letter-spacing: -0.04em;
+            color: #fff;
+
+            margin: 0;
+
+            @media (max-width:1439px) {
+                font-size: 108px;
+            }
+            @media (max-width:1199px) {
+                font-size: 82px;
+            }
+            @media (max-width:991px) {
+                font-size: 74px;
+            }
+            @media (max-width:767px) {
+                font-size: 64px;
+            }
+            @media (max-width:676px) {
+                margin-bottom: 12px;
+            }
+            @media (max-width:567px) {
+                font-size: 56px;
+            }
+            @media (max-width:467px) {
+                font-size: 52px;
+            }
+            @media (max-width:390px) {
+                font-size: 46px;
+            }
+            @media (max-width:375px) {
+                font-size: 42px;
+            }
+            @media (max-width:350px) {
+                font-size: 38px;
+            }
+            @media (max-width:320px) {
+                font-size: 34px;
+            }
+        }
+        p {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 120%;
+            text-transform: uppercase;
+            text-align: justify;
+            color: #fff;
+
+            @media (max-width:1199px) {
+                font-size: 22px;
+                margin: 12px 0;
+                
+            }
+            @media (max-width:991px) {
+                font-size: 18px;
+                text-align: unset;
+                
+            }
+            @media (max-width:867px) {
+                font-size: 16px;
+            }
+            
+        }
+    }
+}
+  
