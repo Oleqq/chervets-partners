@@ -3,6 +3,13 @@
     background-color: #FD5E0F;
     padding: 200px 0 52px;
 
+    @media (max-width:767px) {
+        padding-bottom: 42px;
+    }
+    @media (max-width:567px) {
+        padding-bottom: 32px;
+    }
+
     &__wrapper {
         overflow: hidden;
 
@@ -199,6 +206,9 @@
                     max-width: 250px;
                 }
                 @media (max-width:467px) {
+                    max-width: 240px;
+                }
+                @media (max-width:390px) {
                     max-width: 200px;
                 }
 

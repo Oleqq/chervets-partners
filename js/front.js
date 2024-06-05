@@ -79,3 +79,57 @@ document.addEventListener('DOMContentLoaded', function () {
       // Добавьте другие параметры по мере необходимости
     });
   });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.slider-section__slider', {
+      // Параметры конфигурации
+      loop: true, // Бесконечный слайд
+      slidesPerView: 4,
+      speed: 1000,
+      spaceBetween: 12,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.slider-section__slider-button-next',
+        prevEl: '.slider-section__slider-button-prev',
+      },
+
+      breakpoints: {
+        1920: {
+            slidesPerView: 4,
+        },
+        1660: {
+            slidesPerView: 4,
+        },
+        1440: {
+            slidesPerView: 4,
+        },
+        1280: {
+
+        },
+        1199: {
+
+        },
+        991: {
+            slidesPerView: 3,
+        },
+        767: {
+            slidesPerView: 2,
+        },
+        676: {
+
+        },
+        567: {
+            slidesPerView: 1,
+        },
+        0: {
+            slidesPerView: 1,
+        },
+      }
+
+      // Добавьте другие параметры по мере необходимости
+    });
+  });
