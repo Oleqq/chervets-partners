@@ -1,7 +1,7 @@
 .team-index {
 
     background-color: #FD5E0F;
-    padding: 200px 0 52px;
+    
 
     @media (max-width:767px) {
         padding-bottom: 42px;
@@ -472,3 +472,19 @@
     }
 }
   
+
+
+.team-inner {
+
+    .team-index__title {
+        padding: 124px 0 52px;
+
+        @media (max-width:467px) {
+            padding-top: 100px;
+        }
+    }
+
+    .team-index {
+        padding-bottom: 42px;
+    }
+}
