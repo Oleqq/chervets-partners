@@ -13,8 +13,8 @@
     &__wrapper {
         overflow: hidden;
 
-        @media (max-width:676px) {
-            overflow: hidden;
+        @media (max-width:1199px) {
+            overflow: visible;
         }
     }
 

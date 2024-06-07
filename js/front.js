@@ -215,3 +215,21 @@ document.querySelectorAll('.services-slider__card').forEach(card => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var outerSlider = new Swiper('.news__slider', {
+        speed: 1000,
+        slidesPerView: 1,
+        speed: 1000,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.news__slider-button-next',
+          prevEl: '.news__slider-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
