@@ -247,6 +247,63 @@
   @media (max-width:1660px) {
     max-width: 90%;
   }
+  @media (max-width:567px) {
+    padding-bottom: 0;
+  }
+
+  .section-link {
+    align-items: flex-end;
+
+    position: relative;
+    bottom: 50px;
+
+    @media (max-width:567px) {
+      bottom: 30px;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+     
+    }
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: justify;
+    color: #000;
+
+    max-width: 600px;
+
+    max-width: 600px;
+    position: relative;
+    bottom: 50px;
+
+    margin: 0;
+
+    @media (max-width:1199px) {
+        font-size: 22px;
+       
+    }
+    @media (max-width:1099px) {
+      max-width: 300px;
+    }
+    @media (max-width:991px) {
+        font-size: 18px;
+        text-align: unset;
+        
+    }
+    @media (max-width:867px) {
+        font-size: 16px;
+    }
+    @media (max-width:676px) {
+        display: none;
+    }
+}
 }
 .services-grid {
 
@@ -307,6 +364,10 @@
 
       &.red {
         background-color: #A50034;
+
+        @media (max-width:567px) {
+          background-color: #C4C0BD;
+        }
       }
       &.orange {
         background-color: #FD5E0F;
@@ -324,9 +385,19 @@
 
       align-items: flex-end;
 
+      @media (max-width:1099px) {
+        align-items: unset;
+      }
+
       svg {
         margin-bottom: 6px;
         transition: .5s ease;
+
+        @media (max-width:1099px) {
+          width: 100%;
+          display: flex;
+          margin-left: 40%;
+        }
 
         path {
           transition: .5s ease;
@@ -981,6 +1052,12 @@
         "services-grid__card-19 services-grid__card-20"
         "services-grid__card-21 services-grid__card-22"
         "services-grid__card-23 services-grid__card-24"; 
+
+        padding-bottom: 120px;
+    }
+
+    @media (max-width:567px) {
+      padding-bottom: 60px;
     }
 
     &::after {
@@ -1030,7 +1107,7 @@
 .services-hero-title {
 
   .container {
-    width: 100%;
+    width: 10%;
 
   }
 
@@ -1053,6 +1130,14 @@
         width: 150%;
         height: 1px;
         background-color: #000;
+
+        @media (max-width:1099px) {
+          left: 103%;
+        }
+        @media (max-width:513px) {
+          left: 50%;
+          top: 20%;
+        }
       }
     }
 
