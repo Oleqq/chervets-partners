@@ -133,3 +133,85 @@ document.addEventListener('DOMContentLoaded', function () {
       // Добавьте другие параметры по мере необходимости
     });
   });
+
+
+
+
+document.querySelectorAll('.services-slider__card').forEach(card => {
+    card.addEventListener('click', () => {
+        document.querySelector('.services-slider__card-expanded').classList.toggle('expanded');
+    });
+});
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Инициализация внешнего слайдера
+    var outerSlider = new Swiper('.services-slider__slider', {
+        loop: true,
+        speed: 1000,
+        navigation: {
+          nextEl: '.team-index__slider-button-next',
+          prevEl: '.team-index__slider-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    // Инициализация внутреннего слайдера
+    var innerSliders = document.querySelectorAll('.services-slider__team-slider');
+
+    innerSliders.forEach(function (slider) {
+        new Swiper(slider, {
+            loop: true,
+            slidesPerView: 7,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: slider.querySelector('.swiper-button-next'),
+                prevEl: slider.querySelector('.swiper-button-prev'),
+            },
+            pagination: {
+                el: slider.querySelector('.swiper-pagination'),
+                clickable: true,
+            }, 
+
+            breakpoints: {
+              2560: {
+                  slidesPerView: 7,
+              },
+              1920: {
+                  slidesPerView: 7,
+              },
+              1660: {
+                  slidesPerView: 7,
+              },
+              1440: {
+                  slidesPerView: 7,
+              },
+              1280: {
+                  slidesPerView: 6,
+              },
+              1199: {
+                  slidesPerView: 5,
+              },
+              991: {
+                  slidesPerView: 5,
+              },
+              767: {
+                  slidesPerView: 4,
+              },
+              676: {
+                  slidesPerView: 3,
+              },
+              567: {
+                  slidesPerView: 3,
+              },
+              0: {
+                  slidesPerView: 2,
+              },
+            },
+        });
+    });
+});
