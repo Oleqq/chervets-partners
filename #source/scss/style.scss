@@ -10,6 +10,8 @@
 
 @import "modules/services";
 
+@import "modules/contacts";
+
 :root {
     --font-family: "Nunito Sans", sans-serif;
     --second-family: "Roboto Slab", sans-serif;
@@ -98,8 +100,15 @@ $transition-time: 0.3s;
 
   z-index: 100;
 
+
+
   &.border-bottom {
     @media (max-width:1099px) {
+      border-bottom: 1px solid #000;
+      box-shadow: none;
+    }
+
+    &.desktop {
       border-bottom: 1px solid #000;
       box-shadow: none;
     }

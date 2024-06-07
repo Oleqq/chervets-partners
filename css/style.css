@@ -2150,6 +2150,538 @@ a {
   gap: 16px;
 }
 
+.contacts-title {
+  padding: 142px 0 42px;
+  border-bottom: 1px solid #000;
+}
+@media (max-width: 1440px) {
+  .contacts-title {
+    padding-top: 108px;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 567px) {
+  .contacts-title {
+    padding-top: 104px;
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 467px) {
+  .contacts-title {
+    padding-top: 88px;
+  }
+}
+.contacts-title h2 {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 130px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: #000;
+  margin: 0;
+}
+@media (max-width: 1439px) {
+  .contacts-title h2 {
+    font-size: 108px;
+  }
+}
+@media (max-width: 1199px) {
+  .contacts-title h2 {
+    font-size: 82px;
+  }
+}
+@media (max-width: 991px) {
+  .contacts-title h2 {
+    font-size: 74px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts-title h2 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 676px) {
+  .contacts-title h2 {
+    font-size: 56px;
+  }
+}
+@media (max-width: 567px) {
+  .contacts-title h2 {
+    font-size: 56px;
+  }
+}
+@media (max-width: 467px) {
+  .contacts-title h2 {
+    font-size: 52px;
+  }
+}
+@media (max-width: 390px) {
+  .contacts-title h2 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 375px) {
+  .contacts-title h2 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 350px) {
+  .contacts-title h2 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 320px) {
+  .contacts-title h2 {
+    font-size: 34px;
+  }
+}
+.contacts-title__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .contacts-title__wrapper {
+    justify-content: center;
+  }
+}
+.contacts-title__wrapper div {
+  display: flex;
+  gap: 24px;
+}
+@media (max-width: 767px) {
+  .contacts-title__wrapper div {
+    display: none;
+  }
+}
+.contacts-title__wrapper div a {
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease;
+}
+.contacts-title__wrapper div a:hover {
+  transition: 0.5s ease;
+}
+.contacts-title__wrapper div a:hover svg {
+  transition: 0.5s ease;
+}
+.contacts-title__wrapper div a:hover svg path {
+  transition: 0.5s ease;
+  fill: #fd5e0f;
+}
+.contacts-title__wrapper div a svg {
+  transition: 0.5s ease;
+}
+.contacts-title__wrapper div a svg path {
+  transition: 0.5s ease;
+}
+.contacts-mail {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid #000;
+}
+@media (max-width: 1440px) {
+  .contacts-mail {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+.contacts-mail a {
+  font-family: var(--font-family);
+  font-size: 92px;
+  color: #000;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+@media (max-width: 1660px) {
+  .contacts-mail a {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1439px) {
+  .contacts-mail a {
+    font-size: 62px;
+  }
+}
+@media (max-width: 1199px) {
+  .contacts-mail a {
+    font-size: 52px;
+  }
+}
+@media (max-width: 991px) {
+  .contacts-mail a {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts-mail a {
+    font-size: 34px;
+  }
+}
+@media (max-width: 676px) {
+  .contacts-mail a {
+    font-size: 28px;
+  }
+}
+@media (max-width: 567px) {
+  .contacts-mail a {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 467px) {
+  .contacts-mail a {
+    font-size: 22px;
+  }
+}
+@media (max-width: 375px) {
+  .contacts-mail a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .contacts-mail a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .contacts-mail a {
+    font-size: 16px;
+  }
+}
+.contacts-mail a svg {
+  transition: 0.5s ease;
+}
+.contacts-mail a svg path {
+  transition: 0.5s ease;
+}
+.contacts-mail a:hover {
+  transition: 0.5s ease;
+  color: #FD5E0F;
+}
+.contacts-mail a:hover svg {
+  transition: 0.5s ease;
+}
+.contacts-mail a:hover svg path {
+  transition: 0.5s ease;
+  fill: #fd5e0f;
+}
+.contacts-tel {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid #000;
+}
+@media (max-width: 1440px) {
+  .contacts-tel {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 567px) {
+  .contacts-tel {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+.contacts-tel .tel {
+  font-family: var(--font-family);
+  font-size: 92px;
+  color: #000;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+@media (max-width: 1660px) {
+  .contacts-tel .tel {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1439px) {
+  .contacts-tel .tel {
+    font-size: 62px;
+  }
+}
+@media (max-width: 1199px) {
+  .contacts-tel .tel {
+    font-size: 52px;
+  }
+}
+@media (max-width: 991px) {
+  .contacts-tel .tel {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts-tel .tel {
+    font-size: 34px;
+  }
+}
+@media (max-width: 676px) {
+  .contacts-tel .tel {
+    font-size: 28px;
+  }
+}
+@media (max-width: 567px) {
+  .contacts-tel .tel {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 467px) {
+  .contacts-tel .tel {
+    font-size: 22px;
+  }
+}
+@media (max-width: 375px) {
+  .contacts-tel .tel {
+    font-size: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .contacts-tel .tel {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .contacts-tel .tel {
+    font-size: 16px;
+  }
+}
+.contacts-tel .tel svg {
+  transition: 0.5s ease;
+}
+.contacts-tel .tel svg path {
+  transition: 0.5s ease;
+}
+@media (max-width: 767px) {
+  .contacts-tel .tel svg path {
+    clip-path: inset(0 0 0 50%);
+  }
+}
+.contacts-tel .tel:hover {
+  transition: 0.5s ease;
+  color: #FD5E0F;
+}
+.contacts-tel .tel:hover svg {
+  transition: 0.5s ease;
+}
+.contacts-tel .tel:hover svg path {
+  transition: 0.5s ease;
+  fill: #fd5e0f;
+}
+.contacts-tel .section-link {
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media (max-width: 676px) {
+  .contacts-tel .section-link {
+    display: none;
+  }
+}
+.contacts-tel .section-link a {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+@media (max-width: 867px) {
+  .contacts-tel .section-link a {
+    align-items: flex-end;
+    width: 50%;
+  }
+}
+.contacts-tel .section-link a:hover {
+  transition: 0.5s ease;
+  color: #FD5E0F;
+  right: -10px;
+}
+.contacts-tel .section-link a:hover svg {
+  transition: 0.5s ease;
+}
+.contacts-tel .section-link a:hover svg path {
+  fill: #FD5E0F;
+}
+.contacts-tel .section-link a svg {
+  transition: 0.5s ease;
+}
+@media (max-width: 867px) {
+  .contacts-tel .section-link a svg {
+    clip-path: inset(0 0 0 50%);
+    width: 250px;
+  }
+}
+.contacts-tel .section-link a svg path {
+  transition: 0.5s ease;
+}
+.contacts-tel__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacts-address {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+@media (max-width: 1440px) {
+  .contacts-address {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts-address {
+    border-bottom: 1px solid #000;
+  }
+}
+.contacts-address a {
+  font-family: var(--font-family);
+  font-size: 92px;
+  color: #fd5e0f;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+@media (max-width: 1660px) {
+  .contacts-address a {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1439px) {
+  .contacts-address a {
+    font-size: 62px;
+  }
+}
+@media (max-width: 1199px) {
+  .contacts-address a {
+    font-size: 52px;
+  }
+}
+@media (max-width: 991px) {
+  .contacts-address a {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts-address a {
+    font-size: 34px;
+  }
+}
+@media (max-width: 676px) {
+  .contacts-address a {
+    font-size: 28px;
+  }
+}
+@media (max-width: 567px) {
+  .contacts-address a {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 467px) {
+  .contacts-address a {
+    font-size: 22px;
+  }
+}
+@media (max-width: 375px) {
+  .contacts-address a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .contacts-address a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .contacts-address a {
+    font-size: 16px;
+  }
+}
+.contacts-link {
+  padding-top: 42px;
+  padding-right: 42px;
+  padding-bottom: 42px;
+}
+@media (max-width: 767px) {
+  .contacts-link {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 42px;
+  }
+}
+@media (max-width: 567px) {
+  .contacts-link {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.contacts-link__socials {
+  align-items: center;
+  gap: 16px;
+  display: none;
+}
+@media (max-width: 767px) {
+  .contacts-link__socials {
+    display: flex;
+  }
+}
+.contacts-link .section-link {
+  align-items: flex-end;
+}
+.contacts-link .section-link a {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  transition: 0.5s ease;
+}
+@media (max-width: 567px) {
+  .contacts-link .section-link a {
+    width: 200px;
+  }
+}
+.contacts-link .section-link a svg {
+  transition: 0.5s ease;
+}
+@media (max-width: 567px) {
+  .contacts-link .section-link a svg {
+    width: 200px;
+  }
+}
+.contacts-link .section-link a svg path {
+  transition: 0.5s ease;
+}
+.contacts-link .section-link a:hover {
+  transition: 0.5s ease;
+  color: #FD5E0F;
+}
+.contacts-link .section-link a:hover svg {
+  transition: 0.5s ease;
+}
+.contacts-link .section-link a:hover svg path {
+  transition: 0.5s ease;
+  fill: #fd5e0f;
+}
+
+.marquee-container {
+  width: 100%; /* ширина контейнера */
+  overflow: hidden; /* скрытие текста, который выходит за пределы контейнера */
+  white-space: nowrap; /* предотвращение переноса текста на новую строку */
+  box-sizing: border-box; /* учитывать границы и внутренние отступы в общей ширине */
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: scroll-right 20s linear infinite; /* анимация прокрутки справа налево */
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(75%); /* начальная позиция - за пределами справа */
+  }
+  100% {
+    transform: translateX(-100%); /* конечная позиция - за пределами слева */
+  }
+}
 :root {
   --font-family: "Nunito Sans", sans-serif;
   --second-family: "Roboto Slab", sans-serif;
@@ -2206,6 +2738,10 @@ a {
     border-bottom: 1px solid #000;
     box-shadow: none;
   }
+}
+.header.border-bottom.desktop {
+  border-bottom: 1px solid #000;
+  box-shadow: none;
 }
 .header__container {
   display: flex;
