@@ -169,8 +169,8 @@ document.querySelectorAll('.services-slider__card').forEach(card => {
             slidesPerView: 7,
             spaceBetween: 10,
             navigation: {
-                nextEl: slider.querySelector('.swiper-button-next'),
-                prevEl: slider.querySelector('.swiper-button-prev'),
+                nextEl: '.services-slider__team-slider-button-prev',
+                prevEl: '.services-slider__team-slider-button-next',
             },
             pagination: {
                 el: slider.querySelector('.swiper-pagination'),
@@ -231,5 +231,25 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-pagination',
             clickable: true,
         },
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const photo = document.getElementById('js-photo');
+
+    photo.addEventListener("mousemove", function(e) {
+        const radius = 24; // Радиус области, в которой фотография станет цветной
+        const x = e.offsetX;
+        const y = e.offsetY;
+
+        const distance = Math.sqrt(x*x + y*y); // Расстояние от курсора до центра фотографии
+
+        if (distance < radius) {
+            photo.classList.add('color'); // Добавляем класс, чтобы сделать фотографию цветной
+        } else {
+            photo.classList.remove('color'); // Убираем класс, чтобы вернуть фотографию в черно-белый режим
+        }
     });
 });

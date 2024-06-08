@@ -281,6 +281,28 @@
     
 }
 
+#js-photo {
+    position: relative;
+    display: inline-block;
+}
+
+#js-photo::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 24px); /* Установите радиус */
+    left: calc(50% - 24px); /* Установите радиус */
+    width: 48px; /* Диаметр круга (равен двойному радиусу) */
+    height: 48px; /* Диаметр круга (равен двойному радиусу) */
+    border-radius: 50%;
+    border: 2px solid orange; /* Цвет круга */
+    pointer-events: none; /* Чтобы круг не перехватывал события мыши */
+    z-index: 999; /* Установите z-index выше, чтобы круг был поверх изображения */
+    display: none; /* По умолчанию круг скрыт */
+}
+
+#js-photo.color::after {
+    display: block; /* Показываем круг, если изображение становится цветным */
+}
 
 .member-hero-mobile {
 
