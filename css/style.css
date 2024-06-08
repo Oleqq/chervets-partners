@@ -1206,6 +1206,16 @@ a {
     clip-path: inset(0 75% 0 0);
   }
 }
+@media (max-width: 467px) {
+  .team-index__slider-button-prev svg {
+    clip-path: inset(0 65% 0 0);
+  }
+}
+@media (max-width: 367px) {
+  .team-index__slider-button-prev svg {
+    clip-path: inset(0 85% 0 0);
+  }
+}
 .team-index__slider-button-prev:hover {
   transition: 0.2s ease;
   transform: translateX(-10px);
@@ -1233,7 +1243,17 @@ a {
     clip-path: inset(0 0 0 75%);
   }
 }
-.team-index__slider-button-next:hover {
+@media (max-width: 467px) {
+  .team-index__slider-button-next svg {
+    clip-path: inset(0 0 0 65%);
+  }
+}
+@media (max-width: 367px) {
+  .team-index__slider-button-next svg {
+    clip-path: inset(0 0 0 85%);
+  }
+}
+.team-index__slider-button:hover {
   transition: 0.2s ease;
   transform: translateX(10px);
 }
@@ -2011,12 +2031,7 @@ a {
 }
 @media (max-width: 1380px) {
   .services-slider__service {
-    gap: 224px;
-  }
-}
-@media (max-width: 467px) {
-  .services-slider__service {
-    gap: 282px;
+    gap: 314px;
   }
 }
 .services-slider__service::before {
@@ -2038,6 +2053,17 @@ a {
     font-size: 14px;
   }
 }
+@media (max-width: 1380px) {
+  .services-slider__service::before {
+    top: 56%;
+    left: 0%;
+  }
+}
+@media (max-width: 467px) {
+  .services-slider__service::before {
+    top: 63%;
+  }
+}
 .services-slider__slider {
   margin-bottom: 42px;
 }
@@ -2050,6 +2076,9 @@ a {
 .services-slider__team-slider {
   overflow: hidden;
   position: relative;
+}
+.services-slider__team-slider .swiper-wrapper {
+  justify-content: flex-end;
 }
 .services-slider__team-slider-button-prev {
   position: absolute;
@@ -2142,7 +2171,7 @@ a {
   top: 50%;
   background-color: #000;
   left: -350%;
-  z-index: -1;
+  z-index: -5;
 }
 @media (max-width: 1920px) {
   .services-slider__card {
@@ -5378,6 +5407,16 @@ a {
     clip-path: inset(0 75% 0 0);
   }
 }
+@media (max-width: 467px) {
+  .slider-section__slider-button-prev svg {
+    clip-path: inset(0 65% 0 0);
+  }
+}
+@media (max-width: 367px) {
+  .slider-section__slider-button-prev svg {
+    clip-path: inset(0 85% 0 0);
+  }
+}
 .slider-section__slider-button-prev:hover {
   transition: 0.2s ease;
   transform: translateX(-10px);
@@ -5405,7 +5444,17 @@ a {
     clip-path: inset(0 0 0 75%);
   }
 }
-.slider-section__slider-button-next:hover {
+@media (max-width: 467px) {
+  .slider-section__slider-button-next svg {
+    clip-path: inset(0 0 0 65%);
+  }
+}
+@media (max-width: 367px) {
+  .slider-section__slider-button-next svg {
+    clip-path: inset(0 0 0 85%);
+  }
+}
+.slider-section__slider-button:hover {
   transition: 0.2s ease;
   transform: translateX(10px);
 }

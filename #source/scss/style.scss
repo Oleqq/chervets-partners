@@ -1665,6 +1665,13 @@ $transition-time: 0.3s;
                 @media (max-width:567px) {
                     clip-path: inset(0 75% 0 0);
                 }
+
+                @media (max-width:467px) {
+                  clip-path: inset(0 65% 0 0);
+                }
+                @media (max-width:367px) {
+                  clip-path: inset(0 85% 0 0);
+                }
             }
 
             &:hover {
@@ -1694,6 +1701,13 @@ $transition-time: 0.3s;
                 @media (max-width:567px) {
                     clip-path: inset(0 0 0 75%);
                 }
+                @media (max-width:467px) {
+                  clip-path: inset(0 0 0 65%);
+                }
+                @media (max-width:367px) {
+                  clip-path: inset(0 0 0 85%);
+                }
+              }
             }
 
             &:hover {
@@ -1705,7 +1719,7 @@ $transition-time: 0.3s;
     }
   }
 
-}
+
 
 
 

@@ -148,7 +148,7 @@ document.querySelectorAll('.services-slider__card').forEach(card => {
   document.addEventListener('DOMContentLoaded', function () {
     // Инициализация внешнего слайдера
     var outerSlider = new Swiper('.services-slider__slider', {
-        loop: true,
+        
         speed: 1000,
         navigation: {
           nextEl: '.team-index__slider-button-next',
@@ -165,7 +165,7 @@ document.querySelectorAll('.services-slider__card').forEach(card => {
 
     innerSliders.forEach(function (slider) {
         new Swiper(slider, {
-            loop: true,
+            
             slidesPerView: 7,
             spaceBetween: 10,
             navigation: {

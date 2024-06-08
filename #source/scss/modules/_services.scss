@@ -15,10 +15,10 @@
     position: relative;
 
     @media (max-width:1380px) {
-      gap: 224px;
+      gap: 314px;
     }
     @media (max-width:467px) {
-      gap: 282px;
+      
     }
 
     &::before {
@@ -41,6 +41,13 @@
       @media (max-width:1440px) {
         font-size: 14px;
       }
+      @media (max-width:1380px) {
+        top: 56%;
+        left: 0%;
+      }
+      @media (max-width:467px) {
+        top: 63%;
+      }
     } 
 
   }
@@ -60,6 +67,11 @@
     overflow: hidden;
 
     position: relative;
+
+    .swiper-wrapper {
+      justify-content: flex-end;
+    }
+
 
     &-button {
 
@@ -178,7 +190,7 @@
       top: 50%;
       background-color: #000;
       left: -350%;
-      z-index: -1;
+      z-index: -5;
   
     }
 
