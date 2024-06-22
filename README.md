@@ -26,3 +26,8 @@
 </a>
 <br>
 <br>
+<a href="https://chervets-partners.vercel.app/contacts.html">
+    Контакты
+</a>
+<br>
+<br>

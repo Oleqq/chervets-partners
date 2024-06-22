@@ -1,10 +1,6 @@
 .member-hero {
-
     padding-top: 100px;
-
     position: relative;
-
-
     &.desktop {
         @media (max-width:1099px) {
             display: none;
@@ -12,28 +8,25 @@
     }
     &.mobile {
         display: none;
-
         padding: 42px 0;
-
         margin-top: 95px;
-
+        .img-container {
+            width: 100%;
+            max-width: 100%;
+        }
         img {
             width: 100%;
             object-fit: cover;
             object-position: center;
         }
-
         @media (max-width:1099px) {
             display: block;
             padding: 0;
         }
-
         @media (max-width:467px) {
-            margin-top: 74px;
+            margin-top: 100px;
             padding: 0;
         }
-
-        
     }
 
 
@@ -42,82 +35,118 @@
     }
 
 
-
-
-
-
-
-    &__container {
-
-    }
-    &__wrapper {
-
+    .member-content-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &__img {
-
-        
-
+        width: 100%;
+        height: calc(100vh - 100px);
         img {
             width: 100%;
-            height: calc(100vh - 100px);
+            height: 100%;
             object-fit: cover;
             object-position: center;
-
             display: flex;
         }
     }
 
-    &__name {
-
+    .member-hero__description {
         position: absolute;
-        top: 142px;
-        left: 42px;
+        top: 160px;
+        left: 0;
+        height: 89dvh;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (max-width: 1920px) {
+            height: 85dvh;
+            max-width: 50%;
+        }
+        .back-link {
+            width: fit-content;
+            margin-top: auto;
+            margin-bottom: 50px;
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                    transition: 0.2s ease;
+                }
+            }
+            svg {
+                width: 35px;
+                height: 35px;
+                transition: 0.2s ease;
+            }
+        }
+    }
 
-        h2 {
+    &__name {
+        // position: absolute;
+        // top: 160px;
+        // left: 0;
+        margin-bottom: 100px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-family: var(--font-family);
+        @media (max-width:1920px) {
+            margin-bottom: 60px;
+        }
+        span {
             font-family: var(--font-family);
             font-size: 120px;
-            line-height: 115px;
+            line-height: 1;
             margin: 0;
-
+            text-align: right;
+            font-weight: 300;
             @media (max-width:1920px) {
                 font-size: 110px;
-                line-height: 110px;
             }
             @media (max-width:1660px) {
                 font-size: 100px;
-                line-height: 100px;
             }
             @media (max-width:1440px) {
                 font-size: 80px;
-                line-height: 80px;
-            
             }
 
             &:not(:first-of-type) {
                 color: #FD5E0F;
                 font-weight: 700;
                 margin-left: 24px;
-
-                display: flex;
-                justify-content: flex-end;
+                // display: flex;
+                // justify-content: flex-end;
             }
         }
     }
 
     &__info {
-        position: absolute;
+        // position: absolute;
 
-        top: 40%;
-        left: 42px;
+        // top: 31%;
+        // left: 0;
 
-        @media (max-height:900px) {
-            top: 40%;
+        // @media (max-height:900px) {
+        //     top: 40%;
+        // }
+        // @media (max-height:800px) {
+        //     top: 42%;
+        // }
+
+        margin-bottom: 200px;
+        @media (max-width:1920px) {
+            margin-bottom: 150px;
         }
-        @media (max-height:800px) {
-            top: 42%;
+        @media (max-width:1699px) {
+            margin-bottom: 70px;
         }
-
         p {
             font-family: var(--font-family);
             font-weight: 400;
@@ -127,7 +156,7 @@
             text-align: justify;
             color: #fff;
             max-width: 800px;
-
+            margin-top: 0;
             @media (max-width:1920px) {
                 font-size: 16px;
             }
@@ -142,9 +171,6 @@
             @media (max-height:800px) {
                 font-size: 12px;
             }
-            
-
-            
         }
     }
 
@@ -153,19 +179,19 @@
 
         .section-link {
 
-            
+
         }
 
         &-1 {
 
-            position: absolute;
-            bottom: 17.5%;
-            left: 42px;
+            // position: absolute;
+            // top: 70%;
+            // left: 0;
 
 
-            @media (max-height:1000px) {
-                bottom: 42px;
-            }
+            // @media (max-height:1000px) {
+            //     bottom: 42px;
+            // }
 
             .section-link {
 
@@ -174,45 +200,47 @@
                 a {
                     display: flex;
                     flex-direction: column;
-
                     color: #fff;
-
-                    font-size: 16px;
-
+                    font-size: 20px;
+                }
+                svg {
+                    width: 400px;
+                    height: auto;
                 }
 
             }
-        } 
+        }
 
         &-2 {
 
             .section-link {
-
                 position: absolute;
-                right: 42px;
-                bottom: 42px;
-
+                right: 0;
+                bottom: 50px;
                 a {
                     display: flex;
                     flex-direction: column;
-
                     color: #fff;
-
+                    font-size: 20px;
+                    svg {
+                        width: 400px;
+                        height: auto;
+                    }
                 }
 
             }
-        } 
-        
+        }
+
     }
 
     &__service {
-        
+
         position: absolute;
 
-        top: 142px;
-        right: 24px;
+        top: 160px;
+        right: 0;
 
-        max-width: 350px;
+        max-width: 400px;
 
         h6 {
             font-family: var(--font3);
@@ -257,28 +285,15 @@
 
             &:hover {
                 transition: .2s ease;
-                
+
                 border-bottom: 1px solid #fff;
             }
         }
-
         span {
             color:  #fff;
         }
     }
 
-
-
-
-
-
-
-    .img-container {
-
-        
-    }
-
-    
 }
 
 #js-photo {
@@ -306,9 +321,6 @@
 
 .member-hero-mobile {
 
-    
-    
-
     &__container {
         width: 100%;
     }
@@ -328,7 +340,7 @@
 
         display: flex;
         flex-direction: column;
-        
+
         margin-bottom: 42px;
 
         @media (max-width:767px) {
@@ -339,7 +351,7 @@
         }
 
         h2 {
-
+            flex-shrink: 0;
             @media (max-width:567px) {
                 font-size: 42px !important;
             }
@@ -354,15 +366,18 @@
                 font-weight: 300;
                 font-size: 50px;
                 color: #000;
-
                 margin: 0;
+                font-family: var(--font-family);
+                text-transform: uppercase;
             }
 
-            div {
+            .member-hero-post {
                 display: flex;
                 flex-direction: column;
 
                 justify-content: center;
+                padding-left: 20px;
+                flex-shrink: 1;
 
                 h6 {
                     font-size: 14px;
@@ -403,8 +418,8 @@
                 font-weight: 600;
                 font-size: 50px;
                 color: #FD5E0F;
-
-                margin: 0 0 0 24px;
+                margin: 0 0 0 50px;
+                text-transform: uppercase;
             }
         }
     }
@@ -422,12 +437,12 @@
 
         margin-bottom: 42px;
 
-        
+
         @media (max-width:767px) {
             padding: 24px 24px;
         }
         @media (max-width:567px) {
-            padding: 12px 24px;
+            padding: 12px 2.5%;
             gap: 8px;
         }
         @media (max-width:467px) {
@@ -514,7 +529,7 @@
         @media (max-width:467px) {
             max-height: 300px;
         }
-        
+
 
         p {
             font-family: var(--font-family);
@@ -567,7 +582,7 @@
                 }
 
             }
-        } 
+        }
 
         &-2 {
             display: flex;
@@ -586,7 +601,347 @@
                 }
 
             }
-        } 
+        }
+    }
+}
+
+.member-hero__achievements {
+    color: black;
+    > .container {
+        padding-top: 112px;
+        @media (max-width: 1299px) {
+            padding-top: 90px;
+        }
+    }
+    .member-hero__achievements-title-wrapper {
+        padding-top: 70px;
+        padding-bottom: 100px;
+        position: relative;
+        @media (max-width: 1920px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        @media (max-width: 1699px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &::after {
+            width: 5000px;
+            content: "";
+            bottom: 0;
+            left: -50%;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+        }
+        .member-hero__achievements-title {
+            margin: 0;
+            font-weight: 300;
+            font-size: 120px;
+            color: #000;
+            margin: 0;
+            font-family: var(--font-family);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: 1699px) {
+                font-size: 100px;
+            }
+            @media (max-width: 1099px) {
+                font-size: 80px;
+            }
+            @media (max-width: 767px) {
+                font-size: 50px;
+            }
+            @media (max-width: 575px) {
+                font-size: 40px;
+            }
+            .surname {
+                color: #FD5E0F;
+                font-weight: 700;
+            }
+        }
+    }
+    .member-hero__achievements-items {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        @media (max-width: 991px) {
+            flex-wrap: wrap;
+        }
+        &::after {
+            width: 5000px;
+            content: "";
+            top: 50%;
+            left: -50%;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+        &--top {
+            margin-top: 118px;
+            @media (max-width: 1920px) {
+                margin-top: 75px;
+            }
+            @media (max-width: 1199px) {
+                margin-top: 50px;
+            }
+            @media (max-width: 991px) {
+                margin-top: 20px;
+            }
+            @media (max-width: 767px) {
+                margin-top: 50px;
+            }
+        }
+        &--bottom {
+            margin-top: 80px;
+            @media (max-width: 1199px) {
+                margin-top: 50px;
+            }
+            @media (max-width: 991px) {
+                margin-top: 20px;
+            }
+            @media (max-width: 575px) {
+                margin-top: 0;
+            }
+            .member-hero__achievements-item {
+                margin-left: 200px;
+                @media (max-width: 1920px) {
+                    margin-left: 150px;
+                }
+                @media (max-width: 1699px) {
+                    margin-left: 100px;
+                }
+                @media (max-width: 1399px) {
+                    margin-left: 0;
+                }
+            }
+        }
+        .member-hero__achievements-item {
+            height: 200px;
+            width: 30%;
+            margin-right: 250px;
+            @media (max-width: 1920px) {
+                margin-right: 200px;
+            }
+            @media (max-width: 1399px) {
+                margin-right: 250px;
+            }
+            @media (max-width: 1099px) {
+                margin-right: 220px;
+            }
+            @media (max-width: 991px) {
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 20px;
+                position: relative;
+                &::after {
+                    width: 5000px;
+                    content: "";
+                    top: 50%;
+                    left: -50%;
+                    height: 1px;
+                    background-color: black;
+                    position: absolute;
+                    z-index: -1;
+                }
+            }
+            @media (max-width: 575px) {
+                margin-bottom: 0;
+            }
+        }
+        .member-hero__achievements-item-title {
+            height: 200px;
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: #FD5E0F;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            @media (max-width: 767px) {
+                height: 170px;
+                width: 170px;
+            }
+            @media (max-width: 575px) {
+                height: 150px;
+                width: 150px;
+            }
+            h4 {
+                color: white;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 110%;
+                text-transform: uppercase;
+                text-align: justify;
+                color: #fff;
+                width: fit-content;
+                margin: 0;
+                max-width: 100%;
+                hyphens: auto;
+                @media (max-width: 1440px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 1024px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 575px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .member-hero__achievements-item-content {
+            overflow: hidden;
+            transform: translate(200px, -200px);
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 0;
+            height: 200px;
+            transition: 0.5s 0.5s ease;
+            background-color: white;
+            border: 1px solid #FD5E0F;
+            border-left: none;
+            @media (max-width: 767px) {
+                transform: translate(170px, -170px);
+            }
+            @media (max-width: 575px) {
+                transform: translate(150px, -150px);
+            }
+            > .content {
+                overflow: hidden;
+                p {
+                    transition: 0.2s ease;
+                }
+                &.scroll-text {
+                    max-height: 200px;
+                    overflow: visible;
+                    box-sizing: border-box;
+                    text-transform: uppercase;
+                    padding: 20px;
+                    font-size: 20px;
+                    @media (max-width: 1699px) {
+                        font-size: 18px;
+                        padding: 16px;
+                    }
+                    @media (max-width: 1199px) {
+                        font-size: 16px;
+                    }
+                    @media (max-width: 767px) {
+                        max-height: 170px;
+                        font-size: 14px;
+                    }
+                    @media (max-width: 575px) {
+                        max-height: 150px;
+                        font-size: 12px;
+                    }
+                    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+                        width: 20px;
+                        height: 20px;
+                        right: 2px;
+                        box-sizing: border-box;
+                        @media (max-width: 575px) {
+                            width: 15px;
+                            height: 15px;
+                            right: 0;
+                        }
+                    }
+                    .mCustomScrollBox {
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+        .member-hero__achievements-item-content.active {
+            top: 0;
+            left: 200px;
+            opacity: 1;
+            width: 450px;
+            height: 200px;
+            transition: 0.5s 0.5s ease;
+            @media (max-width: 1920px) {
+                width: 400px;
+            }
+            @media (max-width: 1699px) {
+                width: 350px;
+            }
+            @media (max-width: 1399px) {
+                width: 300px;
+            }
+            @media (max-width: 1199px) {
+                width: 250px;
+            }
+            @media (max-width: 991px) {
+                width: 550px;
+            }
+            @media (max-width: 767px) {
+                height: 170px;
+                width: 400px;
+            }
+            @media (max-width: 699px) {
+                width: 350px;
+            }
+            @media (max-width: 575px) {
+                height: 150px;
+                width: 300px;
+            }
+            @media (max-width: 499px) {
+                width: 250px;
+            }
+            @media (max-width: 449px) {
+                width: 200px;
+            }
+            > .content {
+                p {
+                    transition: 0.2s ease;
+                }
+            }
+        }
+    }
+    .swiper-navigation-wrapper--member {
+        margin-top: 125px;
+        position: relative;
+        margin-bottom: 50px;
+        @media (max-width: 1920px) {
+            margin-top: 60px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .ui-section__button--primary {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            transition: 0.2s ease;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            &:hover {
+                transform: translateX(-50%) scale(1.15);
+                transition: 0.2s ease;
+            }
+        }
+        .member-hero__slider-button-prev {
+            svg {
+                @media (max-width: 991px) {
+                    width: 250px;
+                }
+                @media (max-width: 767px) {
+                    width: 200px;
+                }
+                @media (max-width: 575px) {
+                    width: 150px;
+                }
+            }
+        }
     }
 }
 
@@ -604,18 +959,16 @@
     margin: 12px 0;
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background-color: orange !important; /* Color of the scrollbar thumb */
+    background-color: #fd5e0f !important; /* Color of the scrollbar thumb */
     border-radius: 0px !important; /* Making the thumb square */
     width: 32px;
     height: 32px;
-    right: 48%; 
+    right: 48%;
     opacity: 1;
-
-
     @media (max-width:467px) {
-        width: 24px;
-        height: 24px;
-        right: 24%;
+        width: 20px;
+        height: 20px;
+        right: 10%;
     }
     @media (max-width:390px) {
         width: 16px;

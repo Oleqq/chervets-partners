@@ -1,0 +1,68 @@
+/*Стили для страницы 404 - начало*/
+.lostpage {
+    display: flex;
+    flex-direction: column;
+    .lostpage-content {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex-grow: 1;
+        > .container {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            color: black;
+            text-transform: uppercase;
+            font-size: 25px;
+            line-height: 1.1;
+            text-align: center;
+        }
+        .section-link {
+            &:hover {
+                svg {
+                    transform: translateX(10px);
+                    transition: 0.2s ease;
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                color: #FD5E0F;
+                text-transform: uppercase;
+            }
+            svg {
+                transition: 0.2s ease;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+.lostpage .contacts-title__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    h2 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        text-transform: uppercase;
+        color: #FD5E0F;
+        gap: 70px;
+        @media (max-width: 1199px) {
+            gap: 50px;
+        }
+        @media (max-width: 991px) {
+            gap: 40px;
+        }
+        @media (max-width: 767px) {
+            gap: 30px;
+        }
+    }
+}
+/*Стили для страницы 404 - конец*/
