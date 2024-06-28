@@ -14,6 +14,8 @@
 
 @import "modules/lostpage";
 
+@import "modules/insights";
+
 :root {
 	--font-family: "Nunito Sans", sans-serif;
 	--second-family: "Roboto Slab", sans-serif;
@@ -3505,7 +3507,7 @@ $transition-time: 0.3s;
 
 
 
-	// новые строчки
+	// new
 	&-body {
 
 		

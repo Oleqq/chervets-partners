@@ -30,6 +30,11 @@
     }
 
 
+    &__slider {
+
+
+    }
+
     .link-container {
         padding: 24px 0;
     }
@@ -1026,3 +1031,32 @@
 .mCSB_scrollTools .mCSB_draggerRail {
     background-color: #ff6600 !important; /* Color of the scrollbar track */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// new
+.member-hero__slider {
+
+    .swiper-wrapper {
+
+        
+        .swiper-slide {
+            
+            &:nth-child(1) {
+                z-index: 1;
+            }
+        }  
+        
+    }
+    
+}
+
