@@ -712,6 +712,9 @@
             }
             .member-hero__achievements-item {
                 margin-left: 200px;
+
+                cursor: pointer;
+
                 @media (max-width: 1920px) {
                     margin-left: 150px;
                 }
@@ -775,11 +778,22 @@
                 height: 150px;
                 width: 150px;
             }
+
+            .arrow {
+                transition: .2s ease;
+            }
+            &.expanded {
+                .arrow {
+                    transform: rotate(-180deg);
+                    transition: 0.2s ease;
+                }    
+            }
+
             h4 {
                 color: white;
                 font-family: var(--font-family);
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 110%;
                 text-transform: uppercase;
                 text-align: justify;
@@ -788,14 +802,44 @@
                 margin: 0;
                 max-width: 100%;
                 hyphens: auto;
-                @media (max-width: 1440px) {
-                    font-size: 18px;
-                }
-                @media (max-width: 1024px) {
+                @media (max-width: 1920px) {
                     font-size: 16px;
                 }
-                @media (max-width: 575px) {
+                @media (max-width: 1660px) {
+                    font-size: 15px;
+                }
+                @media (max-width: 1499px) {
                     font-size: 14px;
+                }
+                @media (max-width:1380px) {
+                    font-size: 12px;
+                }
+                @media (max-width: 1280px) {
+                    font-size: 12px;
+                }
+                @media (max-width: 1199px) {
+                    font-size: 10px;
+                }
+                @media (max-width: 1099px) {
+                    font-size: 9px;
+                    // word-break: break-word;
+                }
+                @media (max-width:991px) {
+                    font-size: 14px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 12px;
+                }
+                @media (max-width: 676px) {
+                }
+                @media (max-width: 575px) {
+                    font-size: 16px;
+                }
+                @media (max-width:467px) {
+                    font-size: 14px;
+                }
+                @media (max-width:390px) {
+                    font-size: 12px;
                 }
             }
         }
@@ -828,17 +872,20 @@
                     box-sizing: border-box;
                     text-transform: uppercase;
                     padding: 20px;
-                    font-size: 20px;
-                    @media (max-width: 1699px) {
-                        font-size: 18px;
+                    font-size: 18px;
+                    @media (max-width: 1660px) {
+                        font-size: 16px;
                         padding: 16px;
+                    }
+                    @media (max-width:1440px) {
+                        font-size: 14px;
                     }
                     @media (max-width: 1199px) {
                         font-size: 16px;
                     }
                     @media (max-width: 767px) {
                         max-height: 170px;
-                        font-size: 14px;
+                        
                     }
                     @media (max-width: 575px) {
                         max-height: 150px;

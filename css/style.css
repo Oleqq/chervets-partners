@@ -1080,7 +1080,7 @@ a {
 }
 @media (max-width: 991px) {
   .team-index__card--link {
-    font-size: 8px;
+    font-size: 14px;
   }
 }
 @media (max-width: 575px) {
@@ -2276,6 +2276,7 @@ a {
 }
 .member-hero__achievements .member-hero__achievements-items--bottom .member-hero__achievements-item {
   margin-left: 200px;
+  cursor: pointer;
 }
 @media (max-width: 1920px) {
   .member-hero__achievements .member-hero__achievements-items--bottom .member-hero__achievements-item {
@@ -2359,11 +2360,18 @@ a {
     width: 150px;
   }
 }
+.member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title .arrow {
+  transition: 0.2s ease;
+}
+.member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title.expanded .arrow {
+  transform: rotate(-180deg);
+  transition: 0.2s ease;
+}
 .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
   color: white;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 110%;
   text-transform: uppercase;
   text-align: justify;
@@ -2373,19 +2381,64 @@ a {
   max-width: 100%;
   hyphens: auto;
 }
-@media (max-width: 1440px) {
-  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
-    font-size: 18px;
-  }
-}
-@media (max-width: 1024px) {
+@media (max-width: 1920px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
     font-size: 16px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 1660px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1499px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
     font-size: 14px;
+  }
+}
+@media (max-width: 1380px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1280px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1199px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1099px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 9px;
+  }
+}
+@media (max-width: 991px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 575px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 467px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
+    font-size: 12px;
   }
 }
 .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content {
@@ -2423,12 +2476,17 @@ a {
   box-sizing: border-box;
   text-transform: uppercase;
   padding: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
-@media (max-width: 1699px) {
+@media (max-width: 1660px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text {
-    font-size: 18px;
+    font-size: 16px;
     padding: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text {
+    font-size: 14px;
   }
 }
 @media (max-width: 1199px) {
@@ -2439,7 +2497,6 @@ a {
 @media (max-width: 767px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text {
     max-height: 170px;
-    font-size: 14px;
   }
 }
 @media (max-width: 575px) {
@@ -3391,37 +3448,8 @@ a {
   width: 235px;
   max-width: 100%;
   aspect-ratio: 1/1;
+  width: 100%;
   transition: 0.5s ease;
-}
-@media (max-width: 1920px) {
-  .services-grid__card {
-    width: 185px;
-  }
-}
-@media (max-width: 1440px) {
-  .services-grid__card {
-    width: 156px;
-  }
-}
-@media (max-width: 1299px) {
-  .services-grid__card {
-    width: 144px;
-  }
-}
-@media (max-width: 1199px) {
-  .services-grid__card {
-    width: 133px;
-  }
-}
-@media (max-width: 1099px) {
-  .services-grid__card {
-    width: 122px;
-  }
-}
-@media (max-width: 999px) {
-  .services-grid__card {
-    width: 110px;
-  }
 }
 @media (max-width: 575px) {
   .services-grid__card {
@@ -3527,6 +3555,11 @@ a {
     font-size: 14px;
   }
 }
+@media (max-width: 1380px) {
+  .services-grid__name {
+    font-size: 12px;
+  }
+}
 @media (max-width: 1280px) {
   .services-grid__name {
     font-size: 12px;
@@ -3542,9 +3575,14 @@ a {
     font-size: 9px;
   }
 }
+@media (max-width: 991px) {
+  .services-grid__name {
+    font-size: 14px;
+  }
+}
 @media (max-width: 767px) {
   .services-grid__name {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 @media (max-width: 676px) {
@@ -3555,6 +3593,16 @@ a {
 @media (max-width: 575px) {
   .services-grid__name {
     font-size: 16px;
+  }
+}
+@media (max-width: 467px) {
+  .services-grid__name {
+    font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .services-grid__name {
+    font-size: 12px;
   }
 }
 
@@ -5416,9 +5464,6 @@ a {
     margin-bottom: 10px;
   }
 }
-.header__title a {
-  color: black;
-}
 .header__title p {
   margin: 0;
 }
@@ -5973,14 +6018,15 @@ a {
   margin-bottom: 20px;
   max-width: 350px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1660px) {
   .footer__description {
     font-size: 16px;
   }
 }
-@media (max-width: 567px) {
+@media (max-width: 1440px) {
   .footer__description {
     font-size: 14px;
+    max-width: 265px;
   }
 }
 .footer__language {
@@ -6763,7 +6809,7 @@ a {
   aspect-ratio: 2.75/1;
 }
 .hero-photo-wrapper--mobile .hero-photo__group--2 .hero-photo--wrapper-line-large {
-  aspect-ratio: 3/1;
+  aspect-ratio: 4.5/1;
 }
 .hero-photo-wrapper--mobile .hero-photo__group--3 {
   width: 60%;
@@ -6794,9 +6840,9 @@ a {
     font-size: 18px;
   }
 }
-@media (max-width: 429px) {
+@media (max-width: 467px) {
   .hero-photo-wrapper--mobile .hero-photo__group--large .cite {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 @media (max-width: 385px) {
@@ -6845,17 +6891,17 @@ a {
 .slider-section__container {
   overflow: hidden;
 }
+@media (max-width: 991px) {
+  .slider-section__container {
+    overflow: visible;
+  }
+}
 .slider-section__card {
   display: flex;
   gap: 12px;
   flex-direction: column;
   background-color: #fff;
   padding: 12px;
-}
-@media (max-width: 991px) {
-  .slider-section__card {
-    aspect-ratio: 1/1;
-  }
 }
 .slider-section__card p {
   display: flex;
@@ -6865,6 +6911,7 @@ a {
   font-family: var(--font-family);
   font-weight: 800;
   font-size: 18px;
+  text-transform: uppercase;
   letter-spacing: -0.05em;
   color: #000;
   margin: 0 0 6px 0;
@@ -6875,7 +6922,12 @@ a {
 }
 @media (max-width: 1920px) {
   .slider-section__card p {
-    font-size: 18px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .slider-section__card p {
+    font-size: 14px;
   }
 }
 @media (max-width: 1380px) {
@@ -6902,6 +6954,10 @@ a {
   .slider-section__card p {
     font-size: 14px;
   }
+}
+.slider-section__card--name {
+  display: flex;
+  align-items: flex-end;
 }
 .slider-section__card--photo img {
   width: 100%;
@@ -7949,9 +8005,15 @@ a {
   padding-bottom: 42px;
   overflow: hidden;
 }
+.news__slider {
+  display: none;
+}
+.news__slider.active {
+  display: block;
+}
 @media (max-width: 575px) {
   .news__slider--desktop {
-    display: none;
+    display: none !important;
   }
 }
 @media (min-width: 576px) {
@@ -8106,7 +8168,7 @@ a {
     position: absolute;
     top: 50%;
     height: 1px;
-    width: 300%;
+    width: 500%;
     left: -50%;
     background-color: white;
     z-index: -1;
@@ -8149,6 +8211,16 @@ a {
   display: flex;
   gap: 10px;
 }
+.news__slider-top::before {
+  content: "";
+  position: absolute;
+  width: 5000px;
+  height: 1px;
+  z-index: -2;
+  right: -100%;
+  top: 50%;
+  background-color: #fff;
+}
 @media (max-width: 767px) {
   .news__slider-top {
     gap: 5px;
@@ -8184,19 +8256,37 @@ a {
     left: 16px;
   }
 }
+@media (max-width: 767px) {
+  .news__slider-top .news__card:nth-child(4) {
+    display: none;
+  }
+}
 @media (max-width: 575px) {
   .news__slider-top .news__card:nth-child(4) {
     left: 16px;
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
+  .news__slider-top .news__card:nth-child(5) {
+    display: none;
   }
 }
 @media (max-width: 575px) {
   .news__slider-top .news__card:nth-child(5) {
     left: -16px;
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
+  .news__slider-top .news__card:nth-child(6) {
+    display: none;
   }
 }
 @media (max-width: 575px) {
   .news__slider-top .news__card:nth-child(6) {
     left: -16px;
+    display: flex;
   }
 }
 .news__slider-bottom {
@@ -8204,6 +8294,16 @@ a {
   left: 3%;
   display: flex;
   gap: 10px;
+}
+.news__slider-bottom::before {
+  content: "";
+  position: absolute;
+  width: 5000px;
+  height: 1px;
+  z-index: -2;
+  right: -100%;
+  top: 50%;
+  background-color: #fff;
 }
 @media (max-width: 767px) {
   .news__slider-bottom {
@@ -8242,14 +8342,29 @@ a {
     left: 16px;
   }
 }
+@media (max-width: 767px) {
+  .news__slider-bottom .news__card:nth-child(4) {
+    display: none;
+  }
+}
 @media (max-width: 575px) {
   .news__slider-bottom .news__card:nth-child(4) {
     left: 16px;
   }
 }
+@media (max-width: 991px) {
+  .news__slider-bottom .news__card:nth-child(5) {
+    display: none;
+  }
+}
 @media (max-width: 575px) {
   .news__slider-bottom .news__card:nth-child(5) {
     left: -16px;
+  }
+}
+@media (max-width: 991px) {
+  .news__slider-bottom .news__card:nth-child(6) {
+    display: none;
   }
 }
 @media (max-width: 575px) {
@@ -8322,6 +8437,11 @@ a {
     width: 14%;
   }
 }
+@media (max-width: 991px) {
+  .news__card {
+    width: 100%;
+  }
+}
 @media (max-width: 575px) {
   .news__card {
     width: auto;
@@ -8366,18 +8486,28 @@ a {
 }
 @media (max-width: 991px) {
   .news__card h5 {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 @media (max-width: 676px) {
   .news__card h5 {
     max-width: 100%;
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 @media (max-width: 575px) {
   .news__card h5 {
     font-size: 16px;
+  }
+}
+@media (max-width: 467px) {
+  .news__card h5 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .news__card h5 {
+    font-size: 12px;
   }
 }
 .news__card h5 a {
@@ -8386,5 +8516,218 @@ a {
 }
 .news__card h5 a:hover {
   color: #fd5e0f;
+}
+.news-body .section-title.news {
+  padding-top: 120px;
+}
+.news-body .select2-dropdown {
+  border: 1px solid #fd5e0f;
+  border-radius: 0;
+  margin-top: 6px;
+  font-size: 18px;
+}
+@media (max-width: 1660px) {
+  .news-body .select2-dropdown {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .news-body .select2-dropdown {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .news-body .select2-dropdown {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .news-body .select2-dropdown {
+    font-size: 14px;
+  }
+}
+.news-body .select2-results__options {
+  max-height: 100% !important;
+}
+.news-body .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #fd5e0f;
+  color: white;
+}
+.news-body .select2-results__option {
+  color: #fd5e0f;
+  font-weight: 500;
+  display: flex;
+}
+
+.news-tabs {
+  background-color: #fd5e0f;
+  border-bottom: 1px solid #fff;
+}
+.news-tabs__wrapper {
+  display: flex;
+  gap: 14px;
+  padding: 24px 0;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media (max-width: 1440px) {
+  .news-tabs__wrapper {
+    gap: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .news-tabs__wrapper {
+    padding: 16px 0;
+  }
+}
+.news-tabs__select-box .select2 {
+  display: none;
+}
+.news-tabs__tab {
+  padding: 10px 12px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+@media (max-width: 1660px) {
+  .news-tabs__tab {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .news-tabs__tab {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1280px) {
+  .news-tabs__tab {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+@media (max-width: 991px) {
+  .news-tabs__tab {
+    font-size: 10px;
+  }
+}
+.news-tabs__tab a {
+  color: #fff;
+  transition: 0.2s ease;
+}
+.news-tabs__tab--date {
+  padding: 10px 12px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  color: #fff;
+  position: relative;
+}
+@media (max-width: 1660px) {
+  .news-tabs__tab--date {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .news-tabs__tab--date {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1280px) {
+  .news-tabs__tab--date {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+@media (max-width: 991px) {
+  .news-tabs__tab--date {
+    font-size: 10px;
+  }
+}
+.news-tabs__tab--date .select2 {
+  position: absolute;
+  left: -1px;
+}
+.news-tabs__tab--date .select2-dropdown {
+  left: -65px !important;
+  margin-top: 18px;
+}
+.news-tabs__tab--date .select2-results__option {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fd5e0f;
+}
+.news-tabs__tab--date .select2-results__option--highlighted {
+  background-color: #fd5e0f;
+  color: white;
+}
+.news-tabs__tab--date span.selection {
+  opacity: 0;
+}
+.news-tabs__tab--date #date-tab {
+  display: flex;
+  align-items: center;
+}
+.news-tabs__tab--date:hover {
+  transition: 0.2s ease;
+  background-color: #fff;
+  color: #fd5e0f;
+}
+.news-tabs__tab--date:hover a {
+  transition: 0.2s ease;
+  color: #fd5e0f;
+}
+.news-tabs__tab--date a {
+  color: #fff;
+  transition: 0.2s ease;
+}
+.news-tabs__tab.active {
+  transition: 0.2s ease;
+  background-color: #fff;
+  color: #fd5e0f;
+}
+.news-tabs__tab.active button {
+  transition: 0.2s ease;
+  color: #fd5e0f;
+  background-color: #fff;
+}
+.news-tabs__tab:hover {
+  transition: 0.2s ease;
+  background-color: #fff;
+  color: #fd5e0f;
+}
+.news-tabs__tab:hover a {
+  transition: 0.2s ease;
+  color: #fd5e0f;
+}
+.news-tabs__slider .swiper-wrapper {
+  width: fit-content;
+  gap: 10px;
+  background-color: #fd5e0f;
+}
+.news-tabs__slider .swiper-slide {
+  max-width: fit-content;
+}
+
+.news-tabs__select-box {
+  position: relative;
+}
+
+.select-hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
