@@ -135,8 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 
-	// Инициализация внутреннего слайдера
+	
 
+	// Инициализация внутреннего слайдера
 	var innerSlidersParams = {
 		watchOverflow: true,
 		// loop: true,
