@@ -1,6 +1,7 @@
 .member-hero {
-    padding-top: 100px;
+    padding-top: 90px;
     position: relative;
+    display: flex;
     &.desktop {
         @media (max-width:1099px) {
             display: none;
@@ -50,16 +51,26 @@
     }
 
     &__img {
-        width: 100%;
-        height: calc(100vh - 100px);
+        width: 100vw;
+        height: calc(100vh - 83px);
+
+        position: relative;
+        display: inline-block;
+        
+        overflow: hidden;
+        
         img {
-            width: 100%;
-            height: 100%;
+            width: 122%;
+            height: 143%;
             object-fit: cover;
             object-position: center;
             display: flex;
+            
         }
     }
+
+    
+
 
     .member-hero__description {
         position: absolute;
@@ -73,6 +84,9 @@
         @media (max-width: 1920px) {
             height: 85dvh;
             max-width: 50%;
+        }
+        @media (max-width:1660px) {
+            top: 120px;
         }
         .back-link {
             width: fit-content;
@@ -167,10 +181,10 @@
             }
             @media (max-width:1660px) {
                 max-width: 500px;
-                font-size: 15px ;
+                font-size: 14px ;
             }
             @media (max-width:1440px) {
-                font-size: 14px;
+                font-size: 12px;
             }
 
             @media (max-height:800px) {
@@ -247,6 +261,11 @@
 
         max-width: 400px;
 
+        @media (max-width:1499px) {
+            top: 120px;
+            right: -100px;
+        }
+
         h6 {
             font-family: var(--font3);
             font-weight: 600;
@@ -301,28 +320,7 @@
 
 }
 
-#js-photo {
-    position: relative;
-    display: inline-block;
-}
 
-#js-photo::after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 24px); /* Установите радиус */
-    left: calc(50% - 24px); /* Установите радиус */
-    width: 48px; /* Диаметр круга (равен двойному радиусу) */
-    height: 48px; /* Диаметр круга (равен двойному радиусу) */
-    border-radius: 50%;
-    border: 2px solid orange; /* Цвет круга */
-    pointer-events: none; /* Чтобы круг не перехватывал события мыши */
-    z-index: 999; /* Установите z-index выше, чтобы круг был поверх изображения */
-    display: none; /* По умолчанию круг скрыт */
-}
-
-#js-photo.color::after {
-    display: block; /* Показываем круг, если изображение становится цветным */
-}
 
 .member-hero-mobile {
 
@@ -494,6 +492,10 @@
         gap: 32px;
 
         margin-bottom: 32px;
+        margin-left: 24px;
+        @media (max-width:676px) {
+            margin-left: 0;
+        }
 
         @media (max-width:676px) {
             flex-direction: column;
@@ -617,6 +619,9 @@
         @media (max-width: 1299px) {
             padding-top: 90px;
         }
+        @media (max-height:899px) {
+            padding-top: 90px;
+        }
     }
     .member-hero__achievements-title-wrapper {
         padding-top: 70px;
@@ -654,6 +659,10 @@
             @media (max-width: 1699px) {
                 font-size: 100px;
             }
+            @media (max-width:1499px) {
+                font-size: 80px;
+                padding-bottom: 72px;
+            }
             @media (max-width: 1099px) {
                 font-size: 80px;
             }
@@ -663,12 +672,40 @@
             @media (max-width: 575px) {
                 font-size: 40px;
             }
+
+            @media (max-height:899px) {
+                padding-bottom: 0;
+            }
+
             .surname {
                 color: #FD5E0F;
                 font-weight: 700;
             }
         }
     }
+
+    .member-hero-mobile__tabs {
+        border: none;
+        position: relative;
+
+        display: none;
+
+        @media (max-width:1099px) {
+            display: flex;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: -50%;
+            width: 200%;
+            height: 1px;
+            background-color: #000;
+            
+        }
+    }
+
     .member-hero__achievements-items {
         display: flex;
         align-items: flex-start;
@@ -694,6 +731,9 @@
             @media (max-width: 1920px) {
                 margin-top: 75px;
             }
+            @media (max-width:1499px) {
+                margin-top: 112px;
+            }
             @media (max-width: 1199px) {
                 margin-top: 50px;
             }
@@ -705,12 +745,17 @@
             }
         }
         &--bottom {
-            margin-top: 80px;
+            
+            justify-content: center;
+
+            @media (max-width:1499px) {
+                margin-top: 0;
+            }
             @media (max-width: 1199px) {
-                margin-top: 50px;
+                
             }
             @media (max-width: 991px) {
-                margin-top: 20px;
+                
             }
             @media (max-width: 575px) {
                 margin-top: 0;
@@ -734,15 +779,23 @@
         .member-hero__achievements-item {
             height: 200px;
             width: 30%;
-            margin-right: 250px;
-            @media (max-width: 1920px) {
+            transition: .2s ease;
+            margin: 0;
+            cursor: pointer;
+
+            &.active {
                 margin-right: 200px;
             }
-            @media (max-width: 1399px) {
-                margin-right: 250px;
+
+            @media (max-width: 1920px) {
+
+            }
+            @media (max-width: 1499px) {
+
+                height: 170px;
             }
             @media (max-width: 1099px) {
-                margin-right: 220px;
+                
             }
             @media (max-width: 991px) {
                 width: 100%;
@@ -775,7 +828,7 @@
             flex-direction: column;
             justify-content: space-between;
             box-sizing: border-box;
-            @media (max-width: 767px) {
+            @media (max-width: 1499px) {
                 height: 170px;
                 width: 170px;
             }
@@ -817,16 +870,16 @@
                     font-size: 14px;
                 }
                 @media (max-width:1380px) {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 @media (max-width: 1280px) {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 @media (max-width: 1199px) {
-                    font-size: 10px;
+                    font-size: 12px;
                 }
                 @media (max-width: 1099px) {
-                    font-size: 9px;
+                    font-size: 12px;
                     // word-break: break-word;
                 }
                 @media (max-width:991px) {
@@ -856,11 +909,11 @@
             opacity: 0;
             width: 0;
             height: 200px;
-            transition: 0.5s 0.5s ease;
+            
             background-color: white;
             border: 1px solid #FD5E0F;
             border-left: none;
-            @media (max-width: 767px) {
+            @media (max-width: 1499px) {
                 transform: translate(170px, -170px);
             }
             @media (max-width: 575px) {
@@ -878,12 +931,13 @@
                     text-transform: uppercase;
                     padding: 20px;
                     font-size: 18px;
-                    @media (max-width: 1660px) {
+                    @media (max-width: 1920px) {
                         font-size: 16px;
                         padding: 16px;
                     }
-                    @media (max-width:1440px) {
-                        font-size: 14px;
+                    @media (max-width:1499px) {
+                        font-size: 12px;
+                        max-height: 170px;
                     }
                     @media (max-width: 1199px) {
                         font-size: 16px;
@@ -919,15 +973,16 @@
             opacity: 1;
             width: 450px;
             height: 200px;
-            transition: 0.5s 0.5s ease;
+            transition: .2s ease;
             @media (max-width: 1920px) {
                 width: 400px;
             }
             @media (max-width: 1699px) {
                 width: 350px;
             }
-            @media (max-width: 1399px) {
+            @media (max-width: 1499px) {
                 width: 300px;
+                height: 168px;
             }
             @media (max-width: 1199px) {
                 width: 250px;

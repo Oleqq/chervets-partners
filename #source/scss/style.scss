@@ -4952,6 +4952,12 @@ $transition-time: 0.3s;
 					left: -25%;
 					background-color: #000;
 					z-index: -2;
+					
+					display: none;
+
+					@media (max-width:1024px) {
+						display: block;
+					}
 				}
 			}
 			
@@ -5038,6 +5044,290 @@ $transition-time: 0.3s;
 					display: flex;
 					width: 100%;
 				}
+			}
+		}
+	}
+}
+
+
+.post {
+	&-body {
+
+		.section-title {
+			padding-top: 120px;
+			h2 {
+				color: #FD5E0F;
+
+				display: flex;
+				gap: 24px;
+
+				span {
+					color:  #000;
+				}
+			}
+		}
+
+		.news-tabs {
+			background-color: #fff;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+
+			.news-tabs__tab {
+				background-color: #fd5e0f;
+				color: #fff;
+				border: 1px solid #fd5e0f;
+
+				&:hover {
+					background-color: #fff;
+					color:  #FD5E0F;
+				}
+			
+			}
+		}
+	}
+}
+
+
+.about-us {
+
+	&-body {
+
+		.section-title {
+
+			padding-top: 120px;
+			border-bottom: 1px solid #000;
+
+			h2 {
+				color: #000;
+			}
+		}
+
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	&__top {
+		display: flex;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 60%;
+			width: 500%;
+			background-color: #000;
+			height: 1px;
+		}
+
+		.block {
+			
+			width: 250px;
+			max-width: 250px;
+
+			@media (max-width:1440px) {
+				max-width: 160px;
+			}
+
+			&.red {
+				background-color: #a50034;
+			}
+			&.orange {
+				background-color: #fd5e0f;
+			}
+		}
+
+		p {
+			color: #000;
+
+			font-family: var(--font-family);
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 150%;
+			text-transform: uppercase;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+
+			max-width: 750px;
+			margin: 24px auto 24px 32px;
+		
+			@media (max-width: 1920px) {
+				font-size: 16px;
+			}
+			@media (max-width: 1699px) {
+				font-size: 14px;
+			}
+			@media (max-width: 1440px) {
+				font-size: 12px;
+				max-width: 530px;
+				margin: 12px auto 12px 32px;
+			}
+		}
+	}
+
+	&__middle {
+
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: -100%;
+			width: 500%;
+			height: 1px;
+			z-index: -1;
+			background-color: #000;
+		}
+
+		&--quote {
+			display: flex;
+			justify-content: space-between;
+			border: 1px solid #000;
+			background-color: #fff;
+
+			max-width: 1000px;
+			@media (max-width:1920px) {
+				max-width: 950px;
+			}
+			@media (max-width:1440px) {
+				max-width: 750px;
+			}
+
+			p {
+				font-family: var(--font-family);
+				font-weight: 500;
+				font-size: 24px;
+
+				color: #000;
+				text-transform: uppercase;
+
+				padding: 0px 52px;
+
+				display: flex;
+
+				align-items: center;
+				justify-content: center;
+
+				margin-bottom: 0;
+
+				@media (max-width:1440px) {
+					font-size: 20px;
+					padding: 32px 52px;
+				}
+			}
+
+			img {
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+
+				max-width: 250px;
+
+				border-left: 1px solid #000;
+
+				@media (max-width:1440px) {
+					max-width: 160px;
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		position: relative;
+		margin-left: 96px;
+
+		max-height: 190px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 60%;
+			width: 500%;
+			background-color: #000;
+			height: 1px;
+			z-index: -1;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 90%;
+			width: 500%;
+			background-color: #000;
+			height: 1px;
+			z-index: -1;
+		}
+
+		.block {
+			
+			width: 250px;
+			max-width: 250px;
+
+			@media (max-width:1440px) {
+				max-width: 160px;
+			}
+
+			&.red {
+				background-color: #a50034;
+			}
+			&.orange {
+				background-color: #fd5e0f;
+			}
+			&.tip {
+				border: 1px solid #FD5E0F;
+				background-color: #fff;
+
+				max-width: unset;
+				width: 260px;
+
+				p {
+					margin: 0;
+					padding: 42px 32px;
+					
+				}
+			}
+		}
+
+		p {
+			color: #000;
+
+			font-family: var(--font-family);
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 150%;
+			text-transform: uppercase;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			max-width: 750px;
+			margin: 24px auto 24px 32px;
+		
+			@media (max-width: 1920px) {
+				font-size: 16px;
+			}
+			@media (max-width: 1699px) {
+				font-size: 14px;
+			}
+			@media (max-width: 1440px) {
+				font-size: 12px;
+				max-width: 530px;
+				margin: 12px auto 12px 32px;
 			}
 		}
 	}

@@ -1599,8 +1599,9 @@ a {
 }
 
 .member-hero {
-  padding-top: 100px;
+  padding-top: 90px;
   position: relative;
+  display: flex;
 }
 @media (max-width: 1099px) {
   .member-hero.desktop {
@@ -1645,12 +1646,15 @@ a {
   transform: translateX(-50%);
 }
 .member-hero__img {
-  width: 100%;
-  height: calc(100vh - 100px);
+  width: 100vw;
+  height: calc(100vh - 83px);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 .member-hero__img img {
-  width: 100%;
-  height: 100%;
+  width: 122%;
+  height: 143%;
   object-fit: cover;
   object-position: center;
   display: flex;
@@ -1669,6 +1673,11 @@ a {
   .member-hero .member-hero__description {
     height: 85dvh;
     max-width: 50%;
+  }
+}
+@media (max-width: 1660px) {
+  .member-hero .member-hero__description {
+    top: 120px;
   }
 }
 .member-hero .member-hero__description .back-link {
@@ -1758,12 +1767,12 @@ a {
 @media (max-width: 1660px) {
   .member-hero__info p {
     max-width: 500px;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1440px) {
   .member-hero__info p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (max-height: 800px) {
@@ -1804,6 +1813,12 @@ a {
   top: 160px;
   right: 0;
   max-width: 400px;
+}
+@media (max-width: 1499px) {
+  .member-hero__service {
+    top: 120px;
+    right: -100px;
+  }
 }
 .member-hero__service h6 {
   font-family: var(--font3);
@@ -1850,29 +1865,6 @@ a {
 }
 .member-hero__service span {
   color: #fff;
-}
-
-#js-photo {
-  position: relative;
-  display: inline-block;
-}
-
-#js-photo::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 24px); /* Установите радиус */
-  left: calc(50% - 24px); /* Установите радиус */
-  width: 48px; /* Диаметр круга (равен двойному радиусу) */
-  height: 48px; /* Диаметр круга (равен двойному радиусу) */
-  border-radius: 50%;
-  border: 2px solid orange; /* Цвет круга */
-  pointer-events: none; /* Чтобы круг не перехватывал события мыши */
-  z-index: 999; /* Установите z-index выше, чтобы круг был поверх изображения */
-  display: none; /* По умолчанию круг скрыт */
-}
-
-#js-photo.color::after {
-  display: block; /* Показываем круг, если изображение становится цветным */
 }
 
 .member-hero-mobile__container {
@@ -2037,6 +2029,12 @@ a {
   display: flex;
   gap: 32px;
   margin-bottom: 32px;
+  margin-left: 24px;
+}
+@media (max-width: 676px) {
+  .member-hero-mobile__info {
+    margin-left: 0;
+  }
 }
 @media (max-width: 676px) {
   .member-hero-mobile__info {
@@ -2145,6 +2143,11 @@ a {
     padding-top: 90px;
   }
 }
+@media (max-height: 899px) {
+  .member-hero__achievements > .container {
+    padding-top: 90px;
+  }
+}
 .member-hero__achievements .member-hero__achievements-title-wrapper {
   padding-top: 70px;
   padding-bottom: 100px;
@@ -2189,6 +2192,12 @@ a {
     font-size: 100px;
   }
 }
+@media (max-width: 1499px) {
+  .member-hero__achievements .member-hero__achievements-title-wrapper .member-hero__achievements-title {
+    font-size: 80px;
+    padding-bottom: 72px;
+  }
+}
 @media (max-width: 1099px) {
   .member-hero__achievements .member-hero__achievements-title-wrapper .member-hero__achievements-title {
     font-size: 80px;
@@ -2204,9 +2213,33 @@ a {
     font-size: 40px;
   }
 }
+@media (max-height: 899px) {
+  .member-hero__achievements .member-hero__achievements-title-wrapper .member-hero__achievements-title {
+    padding-bottom: 0;
+  }
+}
 .member-hero__achievements .member-hero__achievements-title-wrapper .member-hero__achievements-title .surname {
   color: #FD5E0F;
   font-weight: 700;
+}
+.member-hero__achievements .member-hero-mobile__tabs {
+  border: none;
+  position: relative;
+  display: none;
+}
+@media (max-width: 1099px) {
+  .member-hero__achievements .member-hero-mobile__tabs {
+    display: flex;
+  }
+}
+.member-hero__achievements .member-hero-mobile__tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -50%;
+  width: 200%;
+  height: 1px;
+  background-color: #000;
 }
 .member-hero__achievements .member-hero__achievements-items {
   display: flex;
@@ -2241,6 +2274,11 @@ a {
     margin-top: 75px;
   }
 }
+@media (max-width: 1499px) {
+  .member-hero__achievements .member-hero__achievements-items--top {
+    margin-top: 112px;
+  }
+}
 @media (max-width: 1199px) {
   .member-hero__achievements .member-hero__achievements-items--top {
     margin-top: 50px;
@@ -2257,16 +2295,11 @@ a {
   }
 }
 .member-hero__achievements .member-hero__achievements-items--bottom {
-  margin-top: 80px;
+  justify-content: center;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1499px) {
   .member-hero__achievements .member-hero__achievements-items--bottom {
-    margin-top: 50px;
-  }
-}
-@media (max-width: 991px) {
-  .member-hero__achievements .member-hero__achievements-items--bottom {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 @media (max-width: 575px) {
@@ -2296,21 +2329,16 @@ a {
 .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item {
   height: 200px;
   width: 30%;
-  margin-right: 250px;
+  transition: 0.2s ease;
+  margin: 0;
+  cursor: pointer;
 }
-@media (max-width: 1920px) {
-  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item {
-    margin-right: 200px;
-  }
+.member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item.active {
+  margin-right: 200px;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1499px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item {
-    margin-right: 250px;
-  }
-}
-@media (max-width: 1099px) {
-  .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item {
-    margin-right: 220px;
+    height: 170px;
   }
 }
 @media (max-width: 991px) {
@@ -2348,7 +2376,7 @@ a {
   justify-content: space-between;
   box-sizing: border-box;
 }
-@media (max-width: 767px) {
+@media (max-width: 1499px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title {
     height: 170px;
     width: 170px;
@@ -2398,22 +2426,22 @@ a {
 }
 @media (max-width: 1380px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1280px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1199px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 1099px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
-    font-size: 9px;
+    font-size: 12px;
   }
 }
 @media (max-width: 991px) {
@@ -2449,12 +2477,11 @@ a {
   opacity: 0;
   width: 0;
   height: 200px;
-  transition: 0.5s 0.5s ease;
   background-color: white;
   border: 1px solid #FD5E0F;
   border-left: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 1499px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content {
     transform: translate(170px, -170px);
   }
@@ -2478,15 +2505,16 @@ a {
   padding: 20px;
   font-size: 18px;
 }
-@media (max-width: 1660px) {
+@media (max-width: 1920px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text {
     font-size: 16px;
     padding: 16px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1499px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text {
-    font-size: 14px;
+    font-size: 12px;
+    max-height: 170px;
   }
 }
 @media (max-width: 1199px) {
@@ -2527,7 +2555,7 @@ a {
   opacity: 1;
   width: 450px;
   height: 200px;
-  transition: 0.5s 0.5s ease;
+  transition: 0.2s ease;
 }
 @media (max-width: 1920px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content.active {
@@ -2539,9 +2567,10 @@ a {
     width: 350px;
   }
 }
-@media (max-width: 1399px) {
+@media (max-width: 1499px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content.active {
     width: 300px;
+    height: 168px;
   }
 }
 @media (max-width: 1199px) {
@@ -2741,9 +2770,11 @@ a {
 }
 .services-slider__slider .swiper-slide {
   opacity: 0;
+  transition: 0.2ss ease;
 }
 .services-slider__slider .swiper-slide-active {
   opacity: 1;
+  transition: 0.2s ease;
 }
 .services-slider__team-slider {
   overflow: hidden;
@@ -2759,10 +2790,16 @@ a {
 @media (max-width: 767px) {
   .services-slider__team-slider {
     width: 100%;
+    overflow: visible;
   }
 }
 .services-slider__team-slider--min .swiper-wrapper {
   justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .services-slider__team-slider--min .swiper-wrapper {
+    justify-content: unset;
+  }
 }
 .services-slider__team-slider-button {
   bottom: 80px;
@@ -2988,7 +3025,7 @@ a {
 @media (max-width: 1399px) {
   .services-slider__card {
     height: 200px;
-    width: 260px;
+    width: 220px;
   }
 }
 @media (max-width: 1099px) {
@@ -3014,8 +3051,9 @@ a {
 @media (max-width: 991px) {
   .services-slider__card.active {
     width: 500px;
-    height: 400px;
+    height: 500px;
     transition: width 0.5s ease, height 0.5s ease;
+    margin-bottom: 62px;
   }
 }
 @media (max-width: 575px) {
@@ -3181,7 +3219,7 @@ a {
 @media (max-width: 991px) {
   .services-slider__card-expanded.expanded {
     width: 500px;
-    height: 400px;
+    height: 500px;
     transition: width 0.5s ease, height 0.5s ease;
   }
 }
@@ -3235,31 +3273,32 @@ a {
 }
 @media (max-width: 1299px) {
   .services-slider__card-expanded p {
-    font-size: 8px;
+    font-size: 9px;
   }
 }
 @media (max-width: 991px) {
   .services-slider__card-expanded p {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 15px;
     opacity: 0;
     transform: translateY(10px);
     transition: 0.5s 0.5s ease;
+    margin-left: 12px;
   }
 }
 @media (max-width: 767px) {
   .services-slider__card-expanded p {
-    font-size: 9px;
+    font-size: 12px;
   }
 }
 @media (max-width: 575px) {
   .services-slider__card-expanded p {
-    font-size: 8px;
+    font-size: 11px;
   }
 }
 @media (max-width: 449px) {
   .services-slider__card-expanded p {
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 .services-slider__card-expanded p::before {
@@ -10031,6 +10070,12 @@ a {
   left: -25%;
   background-color: #000;
   z-index: -2;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .search-slider .insights__top .insights-card::after {
+    display: block;
+  }
 }
 .search-slider .insights__bottom {
   flex-wrap: nowrap;
@@ -10103,5 +10148,245 @@ a {
 .search-slider-button-prev svg {
   display: flex;
   width: 100%;
+}
+
+.post-body .section-title {
+  padding-top: 120px;
+}
+.post-body .section-title h2 {
+  color: #FD5E0F;
+  display: flex;
+  gap: 24px;
+}
+.post-body .section-title h2 span {
+  color: #000;
+}
+.post-body .news-tabs {
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.post-body .news-tabs .news-tabs__tab {
+  background-color: #fd5e0f;
+  color: #fff;
+  border: 1px solid #fd5e0f;
+}
+.post-body .news-tabs .news-tabs__tab:hover {
+  background-color: #fff;
+  color: #FD5E0F;
+}
+
+.about-us-body .section-title {
+  padding-top: 120px;
+  border-bottom: 1px solid #000;
+}
+.about-us-body .section-title h2 {
+  color: #000;
+}
+.about-us__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.about-us__top {
+  display: flex;
+  position: relative;
+}
+.about-us__top::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 500%;
+  background-color: #000;
+  height: 1px;
+}
+.about-us__top .block {
+  width: 250px;
+  max-width: 250px;
+}
+@media (max-width: 1440px) {
+  .about-us__top .block {
+    max-width: 160px;
+  }
+}
+.about-us__top .block.red {
+  background-color: #a50034;
+}
+.about-us__top .block.orange {
+  background-color: #fd5e0f;
+}
+.about-us__top p {
+  color: #000;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+  margin: 24px auto 24px 32px;
+}
+@media (max-width: 1920px) {
+  .about-us__top p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1699px) {
+  .about-us__top p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1440px) {
+  .about-us__top p {
+    font-size: 12px;
+    max-width: 530px;
+    margin: 12px auto 12px 32px;
+  }
+}
+.about-us__middle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-us__middle:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  width: 500%;
+  height: 1px;
+  z-index: -1;
+  background-color: #000;
+}
+.about-us__middle--quote {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+  background-color: #fff;
+  max-width: 1000px;
+}
+@media (max-width: 1920px) {
+  .about-us__middle--quote {
+    max-width: 950px;
+  }
+}
+@media (max-width: 1440px) {
+  .about-us__middle--quote {
+    max-width: 750px;
+  }
+}
+.about-us__middle--quote p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  color: #000;
+  text-transform: uppercase;
+  padding: 0px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+@media (max-width: 1440px) {
+  .about-us__middle--quote p {
+    font-size: 20px;
+    padding: 32px 52px;
+  }
+}
+.about-us__middle--quote img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-width: 250px;
+  border-left: 1px solid #000;
+}
+@media (max-width: 1440px) {
+  .about-us__middle--quote img {
+    max-width: 160px;
+  }
+}
+.about-us__bottom {
+  display: flex;
+  position: relative;
+  margin-left: 96px;
+  max-height: 190px;
+}
+.about-us__bottom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 500%;
+  background-color: #000;
+  height: 1px;
+  z-index: -1;
+}
+.about-us__bottom::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 90%;
+  width: 500%;
+  background-color: #000;
+  height: 1px;
+  z-index: -1;
+}
+.about-us__bottom .block {
+  width: 250px;
+  max-width: 250px;
+}
+@media (max-width: 1440px) {
+  .about-us__bottom .block {
+    max-width: 160px;
+  }
+}
+.about-us__bottom .block.red {
+  background-color: #a50034;
+}
+.about-us__bottom .block.orange {
+  background-color: #fd5e0f;
+}
+.about-us__bottom .block.tip {
+  border: 1px solid #FD5E0F;
+  background-color: #fff;
+  max-width: unset;
+  width: 260px;
+}
+.about-us__bottom .block.tip p {
+  margin: 0;
+  padding: 42px 32px;
+}
+.about-us__bottom p {
+  color: #000;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+  margin: 24px auto 24px 32px;
+}
+@media (max-width: 1920px) {
+  .about-us__bottom p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1699px) {
+  .about-us__bottom p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1440px) {
+  .about-us__bottom p {
+    font-size: 12px;
+    max-width: 530px;
+    margin: 12px auto 12px 32px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -69,9 +69,13 @@
 		// margin-bottom: 42px;
 		.swiper-slide {
 			opacity: 0;
+			// new
+			transition: .2ss ease;
 
 			&-active {
 				opacity: 1;
+				// new
+				transition: .2s ease;
 			}
 		}
 	}
@@ -89,9 +93,13 @@
 		}
 		@media (max-width: 767px) {
 			width: 100%;
+			overflow: visible;
 		}
 		&--min .swiper-wrapper {
 			justify-content: flex-end;
+			@media (max-width:767px) {
+				justify-content: unset;
+			}
 		}
 
 		&-button {
@@ -293,7 +301,7 @@
 		}
 		@media (max-width: 1399px) {
 			height: 200px;
-			width: 260px;
+			width: 220px;
 		}
 		@media (max-width: 1099px) {
 			height: 200px;
@@ -328,8 +336,9 @@
 		&.active {
 			@media (max-width: 991px) {
 				width: 500px;
-				height: 400px;
+				height: 500px;
 				transition: width 0.5s ease, height 0.5s ease;
+				 margin-bottom: 62px;
 			}
 			@media (max-width: 575px) {
 				width: 400px;
@@ -337,9 +346,9 @@
 			@media (max-width: 449px) {
 				width: 375px;
 			}
-      @media (max-width: 399px) {
-        width: 350px;
-      }
+			@media (max-width: 399px) {
+				width: 350px;
+			}
 			.services-slider__card-link {
 				> span.text {
 					opacity: 0;
@@ -454,10 +463,10 @@
 						width: 150px;
 						height: 150px;
 					}
-          @media (max-width: 767px) {
+					@media (max-width: 767px) {
 						width: 170px;
 						height: 170px;
-          }
+					}
 				}
 			}
 
@@ -472,22 +481,22 @@
 				top: 0;
 				@media (max-width: 991px) {
 					width: 500px;
-					height: 400px;
+					height: 500px;
 					transition: width 0.5s ease, height 0.5s ease;
 				}
 				@media (max-width: 767px) {
 					left: 0;
 					z-index: -1;
 				}
-        @media (max-width: 575px) {
-          width: 400px;
-        }
-        @media (max-width: 449px) {
-          width: 375px;
-        }
-        @media (max-width: 399px) {
-          width: 350px;
-        }
+				@media (max-width: 575px) {
+				width: 400px;
+				}
+				@media (max-width: 449px) {
+				width: 375px;
+				}
+				@media (max-width: 399px) {
+				width: 350px;
+				}
 			}
 
 			p {
@@ -515,24 +524,26 @@
 					font-size: 10px;
 				}
 				@media (max-width: 1299px) {
-					font-size: 8px;
+					font-size: 9px;
 				}
 				@media (max-width: 991px) {
-					font-size: 10px;
+					font-size: 12px;
 					margin-bottom: 15px;
 					opacity: 0;
 					transform: translateY(10px);
 					transition: 0.5s 0.5s ease;
+					margin-left: 12px;
 				}
-        @media (max-width: 767px) {
-					font-size: 9px;
-        }
-        @media (max-width: 575px) {
-					font-size: 8px;
-        }
-        @media (max-width: 449px) {
-					font-size: 7px;
-        }
+				@media (max-width: 767px) {
+					font-size: 12px;
+				}
+				@media (max-width: 575px) {
+					font-size: 11px;
+					
+				}
+				@media (max-width: 449px) {
+					font-size: 10px;
+				}
 
 				&::before {
 					content: "";

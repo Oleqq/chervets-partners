@@ -172,13 +172,13 @@ document.addEventListener("DOMContentLoaded", function () {
 				slidesPerView: 6,
 			},
 			1199: {
-				slidesPerView: 5,
+				slidesPerView: 4,
 			},
 			991: {
-				slidesPerView: 5,
+				slidesPerView: 4,
 			},
 			767: {
-				slidesPerView: 4,
+				slidesPerView: 3,
 			},
 			676: {
 				slidesPerView: 3.2,
