@@ -320,7 +320,7 @@
                 
                               <div class="insights-card__wrapper">
                 
-                                <div class="insights-card__type red" data-fancybox="gallery" data-src="https://www.youtube.com/embed/VWaY3cXNaOw?si=tfEjKWufp7mLqrxW">
+                                <div class="insights-card__type red" data-fancybox="gallery" data-src="https://www.youtube.com/embed/Llour2YvsiI?si=BFXT2qL4JDGYaY-5">
                                   <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 0.960938H18" stroke="white" />
                                     <path d="M0 3.96094H18" stroke="white" />
@@ -371,7 +371,7 @@
                 
                               <div class="insights-card__wrapper">
                 
-                                <div class="insights-card__type orange" data-fancybox="gallery" data-src="https://www.youtube.com/embed/stlUYIZbXeY?si=BuPxMmHu2Q075BzA">
+                                <div class="insights-card__type orange" data-fancybox="gallery" data-src="https://www.youtube.com/embed/emaQgCZGl1s?si=R1DK0oh1ZsUXXlyp">
                                   <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.25 3.09972L18 10.4609L5.25 17.8222L5.25 3.09972Z" stroke="white" />
                                   </svg>
@@ -989,9 +989,13 @@
             <input type="checkbox" class="form__checkbox" />
             Я хотел бы получать новости, экспертные материалы компании, приглашения на деловые и культурные мероприятия Chervets Partners
           </label>
-          <p class="form__note">
-            *Отписаться от рассылки можно в любой момент, сообщив на почту pr@chervetspartners.com
-          </p>
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox" / style="opacity: 0;">
+            <p class="form__note">
+              *Отписаться от рассылки можно в любой момент, сообщив на почту pr@chervetspartners.com
+            </p>
+          </label>
+          
         </div>
         <button type="submit" class="form__submit">Отправить</button>
        
@@ -1002,111 +1006,17 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.insights-card__link');
-    const form = document.querySelector('.form');
-    const backdrop = document.createElement('div');
-    backdrop.classList.add('backdrop');
-    document.body.appendChild(backdrop);
-
-    links.forEach(link => {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-        form.classList.add('active');
-        backdrop.classList.add('active');
-      });
-    });
-
-    backdrop.addEventListener('click', function() {
-      form.classList.remove('active');
-      backdrop.classList.remove('active');
-    });
-
-    // Find existing close button and add click event
-    const closeButton = document.querySelector('.form__close');
-    if (closeButton) {
-      closeButton.addEventListener('click', function() {
-        form.classList.remove('active');
-        backdrop.classList.remove('active');
-      });
-    }
-  });
+  
 </script>
 
 <style>
-  /* Стили для замены иконок стрелок и кнопки закрытия */
 
-  .fancybox__backdrop {
-    background-color: #575656;
-    opacity: .8;
-  }
-
-  .carousel__button {
-    width: 100%;
-    
-  }
-
-  .carousel__button.is-prev {
-    display: flex;
-    justify-content: flex-start;
-    top: 88.25%;
-
-    svg {
-      display: none;
-    }
-  }
-  .carousel__button.is-next {
-    display: flex;
-    justify-content: flex-end;
-    top: 88.25%;
-
-    svg {
-      display: none;
-    }
-  }
-  .carousel__button.is-close {
-    top: 110% !important;
-  }
-    .carousel__button.is-prev::before {
-      content: "";
-      display: block;
-      width: 300px; /* Adjust size as needed */
-      height: 24px;
-      background-image: url('data:image/svg+xml;utf8,<svg width="305" height="16" viewBox="0 0 305 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM1 9L305 9.00003L305 7.00003L1 7L1 9Z" fill="white"></path></svg>');
-      background-size: contain;
-      background-repeat: no-repeat;
-  }
-
-  .carousel__button.is-next::before {
-      content: "";
-      display: block;
-      width: 300px; /* Adjust size as needed */
-      height: 24px;
-      background-image: url('data:image/svg+xml;utf8,<svg width="305" height="16" viewBox="0 0 305 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M304.707 8.70713C305.098 8.31661 305.098 7.68344 304.707 7.29292L298.343 0.928958C297.953 0.538434 297.319 0.538434 296.929 0.928958C296.538 1.31948 296.538 1.95265 296.929 2.34317L302.586 8.00003L296.929 13.6569C296.538 14.0474 296.538 14.6806 296.929 15.0711C297.319 15.4616 297.953 15.4616 298.343 15.0711L304.707 8.70713ZM-8.74228e-08 9L304 9.00003L304 7.00003L8.74228e-08 7L-8.74228e-08 9Z" fill="white"></path></svg>');
-      background-size: contain;
-      background-repeat: no-repeat;
-  }
-
-
-
-  .fancybox__button--close::before {
-      content: url('path/to/your/custom-close-icon.png'); /* Укажите путь к вашей иконке закрытия */
-  }
-
-  /* Удаление элемента carousel__track */
-  .carousel__track {
-      display: none;
-  }
 </style>
 
 
 <script src="./js/fancybox.umd.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-      Fancybox.bind("[data-fancybox='gallery']", {
-          // Ваши параметры Fancybox, если они нужны
-      });
-  });
+
 </script>
 
 
@@ -1116,44 +1026,11 @@
 <script src="./js/jquery-3.6.0.min.js"></script>
 
 <script>
-    var swiper = new Swiper('.insights-slider', {
-      slidesPerView: 1,
-      spaceBetween: 1000,
-      speed: 1000,
     
-      navigation: {
-            nextEl: '.insights-slider-button-next',
-            prevEl: '.insights-slider-button-prev',
-        },
-
-    });
 </script>
 
 <script>
-  // Функция для инициализации Swiper
-  function initSwiper() {
-    var swiper = new Swiper('.insights-filters__slider', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      freeMode: true, // Включаем режим свободного перемещения
-      // любые другие настройки Swiper
-    });
-  }
-
-  // Функция для проверки размера экрана и инициализации Swiper при необходимости
-  function checkScreenSize() {
-    if (window.innerWidth < 991) {
-      if (!document.querySelector('.insights-filters__slider').classList.contains('swiper-initialized')) {
-        initSwiper();
-      }
-    }
-  }
-
-  // Проверка размера экрана при загрузке страницы
-  window.addEventListener('load', checkScreenSize);
-
-  // Проверка размера экрана при изменении размеров окна
-  window.addEventListener('resize', checkScreenSize);
+  
 </script>
 
 
@@ -1164,42 +1041,7 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <script>
-$(document).ready(function() {
-  // При клике на кнопку фильтра
-  $('.insights-filters__tab').click(function() {
-    // Скрываем все выпадающие списки
-    $('.insights-filters__dropdown').removeClass('active');
-    // Получаем значение атрибута data-filter
-    var filter = $(this).attr('data-filter');
-    // Находим соответствующий выпадающий список по ID и показываем его
-    $('#' + filter + '-dropdown').addClass('active');
-  });
 
-  // Инициализация Select2 для выпадающих списков
-  $('.insights-filters__tab-dropdown').select2({
-    minimumResultsForSearch: -1, // Отключает поле поиска
-    dropdownCssClass: 'no-search-arrow' // Добавляет класс для стилизации
-  });
-
-  // Ограничение текста до 30 символов с добавлением "..."
-  function truncateText() {
-    $('.select2-selection__rendered').each(function() {
-      var text = $(this).text();
-      if (text.length > 30) {
-        var truncated = text.substring(0, 30) + '...';
-        $(this).text(truncated);
-      }
-    });
-  }
-
-  // Применение truncateText после изменения выбора
-  $('.insights-filters__tab-dropdown').on('select2:select', function(e) {
-    truncateText();
-  });
-
-  // Применение truncateText при загрузке
-  truncateText();
-});
 
 </script>
 

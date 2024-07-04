@@ -1123,6 +1123,10 @@ $transition-time: 0.3s;
 	}
 }
 
+
+
+
+
 // Hero Section
 .hero {
 	// padding-top: 142px;
@@ -2858,6 +2862,9 @@ $transition-time: 0.3s;
 			color: #000;
 			text-transform: uppercase;
 			transition: 0.2s ease;
+
+			cursor: pointer;
+
 			@media (max-width: 1920px) {
 				font-size: 16px;
 				gap: 16px;
@@ -5367,6 +5374,28 @@ $transition-time: 0.3s;
 				max-width: 530px;
 				margin: 12px auto 12px 32px;
 			}
+		}
+	}
+}
+
+
+
+
+
+.backdrop {
+
+
+	&.active {
+
+		background-color: #ffffff;
+		opacity: .9;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 101;
+
+		@media (max-width:1024px) {
+			z-index: 99;
 		}
 	}
 }

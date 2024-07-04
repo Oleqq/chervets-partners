@@ -251,3 +251,123 @@ document.addEventListener("DOMContentLoaded", function () {
 //         }
 //     });
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+// скрипты страницы insights
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".insights-card__link");
+    const form = document.querySelector(".form");
+    const backdrop = document.createElement("div");
+    backdrop.classList.add("backdrop");
+    document.body.appendChild(backdrop);
+
+    links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            form.classList.add("active");
+            backdrop.classList.add("active");
+        });
+    });
+
+    backdrop.addEventListener("click", function () {
+        form.classList.remove("active");
+        backdrop.classList.remove("active");
+    });
+
+    // Find existing close button and add click event
+    const closeButton = document.querySelector(".form__close");
+    if (closeButton) {
+        closeButton.addEventListener("click", function () {
+            form.classList.remove("active");
+            backdrop.classList.remove("active");
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    Fancybox.bind("[data-fancybox='gallery']", {
+        // Ваши параметры Fancybox, если они нужны
+    });
+});
+
+var swiper = new Swiper(".insights-slider", {
+    slidesPerView: 1,
+    spaceBetween: 1000,
+    speed: 1000,
+
+    navigation: {
+        nextEl: ".insights-slider-button-next",
+        prevEl: ".insights-slider-button-prev",
+    },
+});
+// Функция для инициализации Swiper
+function initSwiper() {
+    var swiper = new Swiper(".insights-filters__slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        freeMode: true, // Включаем режим свободного перемещения
+        // любые другие настройки Swiper
+    });
+}
+
+// Функция для проверки размера экрана и инициализации Swiper при необходимости
+function checkScreenSize() {
+    if (window.innerWidth < 991) {
+        if (!document.querySelector(".insights-filters__slider").classList.contains("swiper-initialized")) {
+            initSwiper();
+        }
+    }
+}
+
+// Проверка размера экрана при загрузке страницы
+window.addEventListener("load", checkScreenSize);
+
+// Проверка размера экрана при изменении размеров окна
+window.addEventListener("resize", checkScreenSize);
+
+$(document).ready(function () {
+    // При клике на кнопку фильтра
+    $(".insights-filters__tab").click(function () {
+        // Скрываем все выпадающие списки
+        $(".insights-filters__dropdown").removeClass("active");
+        // Получаем значение атрибута data-filter
+        var filter = $(this).attr("data-filter");
+        // Находим соответствующий выпадающий список по ID и показываем его
+        $("#" + filter + "-dropdown").addClass("active");
+    });
+
+    // Инициализация Select2 для выпадающих списков
+    $(".insights-filters__tab-dropdown").select2({
+        minimumResultsForSearch: -1, // Отключает поле поиска
+        dropdownCssClass: "no-search-arrow", // Добавляет класс для стилизации
+    });
+
+    // Ограничение текста до 30 символов с добавлением "..."
+    function truncateText() {
+        $(".select2-selection__rendered").each(function () {
+            var text = $(this).text();
+            if (text.length > 30) {
+                var truncated = text.substring(0, 30) + "...";
+                $(this).text(truncated);
+            }
+        });
+    }
+
+    // Применение truncateText после изменения выбора
+    $(".insights-filters__tab-dropdown").on("select2:select", function (e) {
+        truncateText();
+    });
+
+    // Применение truncateText при загрузке
+    truncateText();
+});
