@@ -13,11 +13,14 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     
 
+    <!-- Подключение fancybox -->
+     <link rel="stylesheet" href="./css/fancybox.css">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="insights-body">
 
-    <header class="header">
+    <header class="header border-bottom desktop">
       <div class="header__container container">
         <div class="header__wrapper">
 
@@ -207,67 +210,87 @@
   
     </section>
   
-    <section class="insights-tabs">
+    <section class="insights-filters">
 
-        <div class="insights-tabs__container container">
+        <div class="insights-filters__container container">
             
-            <div class="insights-tabs__wrapper">
+            <div class="insights-filters__wrapper">
 
-                <div class="insights-tabs__tab--date">
-                    <div id="date-tab">
-                        ДАТА
-                    </div>
-                    <select id="date-select" class="select-hidden news-tabs__select-box" style="width: 200px;">
-                        <option value="ЯНВАРЬ 2022"><div>ЯНВАРЬ</div> <div>2022</div></option>
-                        <option value="ФЕВРАЛЬ 2023">ФЕВРАЛЬ <div>2023</div></option>
-                        <option value="МАРТ 2024">МАРТ 2024</option>
-                        <option value="АПРЕЛЬ">АПРЕЛЬ</option>
-                        <option value="МАЙ">МАЙ</option>
-                        <option value="ИЮНЬ">ИЮНЬ</option>
-                        <option value="ИЮЛЬ">ИЮЛЬ</option>
-                        <option value="АВГУСТ">АВГУСТ</option>
-                        <option value="СЕНТЯБРЬ">СЕНТЯБРЬ</option>
-                        <option value="ОКТЯБРЬ">ОКТЯБРЬ</option>
-                        <option value="НОЯБРЬ">НОЯБРЬ</option>
-                    </select>
-                </div>
+               
             
                 
 
-                <div class="insights-tabs__slider">
+                <div class="insights-filters__slider">
 
                   <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                      <button class="insights-tabs__tab active">
-                        НАЗВАНИЕ ТЕМЫ 1
-                      </button>
+                      <div class="insights-filters__dropdown" id="expert-dropdown">
+                        <select class="insights-filters__tab-dropdown">
+                          <option value="expert1">Евгения Червец</option>
+                          <option value="expert2">Арсен Навасардян</option>
+                          <option value="expert3">Мария Любимова</option>
+                          <option value="expert4">Александр Борзов</option>
+                          <option value="expert5">Игорь Ершов</option>
+                          <option value="expert6">Сергей Копылов</option>
+                          <option value="expert7">Юлия Синицына</option>
+                          <option value="expert8">Станислав Соболев</option>
+                          <option value="expert9">Екатерина Киселева</option>
+                          <option value="expert10">Анастасия Антонова</option>
+                          <option value="expert11">Алексей Панюшкин</option>
+                          <option value="expert12">Никита Ржанов</option>
+                          <option value="expert13">Наталья Харитонова</option>
+                          <option value="expert14">Евгений Татарченко</option>
+                          <option value="expert15">Полина Карпова</option>
+                        </select>
+                      </div>
                     </div>
+                    
+                    <div class="swiper-slide">
+                      <div class="insights-filters__dropdown" id="expertiza-dropdown">
+                        <select class="insights-filters__tab-dropdown">
+                          <option value="expertiza1">РАЗРЕШЕНИЕ СПОРОВ</option>
+                          <option value="expertiza2">КОРПОРАТИВНОЕ ПРАВО, M&A, ФИНАНСОВЫЕ СДЕЛКИ</option>
+                          <option value="expertiza3">СОПРОВОЖДЕНИЕ ВНЕШНЕЭКОНОМИЧЕСКОЙ ДЕЯТЕЛЬНОСТИ / FOREIGN DESK</option>
+                          <option value="expertiza4">ИНТЕЛЛЕКТУАЛЬНАЯ СОБСТВЕННОСТЬ И ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ / IP & IT</option>
+                          <option value="expertiza5">НАЛОГОВОЕ КОНСУЛЬТИРОВАНИЕ И СПОРЫ</option>
+                          <option value="expertiza6">ЧАСТНЫЕ КЛИЕНТЫ</option>
+                          <option value="expertiza7">УГОЛОВНО-ПРАВОВАЯ ЗАЩИТА</option>
+                          <option value="expertiza8">ЭКОНОМИЧЕСКИЙ И ФИНАНСОВЫЙ АНАЛИЗ / INSIDE ECONOMISTS</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                      <div class="insights-filters__dropdown" id="material-dropdown">
+                        <select class="insights-filters__tab-dropdown">
+                          <option value="material1">Материал</option>
+                          <option value="material2">Материал</option>
+                          <option value="material3">Материал</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                      <div class="insights-filters__dropdown" id="theme-dropdown">
+                        <select class="insights-filters__tab-dropdown">
+                          <option value="theme1">Тема</option>
+                          <option value="theme2">Тема</option>
+                          <option value="theme3">Тема</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    
     
-                    <div class="swiper-slide">
-                      <button class="insights-tabs__tab">
-                        НАЗВАНИЕ ТЕМЫ 2
-                      </button>
-                    </div>
-    
-                    <div class="swiper-slide">
-                      <button class="insights-tabs__tab">
-                        НАЗВАНИЕ ТЕМЫ 3
-                      </button>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <button class="insights-tabs__tab">
-                        НАЗВАНИЕ ТЕМЫ 4
-                      </button>
-                    </div>
-    
-                    <div class="swiper-slide">
-                      <button class="insights-tabs__tab">
-                        НАЗВАНИЕ ТЕМЫ 5
-                      </button>
-                    </div>
-
+                    
                   </div>
 
                 </div>
@@ -297,7 +320,7 @@
                 
                               <div class="insights-card__wrapper">
                 
-                                <div class="insights-card__type red">
+                                <div class="insights-card__type red" data-fancybox="gallery" data-src="https://www.youtube.com/embed/VWaY3cXNaOw?si=tfEjKWufp7mLqrxW">
                                   <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 0.960938H18" stroke="white" />
                                     <path d="M0 3.96094H18" stroke="white" />
@@ -329,7 +352,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -348,7 +371,7 @@
                 
                               <div class="insights-card__wrapper">
                 
-                                <div class="insights-card__type orange">
+                                <div class="insights-card__type orange" data-fancybox="gallery" data-src="https://www.youtube.com/embed/stlUYIZbXeY?si=BuPxMmHu2Q075BzA">
                                   <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.25 3.09972L18 10.4609L5.25 17.8222L5.25 3.09972Z" stroke="white" />
                                   </svg>
@@ -375,7 +398,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -426,7 +449,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -484,7 +507,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -534,7 +557,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -602,7 +625,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -648,7 +671,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -699,7 +722,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -757,7 +780,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -807,7 +830,7 @@
                                       </div>
                                     </div>
                 
-                                    <a href="" class="insights-card__link">
+                                    <a class="insights-card__link">
                                       ЧИТАТЬ
                                       <svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.1826 4.49223C43.3778 4.29696 43.3778 3.98038 43.1826 3.78512L40.0006 0.603138C39.8053 0.407876 39.4888 0.407876 39.2935 0.603138C39.0982 0.7984 39.0982 1.11498 39.2935 1.31024L42.1219 4.13867L39.2935 6.9671C39.0982 7.16236 39.0982 7.47894 39.2935 7.67421C39.4888 7.86947 39.8053 7.86947 40.0006 7.67421L43.1826 4.49223ZM0.239258 4.63867H42.829V3.63867H0.239258V4.63867Z" fill="black" />
@@ -841,14 +864,23 @@
   
           
   
-          <div class="section-link">
-            <a>
-              БОЛЬШЕ
-              <svg width="305" height="16" viewBox="0 0 305 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M304.707 8.66807C305.098 8.27755 305.098 7.64438 304.707 7.25386L298.343 0.889896C297.953 0.499371 297.319 0.499371 296.929 0.889896C296.538 1.28042 296.538 1.91358 296.929 2.30411L302.586 7.96096L296.929 13.6178C296.538 14.0083 296.538 14.6415 296.929 15.032C297.319 15.4226 297.953 15.4226 298.343 15.032L304.707 8.66807ZM-8.74228e-08 8.96094L304 8.96096L304 6.96096L8.74228e-08 6.96094L-8.74228e-08 8.96094Z" fill="black" />
-              </svg>
-            </a>
-          </div>
+            <div class="swiper-navigation-wrapper swiper-navigation-wrapper--services">
+              <div class="insights-slider-button-prev">
+                <svg width="305" height="16" viewBox="0 0 305 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM1 9L305 9.00003L305 7.00003L1 7L1 9Z" fill="black"></path>
+                </svg>
+              </div>
+              <a class="ui-section__button--primary" href="/">
+                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.68552 0.85514L25.423 24.5927M1.68445 24.5911L25.4214 0.854685" stroke="black" stroke-width="2"></path>
+                </svg>
+              </a>
+              <div class="insights-slider-button-next">
+                <svg width="305" height="16" viewBox="0 0 305 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M304.707 8.70713C305.098 8.31661 305.098 7.68344 304.707 7.29292L298.343 0.928958C297.953 0.538434 297.319 0.538434 296.929 0.928958C296.538 1.31948 296.538 1.95265 296.929 2.34317L302.586 8.00003L296.929 13.6569C296.538 14.0474 296.538 14.6806 296.929 15.0711C297.319 15.4616 297.953 15.4616 298.343 15.0711L304.707 8.70713ZM-8.74228e-08 9L304 9.00003L304 7.00003L8.74228e-08 7L-8.74228e-08 9Z" fill="black"></path>
+                </svg>
+              </div>
+            </div>
   
         </div>
   
@@ -914,6 +946,171 @@
 
 </body>
 
+<div class="form">
+  <div class="form__wrapper">
+
+      <div class="form__close">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.855442 0.85514L24.593 24.5927M0.854369 24.5911L24.5913 0.854685" stroke="white" stroke-width="2" />
+        </svg>
+      </div>
+
+      <h2 class="form__title">Заполните форму</h2>
+      <p class="form__description">
+        Мы рады, что вас заинтересовали наши экспертные материалы. Чтобы прочитать или скачать информацию из раздела Insights, просим заполнить форму ниже:
+      </p>
+      <form class="form__body">
+        <div class="form__group">
+          <input type="text" class="form__input" placeholder="Имя" />
+          <input type="text" class="form__input" placeholder="Фамилия" />
+        </div>
+        <div class="form__group">
+          <input type="text" class="form__input" placeholder="Компания / организация" />
+          <input type="text" class="form__input" placeholder="Сектор / отрасль" />
+        </div>
+        <div class="form__group">
+          <input type="text" class="form__input" placeholder="Должность" />
+          <input type="email" class="form__input" placeholder="Email" />
+        </div>
+        <div class="form__group">
+          <input type="text" class="form__input" placeholder="Город" />
+          <input type="text" class="form__input" placeholder="Кого в фирме вы знаете лучше всех?" />
+        </div>
+        <div class="form__checkbox-group">
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox" />
+            Ознакомлен с политикой обработки персональных данных
+          </label>
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox" />
+            Даю свое согласие на обработку персональных данных
+          </label>
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox" />
+            Я хотел бы получать новости, экспертные материалы компании, приглашения на деловые и культурные мероприятия Chervets Partners
+          </label>
+          <p class="form__note">
+            *Отписаться от рассылки можно в любой момент, сообщив на почту pr@chervetspartners.com
+          </p>
+        </div>
+        <button type="submit" class="form__submit">Отправить</button>
+       
+      </form>
+
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.insights-card__link');
+    const form = document.querySelector('.form');
+    const backdrop = document.createElement('div');
+    backdrop.classList.add('backdrop');
+    document.body.appendChild(backdrop);
+
+    links.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        form.classList.add('active');
+        backdrop.classList.add('active');
+      });
+    });
+
+    backdrop.addEventListener('click', function() {
+      form.classList.remove('active');
+      backdrop.classList.remove('active');
+    });
+
+    // Find existing close button and add click event
+    const closeButton = document.querySelector('.form__close');
+    if (closeButton) {
+      closeButton.addEventListener('click', function() {
+        form.classList.remove('active');
+        backdrop.classList.remove('active');
+      });
+    }
+  });
+</script>
+
+<style>
+  /* Стили для замены иконок стрелок и кнопки закрытия */
+
+  .fancybox__backdrop {
+    background-color: #575656;
+    opacity: .8;
+  }
+
+  .carousel__button {
+    width: 100%;
+    
+  }
+
+  .carousel__button.is-prev {
+    display: flex;
+    justify-content: flex-start;
+    top: 88.25%;
+
+    svg {
+      display: none;
+    }
+  }
+  .carousel__button.is-next {
+    display: flex;
+    justify-content: flex-end;
+    top: 88.25%;
+
+    svg {
+      display: none;
+    }
+  }
+  .carousel__button.is-close {
+    top: 110% !important;
+  }
+    .carousel__button.is-prev::before {
+      content: "";
+      display: block;
+      width: 300px; /* Adjust size as needed */
+      height: 24px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="305" height="16" viewBox="0 0 305 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM1 9L305 9.00003L305 7.00003L1 7L1 9Z" fill="white"></path></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+
+  .carousel__button.is-next::before {
+      content: "";
+      display: block;
+      width: 300px; /* Adjust size as needed */
+      height: 24px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="305" height="16" viewBox="0 0 305 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M304.707 8.70713C305.098 8.31661 305.098 7.68344 304.707 7.29292L298.343 0.928958C297.953 0.538434 297.319 0.538434 296.929 0.928958C296.538 1.31948 296.538 1.95265 296.929 2.34317L302.586 8.00003L296.929 13.6569C296.538 14.0474 296.538 14.6806 296.929 15.0711C297.319 15.4616 297.953 15.4616 298.343 15.0711L304.707 8.70713ZM-8.74228e-08 9L304 9.00003L304 7.00003L8.74228e-08 7L-8.74228e-08 9Z" fill="white"></path></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+
+
+
+  .fancybox__button--close::before {
+      content: url('path/to/your/custom-close-icon.png'); /* Укажите путь к вашей иконке закрытия */
+  }
+
+  /* Удаление элемента carousel__track */
+  .carousel__track {
+      display: none;
+  }
+</style>
+
+
+<script src="./js/fancybox.umd.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      Fancybox.bind("[data-fancybox='gallery']", {
+          // Ваши параметры Fancybox, если они нужны
+      });
+  });
+</script>
+
+
+
 <script src="./js/swiper-bundle.min.js"></script>
 
 <script src="./js/jquery-3.6.0.min.js"></script>
@@ -924,13 +1121,18 @@
       spaceBetween: 1000,
       speed: 1000,
     
+      navigation: {
+            nextEl: '.insights-slider-button-next',
+            prevEl: '.insights-slider-button-prev',
+        },
+
     });
 </script>
 
 <script>
   // Функция для инициализации Swiper
   function initSwiper() {
-    var swiper = new Swiper('.insights-tabs__slider', {
+    var swiper = new Swiper('.insights-filters__slider', {
       slidesPerView: 1,
       spaceBetween: 0,
       freeMode: true, // Включаем режим свободного перемещения
@@ -941,7 +1143,7 @@
   // Функция для проверки размера экрана и инициализации Swiper при необходимости
   function checkScreenSize() {
     if (window.innerWidth < 991) {
-      if (!document.querySelector('.insights-tabs__slider').classList.contains('swiper-initialized')) {
+      if (!document.querySelector('.insights-filters__slider').classList.contains('swiper-initialized')) {
         initSwiper();
       }
     }
@@ -954,22 +1156,7 @@
   window.addEventListener('resize', checkScreenSize);
 </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const tabs = document.querySelectorAll(".insights-tabs__tab");
-    const sliders = document.querySelectorAll(".insights");
 
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", function() {
-        tabs.forEach(t => t.classList.remove("active")); // Убираем класс active у всех табов
-        sliders.forEach(s => s.classList.remove("active")); // Убираем класс active у всех слайдеров
-
-        this.classList.add("active"); // Добавляем класс active к текущему табу
-        sliders[index].classList.add("active"); // Добавляем класс active к соответствующему слайдеру
-      });
-    });
-  });
-</script>
 
 
 
@@ -977,25 +1164,43 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <script>
-    $(document).ready(function() {
-        $('#date-select').select2({
-            placeholder: "Выберите дату",
-            allowClear: true,
-            minimumResultsForSearch: Infinity // Убирает поле поиска
-        });
+$(document).ready(function() {
+  // При клике на кнопку фильтра
+  $('.insights-filters__tab').click(function() {
+    // Скрываем все выпадающие списки
+    $('.insights-filters__dropdown').removeClass('active');
+    // Получаем значение атрибута data-filter
+    var filter = $(this).attr('data-filter');
+    // Находим соответствующий выпадающий список по ID и показываем его
+    $('#' + filter + '-dropdown').addClass('active');
+  });
 
-        $('#date-tab').on('click', function() {
-            $('#date-select').select2('open');
-        });
+  // Инициализация Select2 для выпадающих списков
+  $('.insights-filters__tab-dropdown').select2({
+    minimumResultsForSearch: -1, // Отключает поле поиска
+    dropdownCssClass: 'no-search-arrow' // Добавляет класс для стилизации
+  });
 
-        $('#date-select').on('select2:open', function() {
-            $('.select2-dropdown').css('display', 'block');
-        });
-
-        $('#date-select').on('select2:close', function() {
-            $('.select2-dropdown').css('display', 'none');
-        });
+  // Ограничение текста до 30 символов с добавлением "..."
+  function truncateText() {
+    $('.select2-selection__rendered').each(function() {
+      var text = $(this).text();
+      if (text.length > 30) {
+        var truncated = text.substring(0, 30) + '...';
+        $(this).text(truncated);
+      }
     });
+  }
+
+  // Применение truncateText после изменения выбора
+  $('.insights-filters__tab-dropdown').on('select2:select', function(e) {
+    truncateText();
+  });
+
+  // Применение truncateText при загрузке
+  truncateText();
+});
+
 </script>
 
 <!-- bootstrap js -->

@@ -16,6 +16,8 @@
 
 @import "modules/insights";
 
+@import "modules/popup";
+
 :root {
 	--font-family: "Nunito Sans", sans-serif;
 	--second-family: "Roboto Slab", sans-serif;
@@ -118,7 +120,7 @@ $transition-time: 0.3s;
 		}
 
 		&.desktop {
-			border-bottom: 1px solid #000;
+			border-bottom: 1px solid #000 !important;
 			box-shadow: none;
 		}
 	}
@@ -2680,6 +2682,16 @@ $transition-time: 0.3s;
 
 		&__type {
 			padding: 24px 112px 48px 24px;
+			cursor: pointer;
+			transition: .2s ease;
+
+			svg {
+				transition: .2s ease;
+
+				path {
+					transition: .2s ease;
+				}
+			}
 
 			@media (max-width: 1920px) {
 				padding: 20px 100px 38px 24px;
@@ -2699,9 +2711,35 @@ $transition-time: 0.3s;
 
 			&.red {
 				background-color: #a50034;
+				border-right: 1px solid #a50034;
+
+				&:hover {
+					transition: .2s ease;
+					background-color: #fff;
+					
+					svg {
+						path {
+							stroke: #a50034;
+						}
+					}
+				}
 			}
 			&.orange {
 				background-color: #fd5e0f;
+
+				background-color: #fd5e0f;
+				border-right: 1px solid #fd5e0f;
+
+				&:hover {
+					transition: .2s ease;
+					background-color: #fff;
+					
+					svg {
+						path {
+							stroke: #fd5e0f;
+						}
+					}
+				}
 			}
 		}
 		&__info {

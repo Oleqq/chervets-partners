@@ -370,6 +370,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  position: relative;
 }
 
 html {
@@ -5289,6 +5290,7 @@ a {
   border-radius: 0;
   margin-top: 6px;
   font-size: 18px;
+  width: 250px !important;
 }
 @media (max-width: 1660px) {
   .insights-body .select2-dropdown {
@@ -5303,6 +5305,7 @@ a {
 @media (max-width: 1024px) {
   .insights-body .select2-dropdown {
     font-size: 12px;
+    width: 180px !important;
   }
 }
 @media (max-width: 767px) {
@@ -5321,12 +5324,13 @@ a {
   color: #fd5e0f;
   font-weight: 500;
   display: flex;
+  width: 100%;
 }
-.insights-tabs {
+.insights-filters {
   background-color: transparent;
   border-bottom: 1px solid #000;
 }
-.insights-tabs__wrapper {
+.insights-filters__wrapper {
   display: flex;
   gap: 14px;
   padding: 24px 0;
@@ -5337,153 +5341,96 @@ a {
   color: #fff;
 }
 @media (max-width: 1440px) {
-  .insights-tabs__wrapper {
+  .insights-filters__wrapper {
     gap: 10px;
   }
 }
 @media (max-width: 991px) {
-  .insights-tabs__wrapper {
+  .insights-filters__wrapper {
     padding: 16px 0;
   }
 }
-.insights-tabs__select-box .select2 {
+.insights-filters__select-box .select2 {
   display: none;
 }
-.insights-tabs__tab {
-  padding: 10px 12px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  font-weight: 500;
-  transition: 0.2s ease;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #fff;
+.insights-filters__dropdown .select2 {
+  width: fit-content !important;
 }
-@media (max-width: 1660px) {
-  .insights-tabs__tab {
-    font-size: 16px;
-  }
-}
-@media (max-width: 1440px) {
-  .insights-tabs__tab {
-    font-size: 14px;
-  }
-}
-@media (max-width: 1280px) {
-  .insights-tabs__tab {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-}
-@media (max-width: 991px) {
-  .insights-tabs__tab {
-    font-size: 10px;
-  }
-}
-.insights-tabs__tab a {
-  color: #fff;
+.insights-filters__dropdown .select2 {
   transition: 0.2s ease;
 }
-.insights-tabs__tab--date {
-  padding: 10px 12px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  font-weight: 500;
-  transition: 0.2s ease;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  color: #fff;
-  position: relative;
-}
-@media (max-width: 1660px) {
-  .insights-tabs__tab--date {
-    font-size: 16px;
-  }
-}
-@media (max-width: 1440px) {
-  .insights-tabs__tab--date {
-    font-size: 14px;
-  }
-}
-@media (max-width: 1280px) {
-  .insights-tabs__tab--date {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-}
-@media (max-width: 991px) {
-  .insights-tabs__tab--date {
-    font-size: 10px;
-  }
-}
-.insights-tabs__tab--date .select2 {
-  position: absolute;
-  left: -1px;
-}
-.insights-tabs__tab--date .select2-dropdown {
-  left: -65px !important;
-  margin-top: 18px;
-}
-.insights-tabs__tab--date .select2-results__option {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #fd5e0f;
-}
-.insights-tabs__tab--date .select2-results__option--highlighted {
+.insights-filters__dropdown .select2-container--default .select2-selection--single {
   background-color: #fd5e0f;
-  color: white;
+  transition: 0.2s ease;
+  height: 100%;
+  border-radius: 0;
+  border: none;
 }
-.insights-tabs__tab--date span.selection {
-  opacity: 0;
-}
-.insights-tabs__tab--date #date-tab {
+.insights-filters__dropdown .select2-container--default .select2-selection__rendered {
+  color: #fff;
+  padding: 10px 12px;
+  background-color: transparent;
+  border: 1px solid #fd5e0f;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
-}
-.insights-tabs__tab--date:hover {
-  transition: 0.2s ease;
-  background-color: #fff;
-  color: #fd5e0f;
-}
-.insights-tabs__tab--date:hover a {
-  transition: 0.2s ease;
-  color: #fd5e0f;
-}
-.insights-tabs__tab--date a {
+  justify-content: center;
   color: #fff;
+}
+@media (max-width: 1660px) {
+  .insights-filters__dropdown .select2-container--default .select2-selection__rendered {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .insights-filters__dropdown .select2-container--default .select2-selection__rendered {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1280px) {
+  .insights-filters__dropdown .select2-container--default .select2-selection__rendered {
+    font-size: 12px;
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 991px) {
+  .insights-filters__dropdown .select2-container--default .select2-selection__rendered {
+    font-size: 10px;
+  }
+}
+.insights-filters__dropdown .select2-container--open {
+  margin-right: 100px;
   transition: 0.2s ease;
 }
-.insights-tabs__tab.active {
-  transition: 0.2s ease;
+@media (max-width: 991px) {
+  .insights-filters__dropdown .select2-container--open {
+    margin-right: 0;
+  }
+}
+.insights-filters__dropdown .select2-container--open .select2-selection--single {
   background-color: #fff;
+}
+.insights-filters__dropdown .select2-container--open .select2-selection__rendered {
   color: #fd5e0f;
 }
-.insights-tabs__tab.active button {
-  transition: 0.2s ease;
-  color: #fd5e0f;
-  background-color: #fff;
+.insights-filters__dropdown .select2-selection__arrow {
+  display: none;
 }
-.insights-tabs__tab:hover {
-  transition: 0.2s ease;
-  background-color: #fff;
-  color: #fd5e0f;
+.insights-filters__slider {
+  max-width: 100%;
 }
-.insights-tabs__tab:hover a {
-  transition: 0.2s ease;
-  color: #fd5e0f;
-}
-.insights-tabs__slider .swiper-wrapper {
-  width: fit-content;
+.insights-filters__slider .swiper-wrapper {
+  width: 100%;
   gap: 10px;
-  background-color: #fd5e0f;
 }
-.insights-tabs__slider .swiper-slide {
+.insights-filters__slider .swiper-slide {
   max-width: fit-content;
+}
+.insights .swiper-navigation-wrapper {
+  transition: 0.2s ease;
 }
 .insights-slider .swiper-slide {
   z-index: 10;
@@ -5491,8 +5438,146 @@ a {
   flex-direction: column;
   gap: 26px;
 }
+@media (max-width: 1024px) {
+  .insights-slider .swiper-slide {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
 .insights-slider .swiper-slide:not(:nth-child(1)) .line {
   display: none;
+}
+.insights-slider-button-prev svg {
+  width: 100%;
+}
+.insights-slider-button-next svg {
+  width: 100%;
+}
+
+html.with-fancybox .swiper-navigation-wrapper {
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.form {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100dvh;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+.form.active {
+  display: flex;
+}
+.form__wrapper {
+  background-color: #A50034;
+  color: #ffffff;
+  max-width: 700px;
+  padding: 18px 12px;
+  position: relative;
+  height: fit-content;
+}
+.form__close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.form__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.form__description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.form__body {
+  display: flex;
+  flex-direction: column;
+}
+.form__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.form__group .form__input {
+  width: 48%;
+  padding: 24px;
+  border: 1px solid #ffffff;
+  background-color: #A50034;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.form__group .form__input::placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+}
+.form__group .form__input:focus-visible {
+  outline: #A50034;
+}
+.form__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form__checkbox-group .form__checkbox-label {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.form__checkbox-group .form__checkbox-label .form__checkbox {
+  margin-right: 10px;
+  /* Общий стиль для чекбокса */
+  /* Стилизация отмеченного чекбокса */
+}
+.form__checkbox-group .form__checkbox-label .form__checkbox input[type=checkbox] {
+  appearance: none; /* Отключаем стандартный вид */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px; /* Задаем размер чекбокса */
+  height: 20px;
+  border: 2px solid #f00; /* Красная рамка */
+  border-radius: 4px; /* Скругляем углы */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+}
+.form__checkbox-group .form__checkbox-label .form__checkbox input[type=checkbox]:checked::before {
+  content: ""; /* Добавляем пустой контент для псевдоэлемента */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px; /* Размер "галочки" */
+  height: 10px;
+  background-color: #f00; /* Красный цвет "галочки" */
+  border-radius: 2px;
+}
+.form__submit {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #A50034;
+  cursor: pointer;
+  font-size: 16px;
+}
+.form__note {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #ffffff;
 }
 
 :root {
@@ -5570,7 +5655,7 @@ a {
   }
 }
 .header.border-bottom.desktop {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000 !important;
   box-shadow: none;
 }
 .header__container {
@@ -8071,6 +8156,14 @@ a {
 }
 .insights-card__type {
   padding: 24px 112px 48px 24px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.insights-card__type svg {
+  transition: 0.2s ease;
+}
+.insights-card__type svg path {
+  transition: 0.2s ease;
 }
 @media (max-width: 1920px) {
   .insights-card__type {
@@ -8099,9 +8192,26 @@ a {
 }
 .insights-card__type.red {
   background-color: #a50034;
+  border-right: 1px solid #a50034;
+}
+.insights-card__type.red:hover {
+  transition: 0.2s ease;
+  background-color: #fff;
+}
+.insights-card__type.red:hover svg path {
+  stroke: #a50034;
 }
 .insights-card__type.orange {
   background-color: #fd5e0f;
+  background-color: #fd5e0f;
+  border-right: 1px solid #fd5e0f;
+}
+.insights-card__type.orange:hover {
+  transition: 0.2s ease;
+  background-color: #fff;
+}
+.insights-card__type.orange:hover svg path {
+  stroke: #fd5e0f;
 }
 .insights-card__info {
   display: flex;
