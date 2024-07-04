@@ -235,6 +235,42 @@
             }
         }
 
+        & > p {
+            text-align: justify;
+            position: relative;
+            text-transform: uppercase;
+            color: #000;
+            max-width: 300px;
+            
+            margin-left: auto;
+            
+            display: none;
+
+            @media (max-width:676px) {
+                display: flex;
+                padding: 28px 0;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 500%;
+                    height: 1px;
+                    background-color: #fff;
+                    top: 0;
+                    right: -100%;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 500%;
+                    height: 1px;
+                    background-color: #fff;
+                    bottom: 0;
+                    right: -100%;
+                }
+            }
+        }
+
         &-button {
             &-prev {
                 // position: absolute;
@@ -495,6 +531,8 @@
             text-align: justify;
             color: #fff;
 
+            position: relative;
+
             @media (max-width: 1920px) {
                 font-size: 28px;
             }
@@ -521,7 +559,28 @@
                 font-size: 14px;
             }
             @media (max-width:676px) {
-                color: black;
+                color: #fff;
+                padding: 28px 0;
+                text-align: justify;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 500%;
+                    height: 1px;
+                    background-color: #fff;
+                    top: 0;
+                    right: -100%;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 500%;
+                    height: 1px;
+                    background-color: #fff;
+                    bottom: 0;
+                    right: -100%;
+                }
             }
             &.team-index__description--desktop {
                 @media (max-width:676px) {
@@ -545,8 +604,9 @@
     .team-index__title {
         padding: 124px 0 52px;
 
-        @media (max-width:467px) {
+        @media (max-width:676px) {
             padding-top: 100px;
+            padding-bottom: 24px;
         }
     }
 
@@ -574,4 +634,6 @@
             max-height: 150px;
         }
     }
+
+    
 }
