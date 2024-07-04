@@ -264,6 +264,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // скрипты страницы insights
+
+// скрипт поп апа на странице insights 
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".insights-card__link");
     const form = document.querySelector(".form");
@@ -371,3 +373,11 @@ $(document).ready(function () {
     // Применение truncateText при загрузке
     truncateText();
 });
+
+
+
+// скрипты страницы сontacts
+// скрипт поп апа на странице сontacts 
+
+
+

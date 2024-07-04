@@ -424,15 +424,31 @@
             }
         }
 
-        &__container {
+        // new
+        &.mobile {
+            display: none;
+           
 
+            @media (max-width:676px) {
+                display: block;
+            }
+
+            a {
+                margin-left: auto;
+
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                color: #000;
+                transition: .2s ease;
+
+                &:hover {
+                    transition: .2s ease;
+                    color: #fd5e0f;
+                }
+            }
         }
 
-        &__wrapper {
-
-            
-
-        }
 
     }
 
@@ -503,6 +519,18 @@
                     }
                 }
 
+            }
+
+            &.address {
+                @media (max-width:676px) {
+                    display: none;
+                }
+            }
+            &.ask {
+                display: none;
+                @media (max-width:676px) {
+                    display: flex;
+                }
             }
         }
 
