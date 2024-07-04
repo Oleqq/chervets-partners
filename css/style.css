@@ -1631,7 +1631,7 @@ a {
 }
 @media (max-width: 467px) {
   .member-hero.mobile {
-    margin-top: 100px;
+    margin-top: 83px;
     padding: 0;
   }
 }
@@ -1887,16 +1887,11 @@ a {
 .member-hero-mobile__name {
   display: flex;
   flex-direction: column;
-  margin-bottom: 42px;
-}
-@media (max-width: 767px) {
-  .member-hero-mobile__name {
-    margin-bottom: 24px;
-  }
+  padding: 24px 0;
 }
 @media (max-width: 567px) {
   .member-hero-mobile__name {
-    margin-bottom: 16px;
+    padding: 18px 0;
   }
 }
 .member-hero-mobile__name h2 {
@@ -1977,7 +1972,7 @@ a {
   border-bottom: 1px solid #000;
   margin-bottom: 42px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .member-hero-mobile__tabs {
     padding: 24px 24px;
   }
@@ -2166,6 +2161,11 @@ a {
     padding-bottom: 20px;
   }
 }
+@media (max-width: 991px) {
+  .member-hero__achievements .member-hero__achievements-title-wrapper {
+    padding: 0;
+  }
+}
 .member-hero__achievements .member-hero__achievements-title-wrapper::after {
   width: 5000px;
   content: "";
@@ -2202,6 +2202,11 @@ a {
 @media (max-width: 1099px) {
   .member-hero__achievements .member-hero__achievements-title-wrapper .member-hero__achievements-title {
     font-size: 80px;
+  }
+}
+@media (max-width: 991px) {
+  .member-hero__achievements .member-hero__achievements-title-wrapper .member-hero__achievements-title {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -2309,7 +2314,7 @@ a {
   }
 }
 .member-hero__achievements .member-hero__achievements-items--bottom .member-hero__achievements-item {
-  margin-left: 200px;
+  margin-left: 45% !important;
   cursor: pointer;
 }
 @media (max-width: 1920px) {
@@ -2325,6 +2330,11 @@ a {
 @media (max-width: 1399px) {
   .member-hero__achievements .member-hero__achievements-items--bottom .member-hero__achievements-item {
     margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .member-hero__achievements .member-hero__achievements-items--bottom .member-hero__achievements-item {
+    margin-left: 0 !important;
   }
 }
 .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item {
@@ -2457,12 +2467,12 @@ a {
 }
 @media (max-width: 575px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media (max-width: 467px) {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-title h4 {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (max-width: 390px) {
@@ -2516,6 +2526,7 @@ a {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text {
     font-size: 12px;
     max-height: 170px;
+    padding: 12px;
   }
 }
 @media (max-width: 1199px) {
@@ -2532,6 +2543,7 @@ a {
   .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text {
     max-height: 150px;
     font-size: 12px;
+    padding: 8px 12px 8px 8px;
   }
 }
 .member-hero__achievements .member-hero__achievements-items .member-hero__achievements-item-content > .content.scroll-text .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -2700,6 +2712,16 @@ a {
 
 .member-hero__slider .swiper-wrapper .swiper-slide:nth-child(1) {
   z-index: 1;
+}
+
+.member-hero-mobile__name.inner {
+  display: none;
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .member-hero-mobile__name.inner {
+    display: block;
+  }
 }
 
 .services-slider {
