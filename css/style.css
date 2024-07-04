@@ -9581,10 +9581,15 @@ html.with-fancybox .swiper-navigation-wrapper {
   }
 }
 .environment-body .section-title.environment {
-  background-color: #960032;
+  background-color: #a50034;
+}
+@media (max-width: 567px) {
+  .environment-body .section-title.environment h2:last-child {
+    margin-left: 10%;
+  }
 }
 .environment-body .environment {
-  padding-top: 120px;
+  padding-top: 64px;
   padding-bottom: 42px;
   border-bottom: 1px solid #fff;
   background-color: #a50034;
@@ -9596,7 +9601,7 @@ html.with-fancybox .swiper-navigation-wrapper {
 }
 @media (max-width: 991px) {
   .environment-body .environment {
-    padding-top: 92px;
+    padding-top: 62px;
   }
 }
 @media (max-width: 567px) {
@@ -9606,7 +9611,7 @@ html.with-fancybox .swiper-navigation-wrapper {
 }
 @media (max-width: 467px) {
   .environment-body .environment {
-    padding-top: 74px;
+    padding-top: 48px;
   }
 }
 .environment-body .slider-section__slider {

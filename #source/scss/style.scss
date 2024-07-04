@@ -3989,13 +3989,20 @@ $transition-time: 0.3s;
 		
 
 		.section-title.environment {
-			background-color: #960032;
+			background-color: #a50034;
 			
+			h2 {
+				&:last-child {
+					@media (max-width:567px) {
+						margin-left: 10%;
+					}
+				}
+			}
 
 		}
 
 		.environment {
-			padding-top: 120px;
+			padding-top: 64px;
 			padding-bottom: 42px;
 			border-bottom: 1px solid #fff;
 			background-color: #a50034;
@@ -4004,13 +4011,13 @@ $transition-time: 0.3s;
 				padding-top: 72px;
 			}
 			@media (max-width:991px) {
-				padding-top: 92px;
+				padding-top: 62px;
 			}
 			@media (max-width:567px) {
 				padding-bottom: 24px;
 			}
 			@media (max-width:467px) {
-				padding-top: 74px;
+				padding-top: 48px;
 			}
 			
 		}
