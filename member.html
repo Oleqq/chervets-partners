@@ -537,37 +537,46 @@
 	<script src="./js/jquery.mCustomScrollbar.min.js"></script>
 
 	<script>
-        document.querySelector('.member-hero').addEventListener('mousemove', function (e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            document.querySelector('.member-hero__img--hover').style.setProperty('--x', `${x}px`);
-            document.querySelector('.member-hero__img--hover').style.setProperty('--y', `${y}px`);
-        });
-    </script>
-	<style>
-
-
+		document.addEventListener('DOMContentLoaded', function () {
+			document.querySelector('.member-hero').addEventListener('mousemove', function (e) {
+				const rect = this.getBoundingClientRect();
+				const x = e.clientX - rect.left;
+				const y = e.clientY - rect.top - 90; // Поднимаем квадрат на 90 пикселей выше
+				document.querySelector('.member-hero__img--hover').style.setProperty('--x', `${x}px`);
+				document.querySelector('.member-hero__img--hover').style.setProperty('--y', `${y}px`);
+			});
+		});
+		</script>
+		
+		<style>
+		.member-hero {
+			position: relative;
+			overflow: hidden; /* Чтобы скрыть части изображения за пределами блока */
+		}
+		
 		.member-hero__img--hover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        clip-path: circle(0% at 0 0);
-        transition: clip-path 0.1s ease;
-        
-    }
-
-    .member-hero:hover .member-hero__img--hover {
-        clip-path: circle(10% at var(--x, 50%) var(--y, 50%));
-        
-    }
-
-
-       
-    </style>
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+			transition: clip-path 0.1s ease;
+		}
+		
+		.member-hero:hover .member-hero__img--hover {
+			clip-path: polygon(
+				calc(var(--x, 50%) - 100px) calc(var(--y, 50%) - 100px),
+				calc(var(--x, 50%) + 100px) calc(var(--y, 50%) - 100px),
+				calc(var(--x, 50%) + 100px) calc(var(--y, 50%) + 100px),
+				calc(var(--x, 50%) - 100px) calc(var(--y, 50%) + 100px)
+			);
+		}
+		</style>
+		
+		
+		
 
 
 
