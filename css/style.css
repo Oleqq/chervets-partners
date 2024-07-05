@@ -6575,7 +6575,7 @@ html.with-fancybox .swiper-navigation-wrapper {
 @media (max-width: 1024px) {
   .pre-footer__card:nth-child(2) {
     position: relative;
-    right: -39px;
+    right: -28px;
   }
 }
 .pre-footer__img img {
@@ -9528,13 +9528,18 @@ html.with-fancybox .swiper-navigation-wrapper {
 
 .social-justice__body section.section-title.marquee {
   display: none;
-  padding-top: 120px;
+  padding-top: 124px;
   padding-bottom: 24px;
   border-bottom: 1px solid #000;
 }
 @media (max-width: 767px) {
   .social-justice__body section.section-title.marquee {
     display: block;
+  }
+}
+@media (max-width: 467px) {
+  .social-justice__body section.section-title.marquee {
+    padding-top: 102px;
   }
 }
 .social-justice__body section.section-title.marquee .container {
@@ -9635,6 +9640,150 @@ html.with-fancybox .swiper-navigation-wrapper {
     display: none;
   }
 }
+.social-justice-slider {
+  margin: 48px 0;
+  padding: 48px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+@media (max-width: 767px) {
+  .social-justice-slider {
+    margin-top: 0;
+    border-top: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 24px;
+  }
+}
+.social-justice-slider__wrapper {
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 1099px) {
+  .social-justice-slider__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.social-justice-slider__wrapper:nth-child(1) .pre-footer__card::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 1px;
+  top: 50%;
+  background-color: #000;
+  right: -100%;
+  display: block;
+  z-index: -1;
+}
+@media (max-width: 1099px) {
+  .social-justice-slider__wrapper:nth-child(1) .pre-footer__card::after {
+    display: block;
+    right: -80%;
+  }
+}
+.social-justice-slider__wrapper .pre-footer__card {
+  position: relative;
+  background-color: #fff;
+}
+@media (max-width: 1499px) {
+  .social-justice-slider__wrapper .pre-footer__card {
+    padding: 8px;
+    height: 220px;
+  }
+}
+@media (max-width: 1099px) {
+  .social-justice-slider__wrapper .pre-footer__card {
+    width: fit-content;
+    height: 168px;
+    width: 90%;
+  }
+}
+.social-justice-slider__wrapper .pre-footer__card h5 {
+  font-family: var(--font-family);
+  font-size: 24px;
+  color: #000;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  max-width: 250px;
+}
+@media (max-width: 1920px) {
+  .social-justice-slider__wrapper .pre-footer__card h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1660px) {
+  .social-justice-slider__wrapper .pre-footer__card h5 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1399px) {
+  .social-justice-slider__wrapper .pre-footer__card h5 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 567px) {
+  .social-justice-slider__wrapper .pre-footer__card h5 {
+    margin-bottom: 0;
+  }
+}
+.social-justice-slider__wrapper .pre-footer__card h5 a {
+  color: black;
+}
+.social-justice-slider__wrapper .pre-footer__card h5 a:hover {
+  color: #fd5e0f;
+}
+.social-justice-slider__wrapper .pre-footer__card h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 121%;
+  text-transform: uppercase;
+  color: #5b5b5b;
+}
+@media (max-width: 1499px) {
+  .social-justice-slider__wrapper .pre-footer__card h6 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1399px) {
+  .social-justice-slider__wrapper .pre-footer__card h6 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1099px) {
+  .social-justice-slider__wrapper .pre-footer__card .pre-footer__img {
+    width: 50%;
+  }
+}
+@media (max-width: 567px) {
+  .social-justice-slider__wrapper .pre-footer__card .pre-footer__img {
+    width: 66%;
+  }
+}
+@media (max-width: 1099px) {
+  .social-justice-slider__wrapper .pre-footer__card .pre-footer__img img {
+    max-width: 300px;
+  }
+}
+@media (max-width: 1499px) {
+  .social-justice-slider__wrapper .pre-footer__card .pre-footer__info {
+    width: 50%;
+  }
+}
+@media (max-width: 1099px) {
+  .social-justice-slider__wrapper .pre-footer__card .pre-footer__info {
+    width: 100%;
+  }
+}
+.social-justice-slider .swiper-navigation-wrapper {
+  margin-top: 54px;
+}
+.social-justice-slider .swiper-navigation-wrapper svg {
+  width: 100%;
+}
+
 .environment-body .section-title.environment {
   background-color: #a50034;
 }
