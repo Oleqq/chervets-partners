@@ -31,3 +31,43 @@
 </a>
 <br>
 <br>
+<a href="https://chervets-partners.vercel.app/about-us.html">
+    О нас
+</a>
+<br>
+<br>
+<a href="https://chervets-partners.vercel.app/environment.html">
+    Наше окружение
+</a>
+<br>
+<br>
+<a href="https://chervets-partners.vercel.app/insights.html">
+    Insights
+</a>
+<br>
+<br>
+<a href="https://chervets-partners.vercel.app/404.html">
+    404
+</a>
+<br>
+<br>
+<a href="https://chervets-partners.vercel.app/lostpage.html">
+    404-2
+</a>
+<br>
+<br>
+<a href="https://chervets-partners.vercel.app/news.html">
+    Новости
+</a>
+<br>
+<br>
+<a href="https://chervets-partners.vercel.app/search.html">
+    Результаты поиска
+</a>
+<br>
+<br>
+<a href="https://chervets-partners.vercel.app/social-justice.html">
+    Социальная ответственность
+</a>
+<br>
+<br>
