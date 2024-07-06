@@ -10191,6 +10191,7 @@ html.with-fancybox .swiper-navigation-wrapper {
   top: 0;
 }
 .company-name .mCSB_dragger {
+  z-index: 50;
   right: 6px;
 }
 @media (max-width: 467px) {
@@ -10204,9 +10205,6 @@ html.with-fancybox .swiper-navigation-wrapper {
     height: 20px;
   }
 }
-.company-name .mCustomScrollBox .mCS-minimal .mCSB_vertical .mCSB_outside {
-  overflow: hidden !important;
-}
 .company-name .mCSB_scrollTools .mCSB_draggerContainer {
   position: absolute;
   top: 14px;
@@ -10215,8 +10213,20 @@ html.with-fancybox .swiper-navigation-wrapper {
   right: 0;
   height: auto;
 }
-.company-name .mCustomScrollBox.mCS-minimal.mCSB_vertical.mCSB_outside {
+.company-name .mCustomScrollBox {
+  position: relative !important;
   overflow: hidden;
+  height: 100% !important;
+  max-width: 100%;
+  outline: 0;
+  direction: ltr;
+}
+.company-name .mCSB_container {
+  z-index: 44;
+  top: unset;
+  overflow: hidden;
+  width: auto;
+  height: auto;
 }
 .company-name__wrapper {
   display: flex;
@@ -10367,11 +10377,6 @@ html.with-fancybox .swiper-navigation-wrapper {
   height: 50%;
   position: relative;
 }
-@media (max-width: 567px) {
-  .company-name__text--about {
-    overflow-y: scroll !important;
-  }
-}
 .company-name__text--about::after {
   content: "";
   position: absolute;
@@ -10390,7 +10395,6 @@ html.with-fancybox .swiper-navigation-wrapper {
 @media (max-width: 567px) {
   .company-name__text--about {
     max-height: 400px;
-    overflow-y: scroll !important;
     border: 1px solid #a50034;
     padding: 14px 42px 14px 14px;
     position: relative;
