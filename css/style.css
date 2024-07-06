@@ -10369,7 +10369,7 @@ html.with-fancybox .swiper-navigation-wrapper {
 }
 @media (max-width: 567px) {
   .company-name__text--about {
-    overflow: auto !important;
+    overflow-y: scroll !important;
   }
 }
 .company-name__text--about::after {
@@ -10390,7 +10390,7 @@ html.with-fancybox .swiper-navigation-wrapper {
 @media (max-width: 567px) {
   .company-name__text--about {
     max-height: 400px;
-    overflow: hidden !important;
+    overflow-y: scroll !important;
     border: 1px solid #a50034;
     padding: 14px 42px 14px 14px;
     position: relative;

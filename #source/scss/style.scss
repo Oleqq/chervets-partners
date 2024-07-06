@@ -4852,7 +4852,7 @@ $transition-time: 0.3s;
 		position: relative;
 	
 		@media (max-width:567px) {
-			overflow: auto !important;
+			overflow-y: scroll !important;
 		}
 
 		
@@ -4877,7 +4877,7 @@ $transition-time: 0.3s;
         }
 		@media (max-width:567px) {
 			max-height: 400px;
-			overflow: hidden !important;
+			overflow-y: scroll !important;
 			border: 1px solid #a50034;
 			padding: 14px 42px 14px 14px;
 
