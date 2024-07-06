@@ -499,3 +499,40 @@ a {
         }
     }
 }
+
+
+/* Custom scrollbar styles */
+.mCS-autoHide>.mCustomScrollBox>.mCSB_scrollTools, .mCS-autoHide>.mCustomScrollBox~.mCSB_scrollTools {
+    opacity: 1;
+    filter: "alpha(opacity=0)";
+    -ms-filter: "alpha(opacity=0)";
+}
+.mCSB_1_scrollbar_vertical {
+    opacity: 1 !important;
+}
+.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical, .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical {
+    right: 14px;
+    margin: 12px 0;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #fd5e0f !important; /* Color of the scrollbar thumb */
+    border-radius: 0px !important; /* Making the thumb square */
+    width: 32px;
+    height: 32px;
+    right: 48%;
+    opacity: 1;
+    @media (max-width:467px) {
+        width: 20px;
+        height: 20px;
+        right: 10%;
+    }
+    @media (max-width:390px) {
+        width: 16px;
+        height: 16px;
+        right: 0%;
+    }
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #ff6600 !important; /* Color of the scrollbar track */
+}
+

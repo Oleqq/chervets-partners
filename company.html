@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <header class="header">
+    <header class="header border-bottom desktop">
       <div class="header__container container">
         <div class="header__wrapper">
 
@@ -304,16 +304,21 @@
 <script src="./js/jquery-3.6.0.min.js"></script>
 
 	<script src="./js/jquery.mCustomScrollbar.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$(".scroll-text").mCustomScrollbar({
-				axis: "y",
-				theme: "minimal",
-				autoHideScrollbar: false,
-				alwaysShowScrollbar: 2,
-			});
-		});
-	</script>
+
+
+  <script>
+    $(document).ready(function() {
+        if ($(window).width() <= 567) {
+            $('.company-name__text--about').mCustomScrollbar({
+              axis: "y",
+              theme: "minimal",
+              autoHideScrollbar: false,
+              alwaysShowScrollbar: 2,
+            });
+        }
+    });
+
+  </script>
 
 
 <!-- bootstrap js -->
