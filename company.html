@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="company-body">
 
     <header class="header border-bottom desktop">
       <div class="header__container container">
@@ -185,6 +185,26 @@
 
     </header>
 
+    <section class="section-title black environment">
+    
+      <div class="section-title__container container">
+
+        <div class="section-title__wrapper">
+
+          <h2>
+            НАШЕ
+          </h2>
+
+          <h2>
+            ОКРУЖЕНИЕ
+          </h2>
+
+        </div>
+
+      </div>
+
+    </section>
+
    <section class="company-name">
 
     <div class="company-name__container container">
@@ -196,6 +216,31 @@
                 <img src="./img/company-1.jpg" alt="">
 
             </div>
+
+            <div class="company-name-mobile">
+              
+              <div class="company-name-mobile__img">
+
+                <img src="./img/company-1.jpg" alt="">
+
+              </div>
+
+              <div class="company-name-mobile__name">
+
+                <div class="company-name__text--title">
+                    
+                  LINK COMMUNITY
+
+                </div>
+
+                <div class="company-name__text--subtitle">
+                  Представители партнера: Алексей<br>Никифоров и Юлия Кузьмичева
+                </div>
+
+              </div>
+
+            </div>
+
 
             <div class="company-name__text">
 
@@ -224,7 +269,7 @@
 
                 
 
-                <div class="company-name__text--about scroll-text">
+                <div class="company-name__text--about scroll-text mobile">
 
                     <p>
                       В рамках сообщества разрабатываются стандарты работы юридических команд, которые далее могут применяться на практике. Новые механизмы организации и нестандартный подход к работе помогут сделать команду еще более эффективной. Сообщество LINK гарантирует сильное окружение и крепкие профессиональные связи, а также продвижение личного бренда. Проект раскроет в вас профессиональные качества и поспособствует карьерному росту.
@@ -243,7 +288,57 @@
 
    </section>
 
-    
+    <section class="company-info">
+
+      <div class="container">
+
+        <div class="company-info__wrapper">
+
+          <div class="company-info__block">
+
+            <div class="company-info__type red">
+
+              <div class="company-info__type--title">
+                МИССИЯ ОРГАНИЗАЦИИ
+              </div>
+
+            </div>
+
+            <div class="company-info__text scroll-text desktop">
+
+              <p>
+                Содержание журнала составляют теоретические статьи, часто монографического характера, по актуальным проблемам гражданского права, публикации работ цивилистов прошлого, материалы, посвященные практике разрешения споров по гражданским делам, статьи, содержащие анализ и критику отдельных наиболее значимых проектов в сфере гражданского законодательства, заключения научных учреждений по ним, материалы обсуждения законопроектов в экспертных и научных советах, работы зарубежных ученых по проблемам, представляющим интерес для развития и примененияроссийского права и пр.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="company-info__block">
+
+            <div class="company-info__type red">
+
+              <div class="company-info__type--title">
+                МИССИЯ ОРГАНИЗАЦИИ
+              </div>
+
+            </div>
+
+            <div class="company-info__text scroll-text desktop">
+
+              <p>
+                Содержание журнала составляют теоретические статьи, часто монографического характера, по актуальным проблемам гражданского права, публикации работ цивилистов прошлого, материалы, посвященные практике разрешения споров по гражданским делам, статьи, содержащие анализ и критику отдельных наиболее значимых проектов в сфере гражданского законодательства, заключения научных учреждений по ним, материалы обсуждения законопроектов в экспертных и научных советах, работы зарубежных ученых по проблемам, представляющим интерес для развития и примененияроссийского права и пр.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
 
@@ -313,7 +408,7 @@
   <script>
     $(document).ready(function() {
         if ($(window).width() <= 567) {
-            $('.scroll-text').mCustomScrollbar({
+            $('.scroll-text.mobile').mCustomScrollbar({
               axis: "y",
               theme: "minimal",
               autoHideScrollbar: false,
@@ -324,6 +419,20 @@
     });
 
   </script>
+
+<script>
+  $(document).ready(function() {
+    $('.scroll-text.desktop').mCustomScrollbar({
+            axis: "y",
+            theme: "minimal",
+            autoHideScrollbar: false,
+            alwaysShowScrollbar: 2,
+            
+          });    
+      
+  });
+
+</script>
 
 
 <!-- bootstrap js -->
