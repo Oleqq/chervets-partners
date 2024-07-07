@@ -381,3 +381,44 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Функция для инициализации Swiper
+
+		const swiper = new Swiper('.company-slider', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 1000,
+		navigation: {
+			nextEl: ".company-slider-button-next",
+			prevEl: ".company-slider-button-prev",
+		},
+
+		});
+	
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Функция для инициализации Swiper
+
+		const swiper = new Swiper('.post-slider', {
+		slidesPerView: 1,
+		spaceBetween: 540,
+		speed: 1000,
+		navigation: {
+			nextEl: ".post-slider-button-next",
+			prevEl: ".post-slider-button-prev",
+		},
+
+		});
+	
+});
