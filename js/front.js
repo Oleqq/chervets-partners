@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
 	const languageIcon = document.querySelector(".header__icon--language");
 	const languageOptions = document.querySelector(".header__language");
@@ -421,4 +423,444 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		});
 	
+});
+
+
+// post.html
+document.querySelectorAll('.post-block__block').forEach(block => {
+	block.addEventListener('click', function() {
+		// Сначала убираем классы со всех блоков
+		document.querySelectorAll('.post-block.active').forEach(activeBlock => {
+			activeBlock.classList.remove('active');
+			activeBlock.querySelector('.post-block__block-info').classList.remove('expanded');
+		});
+
+		// Добавляем классы к текущему блоку и его инфо
+		const parentBlock = this.closest('.post-block');
+		parentBlock.classList.add('active');
+		parentBlock.querySelector('.post-block__block-info').classList.add('expanded');
+	});
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const members = document.querySelectorAll('.member');
+    
+    members.forEach((member, index) => {
+      const memberImgClass = `member-img-${index + 1}`;
+      
+      member.addEventListener('mouseover', function() {
+        const memberImg = document.querySelector(`.${memberImgClass}`);
+        if (memberImg) {
+          memberImg.style.opacity = 1;
+        }
+      });
+
+      member.addEventListener('mouseout', function() {
+        const memberImg = document.querySelector(`.${memberImgClass}`);
+        if (memberImg) {
+          memberImg.style.opacity = 0;
+        }
+      });
+    });
+  });
+  $(document).ready(function () {
+    $(".scroll-text").mCustomScrollbar({
+      axis: "y",
+      theme: "minimal",
+      autoHideScrollbar: false,
+      alwaysShowScrollbar: 2,
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+	var titles = document.querySelectorAll('.member-hero__achievements-item-title');
+	
+	titles.forEach(function(title) {
+	  title.addEventListener('click', function() {
+		var content = this.nextElementSibling;
+		content.classList.toggle('active');
+		this.classList.toggle('expanded');
+	  });
+	});
+  });
+  // about-us.htmk
+  document.addEventListener("DOMContentLoaded", function() {
+	const swiper = new Swiper('.environment-slider', {
+		slidesPerView: 2, // Один слайд на просмотр
+		speed: 1000,
+		loop: true, // Бесконечный слайд
+		navigation: {
+			nextEl: '.environment-slider-button-next',
+			prevEl: '.environment-slider-button-prev',
+		},
+		breakpoints: {
+			2560: {
+				slidesPerView: 2,
+			},
+			1440: {
+				slidesPerView: 2,
+			},
+			1280: {
+				slidesPerView: 2,
+			},
+			1099: {
+				slidesPerView: 2,
+			},
+			1024: {
+				slidesPerView: 1,
+			},
+			767: {
+				slidesPerView: 1,
+			},
+			567: {
+				slidesPerView: 1,                    
+			},
+			467: {
+				slidesPerView: 1.3,
+			},
+			0: {
+				slidesPerView: 1.3,
+			},
+		},
+
+	});
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper('.rewards-slider', {
+        slidesPerView: 5, 
+        
+        speed: 1000,
+        loop: false, // Без бесконечного слайда
+
+        navigation: {
+            nextEl: '.rewards-slider-button-next',
+            prevEl: '.rewards-slider-button-prev',
+        },
+        breakpoints: {
+          2560: {
+            spaceBetween: 20,
+            slidesPerView: 5, 
+          },
+          1280: {
+            spaceBetween: 20,
+            slidesPerView: 5, 
+          },
+          991: {
+            spaceBetween: 20,
+            slidesPerView: 5, 
+          },
+          767: {
+            spaceBetween: 20,
+            slidesPerView: 3, 
+          },
+          567: {
+            spaceBetween: 20,
+            slidesPerView: 3, 
+          },
+          0: {
+            spaceBetween: 20,
+            slidesPerView: 2.5, 
+          },
+        },
+        
+    });
+});
+//company-2.html
+$(document).ready(function() {
+	if ($(window).width() <= 567) {
+		$('.scroll-text.mobile').mCustomScrollbar({
+		  axis: "y",
+		  theme: "minimal",
+		  autoHideScrollbar: false,
+		  alwaysShowScrollbar: 2,
+		  
+		});
+	}
+});
+$(document).ready(function() {
+    $('.scroll-text.desktop').mCustomScrollbar({
+            axis: "y",
+            theme: "minimal",
+            autoHideScrollbar: false,
+            alwaysShowScrollbar: 2,
+            
+          });    
+      
+  });
+document.addEventListener("DOMContentLoaded", function () {
+    const galleryLinks = document.querySelectorAll("[data-fancybox='gallery']");
+    const indicatorsContainer = document.querySelector('.indicators');
+
+
+    galleryLinks.forEach((link, index) => {
+        const indicator = document.createElement('span');
+        indicator.classList.add('indicator');
+        if (index === 0) {
+            indicator.classList.add('active');
+        }
+
+
+        indicator.addEventListener('click', () => {
+            Fancybox.show(galleryLinks, {
+                startIndex: index,
+                on: {
+                    reveal: (fancybox, slide) => {
+                        indicators.forEach((indicator, idx) => {
+                            indicator.classList.toggle('active', idx === slide.index);
+                        });
+                    }
+                }
+            });
+        });
+
+        indicatorsContainer.appendChild(indicator);
+    });
+
+    const indicators = document.querySelectorAll('.indicator');
+
+    Fancybox.bind("[data-fancybox='gallery']", {
+        on: {
+            reveal: (fancybox, slide) => {
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === slide.index);
+                });
+            }
+        }
+    }
+);
+}),
+
+// company.html
+
+$(document).ready(function() {
+	if ($(window).width() <= 567) {
+		$('.scroll-text.mobile').mCustomScrollbar({
+		  axis: "y",
+		  theme: "minimal",
+		  autoHideScrollbar: false,
+		  alwaysShowScrollbar: 2,
+		  
+		});
+	}
+});
+$(document).ready(function() {
+    $('.scroll-text.desktop').mCustomScrollbar({
+            axis: "y",
+            theme: "minimal",
+            autoHideScrollbar: false,
+            alwaysShowScrollbar: 2,
+            
+          });    
+      
+});
+
+// form modal popup
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".section-link.ask");
+    const form = document.querySelector(".form-secondary");
+    const backdrop = document.createElement("div");
+    backdrop.classList.add("backdrop");
+    document.body.appendChild(backdrop);
+
+    links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            form.classList.add("active");
+            backdrop.classList.add("active");
+        });
+    });
+
+    backdrop.addEventListener("click", function () {
+        form.classList.remove("active");
+        backdrop.classList.remove("active");
+    });
+
+    const closeButton = document.querySelector(".form-secondary__close");
+    if (closeButton) {
+        closeButton.addEventListener("click", function () {
+            form.classList.remove("active");
+            backdrop.classList.remove("active");
+        });
+    }
+});
+
+// environment.html
+document.addEventListener("DOMContentLoaded", function() {
+	const swiper = new Swiper('.environment-slider', {
+		slidesPerView: 2, // Один слайд на просмотр
+		speed: 1000,
+		loop: true, // Бесконечный слайд
+		navigation: {
+			nextEl: '.environment-slider-button-next',
+			prevEl: '.environment-slider-button-prev',
+		},
+		breakpoints: {
+			2560: {
+				slidesPerView: 2,
+			},
+			1440: {
+				slidesPerView: 2,
+			},
+			1280: {
+				slidesPerView: 2,
+			},
+			1099: {
+				slidesPerView: 2,
+			},
+			1024: {
+				slidesPerView: 1,
+			},
+			767: {
+				slidesPerView: 1,
+			},
+			567: {
+				slidesPerView: 1,                    
+			},
+			467: {
+				slidesPerView: 1.3,
+			},
+			0: {
+				slidesPerView: 1.3,
+			},
+		},
+
+	});
+});
+
+// member.html
+
+$(document).ready(function () {
+	$(".scroll-text").mCustomScrollbar({
+		axis: "y",
+		theme: "minimal",
+		autoHideScrollbar: false,
+		alwaysShowScrollbar: 2,
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+	var titles = document.querySelectorAll('.member-hero__achievements-item-title');
+	
+	titles.forEach(function(title) {
+		title.addEventListener('click', function() {
+			// Убираем классы 'active' и 'expanded' у всех элементов
+			titles.forEach(function(otherTitle) {
+				var otherContent = otherTitle.nextElementSibling;
+				otherContent.classList.remove('active');
+				otherTitle.classList.remove('expanded');
+				otherTitle.parentElement.classList.remove('active'); // Убираем класс 'active' у родителя
+			});
+
+			// Добавляем классы 'active' и 'expanded' к выбранному элементу
+			var content = this.nextElementSibling;
+			content.classList.toggle('active');
+			this.classList.toggle('expanded');
+			this.parentElement.classList.toggle('active'); // Добавляем класс 'active' к родителю
+		});
+	});
+});
+
+
+
+// news.html
+document.addEventListener('DOMContentLoaded', function() {
+
+	// Функция для инициализации Swiper
+function initSwiper() {
+    var swiper = new Swiper('.news-tabs__slider', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      freeMode: true, // Включаем режим свободного перемещения
+      // любые другие настройки Swiper
+    });
+  }
+
+  // Функция для проверки размера экрана и инициализации Swiper при необходимости
+  function checkScreenSize() {
+    if (window.innerWidth < 991) {
+      if (!document.querySelector('.news-tabs__slider').classList.contains('swiper-initialized')) {
+        initSwiper();
+      }
+    }
+  }
+
+  // Проверка размера экрана при загрузке страницы
+  window.addEventListener('load', checkScreenSize);
+
+  // Проверка размера экрана при изменении размеров окна
+  window.addEventListener('resize', checkScreenSize);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll(".news-tabs__tab");
+    const sliders = document.querySelectorAll(".news__slider");
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", function() {
+        tabs.forEach(t => t.classList.remove("active")); // Убираем класс active у всех табов
+        sliders.forEach(s => s.classList.remove("active")); // Убираем класс active у всех слайдеров
+
+        this.classList.add("active"); // Добавляем класс active к текущему табу
+        sliders[index].classList.add("active"); // Добавляем класс active к соответствующему слайдеру
+      });
+    });
+  });
+
+  $(document).ready(function() {
+	$('#date-select').select2({
+		placeholder: "Выберите дату",
+		allowClear: true,
+		minimumResultsForSearch: Infinity // Убирает поле поиска
+	});
+
+	$('#date-tab').on('click', function() {
+		$('#date-select').select2('open');
+	});
+
+	$('#date-select').on('select2:open', function() {
+		$('.select2-dropdown').css('display', 'block');
+	});
+
+	$('#date-select').on('select2:close', function() {
+		$('.select2-dropdown').css('display', 'none');
+	});
+});
+
+
+// search.html
+
+
+
+// social-justice
+
+document.addEventListener("DOMContentLoaded", function () {
+    const socialJusticeSwiper = new Swiper('.social-justice__slider', {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        speed: 1000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.social-justice-slider-button-next',
+            prevEl: '.social-justice-slider-button-prev',
+        },
+        breakpoints: {
+            2560: {
+                // Add your custom settings here if needed
+            },
+            1440: {
+                // Add your custom settings here if needed
+            },
+            1280: {
+                spaceBetween: 120,
+            },
+            991: {
+                spaceBetween: 120,
+            },
+            0: {
+                spaceBetween: 120,
+            },
+        }
+    });
 });

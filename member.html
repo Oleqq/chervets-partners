@@ -536,6 +536,12 @@
 
 	<script src="./js/jquery.mCustomScrollbar.min.js"></script>
 
+
+
+
+
+	<!-- ЭФФЕКТ ПОДЛОЖКИ ИЗОБРАЖЕНИЯ -->
+
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			document.querySelector('.member-hero').addEventListener('mousemove', function (e) {
@@ -580,40 +586,9 @@
 
 
 
-	<script>
-		$(document).ready(function () {
-			$(".scroll-text").mCustomScrollbar({
-				axis: "y",
-				theme: "minimal",
-				autoHideScrollbar: false,
-				alwaysShowScrollbar: 2,
-			});
-		});
-	</script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var titles = document.querySelectorAll('.member-hero__achievements-item-title');
-        
-        titles.forEach(function(title) {
-            title.addEventListener('click', function() {
-                // Убираем классы 'active' и 'expanded' у всех элементов
-                titles.forEach(function(otherTitle) {
-                    var otherContent = otherTitle.nextElementSibling;
-                    otherContent.classList.remove('active');
-                    otherTitle.classList.remove('expanded');
-                    otherTitle.parentElement.classList.remove('active'); // Убираем класс 'active' у родителя
-                });
 
-                // Добавляем классы 'active' и 'expanded' к выбранному элементу
-                var content = this.nextElementSibling;
-                content.classList.toggle('active');
-                this.classList.toggle('expanded');
-                this.parentElement.classList.toggle('active'); // Добавляем класс 'active' к родителю
-            });
-        });
-    });
-</script>
+
 
 
 

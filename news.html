@@ -2433,76 +2433,13 @@
 
 <script src="./js/jquery-3.6.0.min.js"></script>
 
-<script>
-  // Функция для инициализации Swiper
-  function initSwiper() {
-    var swiper = new Swiper('.news-tabs__slider', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      freeMode: true, // Включаем режим свободного перемещения
-      // любые другие настройки Swiper
-    });
-  }
 
-  // Функция для проверки размера экрана и инициализации Swiper при необходимости
-  function checkScreenSize() {
-    if (window.innerWidth < 991) {
-      if (!document.querySelector('.news-tabs__slider').classList.contains('swiper-initialized')) {
-        initSwiper();
-      }
-    }
-  }
-
-  // Проверка размера экрана при загрузке страницы
-  window.addEventListener('load', checkScreenSize);
-
-  // Проверка размера экрана при изменении размеров окна
-  window.addEventListener('resize', checkScreenSize);
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const tabs = document.querySelectorAll(".news-tabs__tab");
-    const sliders = document.querySelectorAll(".news__slider");
-
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", function() {
-        tabs.forEach(t => t.classList.remove("active")); // Убираем класс active у всех табов
-        sliders.forEach(s => s.classList.remove("active")); // Убираем класс active у всех слайдеров
-
-        this.classList.add("active"); // Добавляем класс active к текущему табу
-        sliders[index].classList.add("active"); // Добавляем класс active к соответствующему слайдеру
-      });
-    });
-  });
-</script>
 
 
 
 <!-- Подключение Select2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $('#date-select').select2({
-            placeholder: "Выберите дату",
-            allowClear: true,
-            minimumResultsForSearch: Infinity // Убирает поле поиска
-        });
-
-        $('#date-tab').on('click', function() {
-            $('#date-select').select2('open');
-        });
-
-        $('#date-select').on('select2:open', function() {
-            $('.select2-dropdown').css('display', 'block');
-        });
-
-        $('#date-select').on('select2:close', function() {
-            $('.select2-dropdown').css('display', 'none');
-        });
-    });
-</script>
 
 <!-- bootstrap js -->
 <script src="./js/bootstrap.bundle.min.js"></script>

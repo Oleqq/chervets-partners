@@ -431,36 +431,7 @@
 <script src="./js/swiper-bundle.min.js"></script>
 
 
-<script>
- document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".section-link.ask");
-    const form = document.querySelector(".form-secondary");
-    const backdrop = document.createElement("div");
-    backdrop.classList.add("backdrop");
-    document.body.appendChild(backdrop);
 
-    links.forEach((link) => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            form.classList.add("active");
-            backdrop.classList.add("active");
-        });
-    });
-
-    backdrop.addEventListener("click", function () {
-        form.classList.remove("active");
-        backdrop.classList.remove("active");
-    });
-
-    const closeButton = document.querySelector(".form-secondary__close");
-    if (closeButton) {
-        closeButton.addEventListener("click", function () {
-            form.classList.remove("active");
-            backdrop.classList.remove("active");
-        });
-    }
-});
-</script>
 
 <script src="./js/front.js"></script>
 </html>

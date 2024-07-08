@@ -1225,47 +1225,7 @@
   </footer>
 
 </body>
-<script>
-  document.querySelectorAll('.post-block__block').forEach(block => {
-      block.addEventListener('click', function() {
-          // Сначала убираем классы со всех блоков
-          document.querySelectorAll('.post-block.active').forEach(activeBlock => {
-              activeBlock.classList.remove('active');
-              activeBlock.querySelector('.post-block__block-info').classList.remove('expanded');
-          });
 
-          // Добавляем классы к текущему блоку и его инфо
-          const parentBlock = this.closest('.post-block');
-          parentBlock.classList.add('active');
-          parentBlock.querySelector('.post-block__block-info').classList.add('expanded');
-      });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const members = document.querySelectorAll('.member');
-    
-    members.forEach((member, index) => {
-      const memberImgClass = `member-img-${index + 1}`;
-      
-      member.addEventListener('mouseover', function() {
-        const memberImg = document.querySelector(`.${memberImgClass}`);
-        if (memberImg) {
-          memberImg.style.opacity = 1;
-        }
-      });
-
-      member.addEventListener('mouseout', function() {
-        const memberImg = document.querySelector(`.${memberImgClass}`);
-        if (memberImg) {
-          memberImg.style.opacity = 0;
-        }
-      });
-    });
-  });
-
-
-</script>
 
 
 <script src="./js/swiper-bundle.min.js"></script>
@@ -1276,30 +1236,7 @@
 
 <script src="./js/jquery.mCustomScrollbar.min.js"></script>
 
-<script>
-  $(document).ready(function () {
-    $(".scroll-text").mCustomScrollbar({
-      axis: "y",
-      theme: "minimal",
-      autoHideScrollbar: false,
-      alwaysShowScrollbar: 2,
-    });
-  });
-</script>
 
-	<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var titles = document.querySelectorAll('.member-hero__achievements-item-title');
-      
-      titles.forEach(function(title) {
-        title.addEventListener('click', function() {
-          var content = this.nextElementSibling;
-          content.classList.toggle('active');
-          this.classList.toggle('expanded');
-        });
-      });
-    });
-  </script>
 
 
 

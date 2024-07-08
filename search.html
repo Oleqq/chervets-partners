@@ -907,17 +907,17 @@
 <script src="./js/swiper-bundle.min.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const swiper = new Swiper('.search-slider', {
-            direction: 'horizontal',
-            speed: 1000,
-            spaceBetween: 432,
-            navigation: {
-                nextEl: '.search-slider-button-next',
-                prevEl: '.search-slider-button-prev',
-            },
-        });
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchSwiper = new Swiper('.search-slider', {
+        direction: 'horizontal',
+        speed: 1000,
+        spaceBetween: 432,
+        navigation: {
+            nextEl: '.search-slider-button-next',
+            prevEl: '.search-slider-button-prev',
+        },
     });
+});
 </script>
 
 
