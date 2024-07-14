@@ -565,16 +565,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 //company-2.html
 $(document).ready(function() {
-	if ($(window).width() <= 567) {
-		$('.scroll-text.mobile').mCustomScrollbar({
-		  axis: "y",
-		  theme: "minimal",
-		  autoHideScrollbar: false,
-		  alwaysShowScrollbar: 2,
-		  
-		});
-	}
+    if ($(window).width() <= 567) {
+        $('.scroll-text.mobile').mCustomScrollbar({
+            axis: "y",
+            theme: "minimal",
+            autoHideScrollbar: true, // Автоматическое скрытие скроллбара
+            scrollbarPosition: "inside", // Размещение скроллбара внутри контейнера
+            autoExpandScrollbar: true // Автоматическое расширение скроллбара при наведении курсора
+        });
+    }
 });
+
+
 $(document).ready(function() {
     $('.scroll-text.desktop').mCustomScrollbar({
             axis: "y",
@@ -853,13 +855,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Add your custom settings here if needed
             },
             1280: {
-                spaceBetween: 120,
+                spaceBetween: 12,
             },
             991: {
-                spaceBetween: 120,
+                spaceBetween: 12,
             },
             0: {
-                spaceBetween: 120,
+                spaceBetween: 12,
             },
         }
     });
