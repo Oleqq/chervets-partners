@@ -6720,21 +6720,28 @@ html.with-fancybox .swiper-navigation-wrapper {
   color: #000;
 }
 .footer.white .footer__form {
-  border-color: #000;
+  border-color: #a50034;
 }
 .footer.white h2 {
-  color: #000;
+  color: #a50034;
 }
 .footer.white .footer__form-input, .footer.white .footer__form-textarea {
-  color: #000;
-  border-color: #000;
+  color: #a50034;
+  border-color: #a50034;
 }
 .footer.white .footer__form-input::placeholder, .footer.white .footer__form-textarea::placeholder {
-  color: #000;
+  color: #a50034;
+}
+.footer.white .footer__form-input:focus-visible, .footer.white .footer__form-textarea:focus-visible {
+  outline-color: #a50034;
 }
 .footer.white .footer__form-button {
-  color: #000;
-  border-color: #000;
+  color: #a50034;
+  border-color: #a50034;
+}
+.footer.white .footer__form-button:hover {
+  background-color: #a50034;
+  color: #fff;
 }
 .footer__container {
   width: 100%;
