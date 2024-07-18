@@ -1,4 +1,33 @@
+// form modal popup
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".section-link.ask");
+    const form = document.querySelector(".form-secondary");
+    const backdrop = document.createElement("div");
+    backdrop.classList.add("backdrop");
+    document.body.appendChild(backdrop);
 
+    links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            form.classList.add("active");
+            backdrop.classList.add("active");
+        });
+    });
+
+    backdrop.addEventListener("click", function () {
+        form.classList.remove("active");
+        backdrop.classList.remove("active");
+    });
+
+    const closeButton = document.querySelector(".form-secondary__close");
+    if (closeButton) {
+        closeButton.addEventListener("click", function () {
+            form.classList.remove("active");
+            backdrop.classList.remove("active");
+        });
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 	const languageIcon = document.querySelector(".header__icon--language");
@@ -694,36 +723,7 @@ $(document).ready(function() {
       
 });
 
-// form modal popup
- 
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".section-link.ask");
-    const form = document.querySelector(".form-secondary");
-    const backdrop = document.createElement("div");
-    backdrop.classList.add("backdrop");
-    document.body.appendChild(backdrop);
 
-    links.forEach((link) => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            form.classList.add("active");
-            backdrop.classList.add("active");
-        });
-    });
-
-    backdrop.addEventListener("click", function () {
-        form.classList.remove("active");
-        backdrop.classList.remove("active");
-    });
-
-    const closeButton = document.querySelector(".form-secondary__close");
-    if (closeButton) {
-        closeButton.addEventListener("click", function () {
-            form.classList.remove("active");
-            backdrop.classList.remove("active");
-        });
-    }
-});
 
 // environment.html
 document.addEventListener("DOMContentLoaded", function() {
