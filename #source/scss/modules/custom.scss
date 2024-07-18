@@ -489,6 +489,11 @@ a {
     &--services {
         margin-top: 30px;
     }
+
+    svg {
+        
+    }
+
     .ui-section__button--primary {
         margin-left: 20px;
         margin-right: 20px;
@@ -496,6 +501,31 @@ a {
         @media (max-width: 575px) {
             margin-left: 10px;
             margin-right: 10px;
+        }
+    }
+
+    &.desktop {
+        display: flex;
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+    &.mobile {
+        display: none;
+        @media (max-width:767px) {
+            display: flex;
+        }
+    }
+
+    &.black {
+
+    }
+    &.white {
+        svg {
+            path {
+                stroke: #fff;
+                fill: #fff;
+            }
         }
     }
 }

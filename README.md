@@ -86,4 +86,8 @@
 </a>
 <br>
 <br>
-
+<a href="https://chervets-partners.vercel.app/company-3.html"> 
+    Социальная ответственость
+</a>
+<br>
+<br>

@@ -563,6 +563,46 @@ document.addEventListener("DOMContentLoaded", function() {
         
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper('.rewards-slider.mobile', {
+        slidesPerView: 1, 
+        
+        speed: 1000,
+        loop: false, // Без бесконечного слайда
+
+        navigation: {
+            nextEl: '.rewards-slider-button-next',
+            prevEl: '.rewards-slider-button-prev',
+        },
+        breakpoints: {
+          2560: {
+            spaceBetween: 20,
+            slidesPerView: 1, 
+          },
+          1280: {
+            spaceBetween: 20,
+            slidesPerView: 1, 
+          },
+          991: {
+            spaceBetween: 20,
+            slidesPerView: 1, 
+          },
+          767: {
+            spaceBetween: 20,
+            slidesPerView: 1, 
+          },
+          567: {
+            spaceBetween: 20,
+            slidesPerView: 1, 
+          },
+          0: {
+            spaceBetween: 20,
+            slidesPerView: 1, 
+          },
+        },
+        
+    });
+});
 //company-2.html
 $(document).ready(function() {
     if ($(window).width() <= 567) {
