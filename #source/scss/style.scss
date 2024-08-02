@@ -4870,12 +4870,13 @@ $transition-time: 0.3s;
 	}
 
 	p {
+		margin-top: 24px;
 		margin: 0;
 	}
 
 	.mCSB_draggerRail {
 		width: 2px;
-		height: 95%;
+		height: 99%;
 		position: absolute;
 		right: 20px;
 		top: 0;
@@ -4948,7 +4949,7 @@ $transition-time: 0.3s;
 		display: none;
 		
 
-		@media (max-width:767px) {
+		@media (max-width:1024px) {
 			display: flex;
 			gap: 12px;
 		}
@@ -4999,9 +5000,13 @@ $transition-time: 0.3s;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 				text-overflow: ellipsis;
+
+				height: 50%;
 			}
 			.company-name__text--subtitle {
 				margin-bottom: 0;
+
+				height: 50%;
 			}
 
 		}
@@ -5014,14 +5019,13 @@ $transition-time: 0.3s;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 100%;
+		height: 50%;
 
 		@media (max-width:1024px) {
-			display: grid;
-			grid-template-columns: .8fr 1fr;
+			display: none;
 		}
 		@media (max-width:767px) {
-			display: none;
+			
 		}
 
 		&.secondary {
@@ -5034,10 +5038,10 @@ $transition-time: 0.3s;
 
 	  aspect-ratio: 1 / 1;
 	  @media (max-width:1024px) {
-		aspect-ratio: unset;
+		display: none;
 	  }
 	  @media (max-width:767px) {
-		display: none;
+		
 	  }
 
 
@@ -5074,6 +5078,27 @@ $transition-time: 0.3s;
 	  flex-direction: column;
       justify-content: space-between;
 
+	  position: relative;
+
+	  &::after {
+		content: '';
+		background-color: #000;
+		width: 350%;
+		height: 1px;
+		position: absolute;
+		top: 47%;
+		right: -50%;
+		z-index: -1;
+
+		
+		@media (max-width:1024px) {
+			display: none;
+		}
+
+		@media (max-width:567px) {
+			display: block;
+		}
+	  }
 	  
 
 	  &--title {
@@ -5106,6 +5131,8 @@ $transition-time: 0.3s;
 		&.secondary {
 			max-width: unset;
 			grid-column: 1 / 3;
+
+			
 		}
 
 	  }
@@ -5141,6 +5168,7 @@ $transition-time: 0.3s;
 		}
 		@media (max-width:767px) {
 			font-size: 12px;
+			justify-content: flex-start;
 		}
 		@media (max-width:567px) {
 			font-size: 11px;
@@ -5201,13 +5229,20 @@ $transition-time: 0.3s;
 		line-height: 150%;
 		text-transform: uppercase;
 		margin-top: 24px;
-		padding: 24px 24px 24px 0;
+		
 		height: 50%;
 		
 		position: relative;
 		
+		padding: 24px 24px 24px 0;
 		
-
+		
+		@media (max-width:1199px) {
+			margin-top: 62px;
+		}
+		@media (max-width:1024px) {
+			margin-top: 0;
+		}
 		
 		
 		.mCSB_draggerContainer {
@@ -5220,13 +5255,27 @@ $transition-time: 0.3s;
 		&.secondary {
 			color: #5b5b5b;
 			font-size: 20px;
+
+
+			@media (max-width:1380px) {
+				padding-top: 0;
+			}
 			@media (max-width:1024px) {
 				text-align: center;
 			}
 			@media (max-width:567px) {
 				font-size: 14px;
-				
+				padding-top: 16px;
 			}
+
+			p {
+				padding-top: 16px;
+				@media (max-width:1380px) {
+					padding-top: 0;
+				}
+				
+				
+			}			
 		}
 
         @media (max-width:676px) {
@@ -5473,6 +5522,9 @@ $transition-time: 0.3s;
 		@media (max-width:1024px) {
 			height: 170px;
 		}
+		@media (max-width:567px) {
+			height: 150px;
+		}
 
 		
 
@@ -5497,8 +5549,20 @@ $transition-time: 0.3s;
 		&.top {
 			position: relative;
 			bottom: 212px;
-			right: 16.6%;
-
+			right: 12.3%;
+			
+			@media (max-width:1920px) {
+				right: 14.9%;
+			}
+			@media (max-width:1440px) {
+				right: 17.8%;
+			}
+			@media (max-width:1380px) {
+				right: 17.8%;
+			}
+			@media (max-width:1280px) {
+				right: 0;
+			}
 			@media (max-width:1024px) {
 				position: relative;
 				bottom: unset;
@@ -5540,8 +5604,10 @@ $transition-time: 0.3s;
 
 	&__type {
 
-		width: 200px;
-		min-width: 200px;
+		width: 180px;
+		aspect-ratio: 1 / 1;
+		min-width: 180px;
+
 		
 		position: relative;
 		padding: 12px;
@@ -5550,9 +5616,13 @@ $transition-time: 0.3s;
 			width: 170px;
 			min-width: 170px;
 		}
+		@media (max-width:1024px) {
+			aspect-ratio: 1 / 1;
+			min-width: unset;
+			width: unset;
+		}
 		@media (max-width:567px) {
-			width: 100px;
-			min-width: 130px;
+
 		}
 		@media (max-width:467px) {
 			width: 40%;
@@ -5682,7 +5752,7 @@ $transition-time: 0.3s;
 			line-height: 150%;
 			
 			
-			padding: 12px 0;
+			
 			margin: 0;
 
 			height: 100%;
