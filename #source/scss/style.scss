@@ -4653,8 +4653,8 @@ $transition-time: 0.3s;
 		&__card {
 			display: flex;
 			position: relative;
-
-
+			transition: 0s;
+			z-index: 20;
 			
 
 			.environment-slider__card--text {
@@ -4720,6 +4720,12 @@ $transition-time: 0.3s;
 				height: 100%;
 				
 
+				position: relative;
+
+				
+				
+				
+
 				img {
 					width: 50%;
 					object-position: top;
@@ -4746,11 +4752,34 @@ $transition-time: 0.3s;
 			margin-bottom: 24px;
 			gap: 12px;
 			right: 20px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 25%;
+				left: -50%;
+				width: 100000px;
+				height: 1px;
+				background-color: #fff;
+				z-index: -12;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 75%;
+				left: -50%;
+				width: 100000px;
+				height: 1px;
+				background-color: #fff;
+				z-index: -12;
+			}
+			
 		}
 
 		.swiper-slide {
 			opacity: 0;
 			
+
 
 			@media (max-width:567px) {
 				
@@ -4758,19 +4787,41 @@ $transition-time: 0.3s;
 			&-prev {
 				opacity: 0;
 				transition: 1s ease;
+				transform: translateX(-500px) !important;
 				@media (max-width:1199px) {
 					opacity: 1;
 				}
+
+				// &-prev {
+				// 	transition: 1s ease;
+				// 	transform: translateX(-1000px);
+				// }
 			}
 
 			&-active {
 				opacity: 1;
 				transition: 1s ease;
+				transform: translateX(0px);
 			}
 			&-next {
 				opacity: 1;
 				transition: 1s ease;
+				transform: translate(0px);
+
+				&-next {
+					opacity: 0;
+					transform: translate(500px);
+					transition: 1s ease;
+
+					&-next {
+						// transition: 1s ease;
+						// transform: translateX(1000px);
+					}
+				}
 			}
+
+			
+			
 		}
 
 		// .swiper-slide {
@@ -7479,6 +7530,10 @@ $transition-time: 0.3s;
 		transition: .2s ease;
 		width: fit-content;
 
+		@media (max-width:1199px) {
+			width: 100%;
+		}
+
 		svg {
 			transition: .5s ease;
 			transform: rotate(180deg);
@@ -7739,7 +7794,7 @@ $transition-time: 0.3s;
 						}
 
 						@media (max-width:1199px) {
-							gap: 24px;
+							        gap: 8px;
 						}
 						
 					}
@@ -7790,6 +7845,9 @@ $transition-time: 0.3s;
 					display: flex;
 					@media (max-width:1380px) {
 						width: 550px;
+					}
+					@media (max-width:1199px) {
+						height: 170px;
 					}
 				}
 			}
@@ -7886,7 +7944,7 @@ $transition-time: 0.3s;
 
 	&__title {
 		font-family: var(--font-family);
-		font-weight: 500;
+		font-weight: 700;
 		font-size: 18px;
 		line-height: 1.2;
 		text-transform: uppercase;

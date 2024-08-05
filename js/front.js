@@ -507,46 +507,58 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   // about-us.htmk
   document.addEventListener("DOMContentLoaded", function() {
-	const swiper = new Swiper('.environment-slider', {
-		slidesPerView: 2, // Один слайд на просмотр
-		speed: 1000,
-		loop: true, // Бесконечный слайд
-		navigation: {
-			nextEl: '.environment-slider-button-next',
-			prevEl: '.environment-slider-button-prev',
-		},
-		breakpoints: {
-			2560: {
-				slidesPerView: 2,
-			},
-			1440: {
-				slidesPerView: 2,
-			},
-			1280: {
-				slidesPerView: 2,
-			},
-			1099: {
-				slidesPerView: 2,
-			},
-			1024: {
-				slidesPerView: 1,
-			},
-			767: {
-				slidesPerView: 1,
-			},
-			567: {
-				slidesPerView: 1,                    
-			},
-			467: {
-				slidesPerView: 1.3,
-			},
-			0: {
-				slidesPerView: 1.3,
-			},
-		},
+    // Уничтожение предыдущих экземпляров Swiper
+    if (window.swiper) {
+        window.swiper.destroy(true, true);
+    }
 
-	});
+    const swiper = new Swiper('.environment-slider', {
+        slidesPerView: 2, // Количество слайдов, видимых одновременно
+        speed: 1000,
+        loop: true, // Отключение бесконечного прокручивания
+        navigation: {
+            nextEl: '.environment-slider-button-next',
+            prevEl: '.environment-slider-button-prev',
+        },
+        breakpoints: {
+            2560: {
+                slidesPerView: 2,
+            },
+            1440: {
+                slidesPerView: 2,
+            },
+            1280: {
+                slidesPerView: 2,
+            },
+            1099: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 1,
+            },
+            567: {
+                slidesPerView: 1,
+            },
+            467: {
+                slidesPerView: 1.3,
+            },
+            0: {
+                slidesPerView: 1.3,
+            },
+        },
+        on: {
+            slideChange: function() {
+                updateClasses(this);
+            }
+        }
+    });
+
 });
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const swiper = new Swiper('.rewards-slider', {
         slidesPerView: 5, 
@@ -923,4 +935,50 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Функция для применения функционала прокрутки
+    function applyScrollText(parentElement) {
+        // Получаем элементы с классами 'member-grid', 'links', 'comment' внутри родительского элемента
+        const targetElements = parentElement.querySelectorAll('.member-grid, .links, .comment');
 
+        let shouldAddScrollText = false;
+
+        targetElements.forEach(function(element) {
+            // Проверка высоты элемента после загрузки всего контента
+            window.setTimeout(function() {
+                if (element.offsetHeight > 140) {
+                    shouldAddScrollText = true;
+                }
+            }, 0);
+        });
+
+        // Добавляем класс 'scroll-text' к родительскому элементу, если условие выполнено
+        window.setTimeout(function() {
+            if (shouldAddScrollText) {
+                parentElement.classList.add('scroll-text');
+            }
+        }, 0);
+    }
+
+    // Применяем функционал прокрутки к уже существующим элементам с классом 'post-block__block-info'
+    document.querySelectorAll('.post-block__block-info').forEach(applyScrollText);
+
+    // Добавляем обработчик на добавление нового класса к элементу
+    const observer = new MutationObserver(function(mutationsList) {
+        for (let mutation of mutationsList) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                const target = mutation.target;
+                if (target.classList.contains('post-block__block-info')) {
+                    applyScrollText(target);
+                }
+            }
+        }
+    });
+
+    // Наблюдаем за изменениями атрибутов во всем документе
+    observer.observe(document.documentElement, {
+        attributes: true,
+        subtree: true,
+        attributeFilter: ['class']
+    });
+});
