@@ -906,3 +906,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// скрипт который считает кол-во символов в блокас с текстом
+document.addEventListener("DOMContentLoaded", function() {
+    // Получаем все элементы с классом 'company-info__text'
+    const elements = document.querySelectorAll('.company-info__text');
+
+    // Проходим по каждому элементу с классом 'company-info__text'
+    elements.forEach(function(element) {
+        // Получаем все элементы <p> внутри текущего элемента
+        const paragraphs = element.querySelectorAll('p');
+        
+        // Проверяем каждый элемент <p>
+        paragraphs.forEach(function(paragraph) {
+            // Если длина текста внутри элемента <p> больше 50 символов или высота больше 150 пикселей
+            if (paragraph.textContent.length > 500 || paragraph.offsetHeight > 150) {
+                // Добавляем класс 'scroll-text' к элементу 'company-info__text'
+                element.classList.add('scroll-text');
+            }
+        });
+    });
+});
+
+
