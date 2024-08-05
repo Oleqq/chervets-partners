@@ -12,22 +12,26 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
             form.classList.add("active");
             backdrop.classList.add("active");
+            document.documentElement.classList.add("fixed"); // Добавляем класс fixed к html
+            form.scrollIntoView({ behavior: "smooth" }); // Прокручиваем к верху формы
         });
     });
 
-    backdrop.addEventListener("click", function () {
+    function closeForm() {
         form.classList.remove("active");
         backdrop.classList.remove("active");
-    });
+        document.documentElement.classList.remove("fixed"); // Удаляем класс fixed с html
+    }
+
+    backdrop.addEventListener("click", closeForm);
 
     const closeButton = document.querySelector(".form-secondary__close");
     if (closeButton) {
-        closeButton.addEventListener("click", function () {
-            form.classList.remove("active");
-            backdrop.classList.remove("active");
-        });
+        closeButton.addEventListener("click", closeForm);
     }
 });
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	const languageIcon = document.querySelector(".header__icon--language");
@@ -265,24 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const photo = document.getElementById('js-photo');
-
-//     photo.addEventListener("mousemove", function(e) {
-//         const radius = 24; // Радиус области, в которой фотография станет цветной
-//         const x = e.offsetX;
-//         const y = e.offsetY;
-
-//         const distance = Math.sqrt(x*x + y*y); // Расстояние от курсора до центра фотографии
-
-//         if (distance < radius) {
-//             photo.classList.add('color'); // Добавляем класс, чтобы сделать фотографию цветной
-//         } else {
-//             photo.classList.remove('color'); // Убираем класс, чтобы вернуть фотографию в черно-белый режим
-//         }
-//     });
-// });
-
 
 
 
@@ -298,32 +284,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // скрипт поп апа на странице insights 
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".insights-card__link");
+    // Получаем все элементы с классом 'insights-card__link' и 'insights-card__info'
+    const links = document.querySelectorAll(".insights-card__link, .insights-card__info");
     const form = document.querySelector(".form");
     const backdrop = document.createElement("div");
     backdrop.classList.add("backdrop");
     document.body.appendChild(backdrop);
 
+    // Функция для открытия формы
+    function openForm(event) {
+        event.preventDefault();
+        form.classList.add("active");
+        backdrop.classList.add("active");
+        form.scrollIntoView({ behavior: "smooth" }); // Прокрутка к верху формы
+        document.documentElement.classList.add("fixed"); // Запрет прокрутки страницы
+    }
+
+    // Добавляем обработчики событий для открытия формы
     links.forEach((link) => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            form.classList.add("active");
-            backdrop.classList.add("active");
-        });
+        link.addEventListener("click", openForm);
     });
 
-    backdrop.addEventListener("click", function () {
+    // Функция для закрытия формы
+    function closeForm() {
         form.classList.remove("active");
         backdrop.classList.remove("active");
-    });
+        document.documentElement.classList.remove("fixed"); // Восстановление прокрутки страницы
+    }
 
-    // Find existing close button and add click event
+    // Добавляем обработчик события для закрытия формы при клике на backdrop
+    backdrop.addEventListener("click", closeForm);
+
+    // Добавляем обработчик события для кнопки закрытия формы
     const closeButton = document.querySelector(".form__close");
     if (closeButton) {
-        closeButton.addEventListener("click", function () {
-            form.classList.remove("active");
-            backdrop.classList.remove("active");
-        });
+        closeButton.addEventListener("click", closeForm);
     }
 });
 
@@ -889,10 +884,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
             2560: {
-                // Add your custom settings here if needed
+                spaceBetween: 12,
             },
             1440: {
-                // Add your custom settings here if needed
+                spaceBetween: 12,
             },
             1280: {
                 spaceBetween: 12,
@@ -919,8 +914,8 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Проверяем каждый элемент <p>
         paragraphs.forEach(function(paragraph) {
-            // Если длина текста внутри элемента <p> больше 50 символов или высота больше 150 пикселей
-            if (paragraph.textContent.length > 500 || paragraph.offsetHeight > 150) {
+            // Если длина текста внутри элемента <p> больше 50 символов или высота больше 140 пикселей
+            if (paragraph.textContent.length > 500 || paragraph.offsetHeight > 140) {
                 // Добавляем класс 'scroll-text' к элементу 'company-info__text'
                 element.classList.add('scroll-text');
             }

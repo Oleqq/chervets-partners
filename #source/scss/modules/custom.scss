@@ -24,6 +24,10 @@ html {
     @media (max-width: 1299px) {
         scroll-padding-top: 90px;
     }
+
+    &.fixed {
+        overflow: hidden;
+    }
 }
 
 body {
@@ -56,10 +60,7 @@ body {
     }
     &.fixed {
         overflow: hidden;
-        position: relative;
-        @media (min-width: 992px) {
-            padding-right: 17px;
-        }
+
         .fader {
             display: block;
             opacity: 1;
@@ -653,3 +654,4 @@ html.with-fancybox {
   .fancybox__toolbar {
     display: none;
   }
+

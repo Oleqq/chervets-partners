@@ -23,11 +23,20 @@ $form-input-bg-color: #A50034;
 
   @media (max-width:567px) {
     padding: 0;
-    margin-top: 180px;
+    margin-top: 93px;
+    border-radius: 0;
+  }
+  @media (max-width:467px) {
+    margin-top: 77px;
   }
 
   &.active {
     display: flex;
+    @media (max-width:567px) {
+      align-items: flex-start;
+      overflow: scroll;
+     
+    }
   }
 
   &__wrapper {
@@ -44,12 +53,21 @@ $form-input-bg-color: #A50034;
     @media (max-width:1660px) {
         padding: 24px 12px 52px 12px;
     }
+    @media (max-width:567px) {
+      overflow: scroll;
+      height: 130%;
+    }
+    @media (max-width:390px) {
+      height: 200%;
+    }
   }
 
   &__close {
     position: absolute;
     right: 12px;
     top: 12px;
+
+    cursor: pointer;
   }
 
   &__title {
@@ -268,6 +286,7 @@ $form-input-bg-color: #A50034;
       position: absolute;
       right: 12px;
       top: 24px;
+      cursor: pointer;
   }
 
   &__title {
